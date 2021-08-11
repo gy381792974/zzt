@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 2307686477
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 80f7b3cb1f8ea8523229fa96cd347422
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 21482870528e7d2628a6440114387582
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/SpineAssets/normalRole2/role_1003_6_7_Material.mat
+- Assets/AssetBundleRes/SpineAssets/normalRole2/role_1003_6_7.png
+- Assets/AssetBundleRes/SpineAssets/normalRole2/role_1003_6_7.json
+- Assets/AssetBundleRes/SpineAssets/normalRole2/role_1003_6_7_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/normalRole2/role_1003_6_7_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/normalRole2/role_1003_6_7.atlas.txt
+Dependencies: []

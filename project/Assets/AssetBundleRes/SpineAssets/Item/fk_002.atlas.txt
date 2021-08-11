@@ -1,0 +1,41 @@
+
+fk_002.png
+size: 259,309
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fk02_1
+  rotate: false
+  xy: 155, 101
+  size: 102, 90
+  orig: 104, 92
+  offset: 1, 1
+  index: -1
+fk02_2
+  rotate: true
+  xy: 155, 193
+  size: 114, 101
+  orig: 116, 103
+  offset: 1, 1
+  index: -1
+fk02_3
+  rotate: true
+  xy: 129, 2
+  size: 97, 100
+  orig: 99, 102
+  offset: 1, 1
+  index: -1
+fk02_4
+  rotate: false
+  xy: 2, 160
+  size: 151, 147
+  orig: 153, 150
+  offset: 1, 2
+  index: -1
+fk02_g
+  rotate: false
+  xy: 2, 27
+  size: 125, 131
+  orig: 128, 134
+  offset: 2, 2
+  index: -1

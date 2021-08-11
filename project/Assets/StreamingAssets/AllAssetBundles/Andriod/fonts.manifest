@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 4147670055
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 98b0d80f1594f131e23ca13adbe3602c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 44912aa95bf28c03affddc6817be15fe
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/AllShareAssets/Fonts/New Material.mat
+- Assets/AssetBundleRes/AllShareAssets/Fonts/EN.ttf
+- Assets/AssetBundleRes/AllShareAssets/Fonts/CN.ttf
+Dependencies: []

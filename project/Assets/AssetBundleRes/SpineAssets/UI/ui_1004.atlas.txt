@@ -1,0 +1,20 @@
+
+ui_1004.png
+size: 66,37
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+star_suo1
+  rotate: true
+  xy: 44, 6
+  size: 29, 20
+  orig: 31, 22
+  offset: 1, 1
+  index: -1
+star_suo2
+  rotate: false
+  xy: 2, 2
+  size: 40, 33
+  orig: 42, 35
+  offset: 1, 1
+  index: -1

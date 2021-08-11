@@ -1,0 +1,41 @@
+
+stall_20084.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+candy_1
+  rotate: false
+  xy: 2, 108
+  size: 174, 189
+  orig: 176, 191
+  offset: 1, 1
+  index: -1
+candy_q1
+  rotate: true
+  xy: 2, 2
+  size: 104, 105
+  orig: 106, 107
+  offset: 1, 1
+  index: -1
+candy_q2
+  rotate: true
+  xy: 109, 2
+  size: 104, 105
+  orig: 106, 107
+  offset: 1, 1
+  index: -1
+candy_q3
+  rotate: true
+  xy: 178, 193
+  size: 104, 105
+  orig: 106, 107
+  offset: 1, 1
+  index: -1
+candy_ty
+  rotate: false
+  xy: 178, 121
+  size: 117, 70
+  orig: 124, 76
+  offset: 3, 3
+  index: -1

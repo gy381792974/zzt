@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1496187602
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 113f0d657f33b0f0690ba00c6edb01f5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/JsonDatas/GameDatas/CubeConfig_Data.txt
+Dependencies: []

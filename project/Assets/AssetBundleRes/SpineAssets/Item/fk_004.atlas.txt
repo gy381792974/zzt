@@ -1,0 +1,27 @@
+
+fk_004.png
+size: 714,218
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fk04_1
+  rotate: false
+  xy: 2, 2
+  size: 251, 214
+  orig: 258, 221
+  offset: 4, 4
+  index: -1
+fk04_2
+  rotate: false
+  xy: 255, 5
+  size: 248, 211
+  orig: 255, 219
+  offset: 3, 3
+  index: -1
+fk04_3
+  rotate: false
+  xy: 505, 2
+  size: 207, 214
+  orig: 210, 216
+  offset: 1, 1
+  index: -1

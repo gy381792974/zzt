@@ -1,0 +1,13 @@
+
+stall_20023.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hamb_3_4
+  rotate: false
+  xy: 2, 2
+  size: 158, 151
+  orig: 160, 153
+  offset: 1, 1
+  index: -1

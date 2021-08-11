@@ -1,0 +1,27 @@
+
+ui_1002.png
+size: 330,205
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+games_1
+  rotate: false
+  xy: 207, 78
+  size: 121, 125
+  orig: 121, 125
+  offset: 0, 0
+  index: -1
+games_g
+  rotate: true
+  xy: 2, 2
+  size: 201, 203
+  orig: 208, 211
+  offset: 3, 4
+  index: -1
+games_gd
+  rotate: false
+  xy: 207, 57
+  size: 19, 19
+  orig: 19, 19
+  offset: 0, 0
+  index: -1

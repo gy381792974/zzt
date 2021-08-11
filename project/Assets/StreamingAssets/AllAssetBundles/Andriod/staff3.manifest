@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 3693210562
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 87a4fd68f06777c6622b8b77b047e888
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 21482870528e7d2628a6440114387582
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/SpineAssets/Staff3/staff3_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/Staff3/staff3.json
+- Assets/AssetBundleRes/SpineAssets/Staff3/staff3.png
+- Assets/AssetBundleRes/SpineAssets/Staff3/staff3_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/Staff3/staff3_Material.mat
+- Assets/AssetBundleRes/SpineAssets/Staff3/staff3.atlas.txt
+Dependencies: []

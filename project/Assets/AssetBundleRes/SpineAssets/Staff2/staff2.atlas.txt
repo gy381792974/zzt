@@ -1,0 +1,62 @@
+
+staff2.png
+size: 138,77
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+staff2_1
+  rotate: true
+  xy: 2, 12
+  size: 63, 61
+  orig: 65, 63
+  offset: 1, 1
+  index: -1
+staff2_2
+  rotate: false
+  xy: 2, 3
+  size: 14, 7
+  orig: 16, 9
+  offset: 1, 1
+  index: -1
+staff2_3
+  rotate: false
+  xy: 94, 33
+  size: 13, 42
+  orig: 13, 42
+  offset: 0, 0
+  index: -1
+staff2_4
+  rotate: false
+  xy: 65, 28
+  size: 27, 47
+  orig: 29, 49
+  offset: 1, 1
+  index: -1
+staff2_5
+  rotate: false
+  xy: 111, 3
+  size: 13, 33
+  orig: 15, 36
+  offset: 1, 1
+  index: -1
+staff2_6
+  rotate: false
+  xy: 109, 38
+  size: 13, 37
+  orig: 15, 40
+  offset: 1, 1
+  index: -1
+staff2_7
+  rotate: false
+  xy: 124, 38
+  size: 12, 37
+  orig: 12, 37
+  offset: 0, 0
+  index: -1
+ty
+  rotate: false
+  xy: 65, 2
+  size: 44, 24
+  orig: 54, 26
+  offset: 5, 1
+  index: -1

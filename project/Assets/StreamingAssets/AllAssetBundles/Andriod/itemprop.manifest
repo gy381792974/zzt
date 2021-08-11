@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 2380129518
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 12914ec262076da2ff0a6b8646e365e2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9e6ad29cbd2df8fbe1a15315db0e51ab
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/A_Textures/FolderPack/ItemProp/icon_item_l.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/ItemProp/icon_item_m.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/ItemProp/d.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/ItemProp/icon_item_r.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/ItemProp/c.png
+Dependencies: []

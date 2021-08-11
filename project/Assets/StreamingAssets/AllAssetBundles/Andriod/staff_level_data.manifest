@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3066272017
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c3ace7cafdf0574a647d3f21b9e3100d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/JsonDatas/GameDatas/Staff_Level_Data.txt
+Dependencies: []

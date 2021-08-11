@@ -1,0 +1,46 @@
+ManifestFileVersion: 0
+CRC: 3213893230
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3be7dc1f41c67196ac813e5df7e55f18
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 87846210be92e6ba0434a1ad9996944b
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 41b1f593962e6e14f9ea89d618104e71, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e1273305f35f9b542aea79c557a1d63c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3c54b6d773c8b494bb891d03ccd138a5, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/A_Prefabs/A_UIPanelPrefabs/ItemBuyPanel.prefab
+Dependencies:
+- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
+- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/fonts

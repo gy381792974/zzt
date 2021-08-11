@@ -1,0 +1,13 @@
+
+stall_20013.png
+size: 64,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+pizza_3_0
+  rotate: false
+  xy: 2, 2
+  size: 55, 35
+  orig: 57, 37
+  offset: 1, 1
+  index: -1

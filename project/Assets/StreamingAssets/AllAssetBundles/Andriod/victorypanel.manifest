@@ -1,0 +1,50 @@
+ManifestFileVersion: 0
+CRC: 2848482325
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 12d4adfb155e8ca65ba94a2bc622e8be
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9b8a8195f1952ebeaf063719ed0d97fb
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b9551f23e92cce74493017fa13b6d10a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e1273305f35f9b542aea79c557a1d63c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0b80cb35a9fd127429651fcfc70e84f1, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d85b887af7e6c3f45a2e2d2920d641bc, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/A_Prefabs/A_UIPanelPrefabs/VictoryPanel.prefab
+Dependencies:
+- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
+- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/fonts

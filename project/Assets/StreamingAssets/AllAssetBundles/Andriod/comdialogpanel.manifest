@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 3003553363
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 00ebfe3929de11ef13e8a91e6fb20407
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7c2b7e3379fb8d0d223862198e361cae
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ebf9d615a50b53e4b8aa8dd52276d074, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: da0276b33f5f56c41b4416d9ea49c88a, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/A_Prefabs/A_UIPanelPrefabs/ComDialogPanel.prefab
+Dependencies:
+- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
+- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/fonts

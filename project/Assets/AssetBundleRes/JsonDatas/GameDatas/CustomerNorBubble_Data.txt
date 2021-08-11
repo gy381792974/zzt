@@ -1,0 +1,32 @@
+﻿[
+	{
+		"ID":1,		"bz":"普通青年",		"SpeStallNum":10,		"ConParam":2,		"HappyTxt":[1,1],		"RantTxt":[1,1]	},
+	{
+		"ID":2,		"bz":"作家",		"SpeStallNum":10,		"ConParam":2,		"HappyTxt":[10,12],		"RantTxt":[10,11]	},
+	{
+		"ID":3,		"bz":"时尚达人",		"SpeStallNum":10,		"ConParam":2,		"HappyTxt":[10,14],		"RantTxt":[10,13]	},
+	{
+		"ID":4,		"bz":"程序员",		"SpeStallNum":10,		"ConParam":2,		"HappyTxt":[10,16],		"RantTxt":[10,15]	},
+	{
+		"ID":5,		"bz":"运动员",		"SpeStallNum":10,		"ConParam":2,		"HappyTxt":[10,18],		"RantTxt":[10,17]	},
+	{
+		"ID":6,		"bz":"辣妈",		"SpeStallNum":10,		"ConParam":2,		"HappyTxt":[10,20],		"RantTxt":[10,19]	},
+	{
+		"ID":7,		"bz":"小女孩",		"SpeStallNum":10,		"ConParam":2,		"HappyTxt":[10,22],		"RantTxt":[10,21]	},
+	{
+		"ID":8,		"bz":"游戏制作人",		"SpeStallNum":10,		"ConParam":2,		"HappyTxt":[10,24],		"RantTxt":[10,23]	},
+	{
+		"ID":9,		"bz":"救生员",		"SpeStallNum":10,		"ConParam":2,		"HappyTxt":[10,26],		"RantTxt":[10,25]	},
+	{
+		"ID":10,		"bz":"插画师",		"SpeStallNum":10,		"ConParam":2,		"HappyTxt":[10,28],		"RantTxt":[10,27]	},
+	{
+		"ID":11,		"bz":"冒险家",		"SpeStallNum":10,		"ConParam":2,		"HappyTxt":[10,30],		"RantTxt":[10,29]	},
+	{
+		"ID":12,		"bz":"货物配送员",		"SpeStallNum":10,		"ConParam":2,		"HappyTxt":[10,32],		"RantTxt":[10,31]	},
+	{
+		"ID":13,		"bz":"理财师",		"SpeStallNum":10,		"ConParam":2,		"HappyTxt":[10,34],		"RantTxt":[10,33]	},
+	{
+		"ID":14,		"bz":"全能歌手",		"SpeStallNum":10,		"ConParam":2,		"HappyTxt":[10,36],		"RantTxt":[10,35]	},
+	{
+		"ID":15,		"bz":"算命先生",		"SpeStallNum":10,		"ConParam":2,		"HappyTxt":[10,38],		"RantTxt":[10,37]	}
+]

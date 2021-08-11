@@ -1,0 +1,62 @@
+
+stall_20044_2.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+seafood_4_2
+  rotate: false
+  xy: 169, 77
+  size: 50, 47
+  orig: 52, 49
+  offset: 1, 1
+  index: -1
+seafood_4_3
+  rotate: false
+  xy: 210, 33
+  size: 36, 35
+  orig: 38, 37
+  offset: 1, 1
+  index: -1
+seafood_4_4
+  rotate: true
+  xy: 2, 7
+  size: 117, 106
+  orig: 119, 108
+  offset: 1, 1
+  index: -1
+seafood_4_5
+  rotate: true
+  xy: 110, 11
+  size: 113, 57
+  orig: 113, 57
+  offset: 0, 0
+  index: -1
+seafood_4_6
+  rotate: true
+  xy: 221, 70
+  size: 54, 33
+  orig: 54, 33
+  offset: 0, 0
+  index: -1
+seafood_4_7
+  rotate: false
+  xy: 169, 38
+  size: 39, 37
+  orig: 39, 37
+  offset: 0, 0
+  index: -1
+seafood_4_8
+  rotate: false
+  xy: 169, 9
+  size: 39, 27
+  orig: 41, 29
+  offset: 1, 1
+  index: -1
+seafood_4_9
+  rotate: false
+  xy: 210, 2
+  size: 43, 29
+  orig: 43, 29
+  offset: 0, 0
+  index: -1

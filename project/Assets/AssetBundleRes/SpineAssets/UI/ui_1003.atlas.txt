@@ -1,0 +1,20 @@
+
+ui_1003.png
+size: 118,77
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+star_star1
+  rotate: false
+  xy: 77, 34
+  size: 39, 41
+  orig: 42, 43
+  offset: 1, 1
+  index: -1
+star_starg
+  rotate: false
+  xy: 2, 2
+  size: 73, 73
+  orig: 81, 80
+  offset: 4, 3
+  index: -1

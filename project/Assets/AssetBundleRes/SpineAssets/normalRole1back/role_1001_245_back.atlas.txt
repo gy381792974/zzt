@@ -1,0 +1,265 @@
+
+role_1001_245_back.png
+size: 94,518
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+kong
+  rotate: false
+  xy: 91, 475
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+panzi
+  rotate: true
+  xy: 2, 416
+  size: 100, 58
+  orig: 152, 98
+  offset: 24, 17
+  index: -1
+panzig
+  rotate: false
+  xy: 2, 277
+  size: 70, 60
+  orig: 86, 67
+  offset: 8, 0
+  index: -1
+role_1001_bdy1
+  rotate: false
+  xy: 62, 435
+  size: 27, 41
+  orig: 29, 43
+  offset: 1, 1
+  index: -1
+role_1001_hand11
+  rotate: false
+  xy: 78, 348
+  size: 13, 41
+  orig: 13, 41
+  offset: 0, 0
+  index: -1
+role_1001_hand21
+  rotate: false
+  xy: 62, 26
+  size: 12, 38
+  orig: 12, 38
+  offset: 0, 0
+  index: -1
+role_1001_head1
+  rotate: false
+  xy: 2, 87
+  size: 58, 59
+  orig: 60, 61
+  offset: 1, 1
+  index: -1
+role_1001_leg11
+  rotate: true
+  xy: 61, 214
+  size: 17, 31
+  orig: 17, 31
+  offset: 0, 0
+  index: -1
+role_1001_leg21
+  rotate: false
+  xy: 62, 12
+  size: 12, 12
+  orig: 14, 14
+  offset: 1, 1
+  index: -1
+role_1001_leg31
+  rotate: true
+  xy: 2, 3
+  size: 15, 30
+  orig: 15, 30
+  offset: 0, 0
+  index: -1
+role_1001_leg41
+  rotate: false
+  xy: 76, 41
+  size: 12, 12
+  orig: 14, 14
+  offset: 1, 1
+  index: -1
+role_1002_bdy1
+  rotate: false
+  xy: 33, 21
+  size: 27, 38
+  orig: 29, 40
+  offset: 1, 1
+  index: -1
+role_1002_book1
+  rotate: true
+  xy: 48, 66
+  size: 19, 15
+  orig: 21, 17
+  offset: 1, 1
+  index: -1
+role_1002_hand11
+  rotate: false
+  xy: 63, 172
+  size: 11, 40
+  orig: 11, 40
+  offset: 0, 0
+  index: -1
+role_1002_hand21
+  rotate: false
+  xy: 76, 55
+  size: 12, 38
+  orig: 12, 38
+  offset: 0, 0
+  index: -1
+role_1002_head1
+  rotate: false
+  xy: 2, 148
+  size: 59, 60
+  orig: 61, 62
+  offset: 1, 1
+  index: -1
+role_1002_leg11
+  rotate: false
+  xy: 76, 178
+  size: 16, 34
+  orig: 16, 34
+  offset: 0, 0
+  index: -1
+role_1002_leg21
+  rotate: false
+  xy: 76, 29
+  size: 12, 10
+  orig: 14, 12
+  offset: 1, 1
+  index: -1
+role_1002_leg31
+  rotate: false
+  xy: 75, 95
+  size: 15, 31
+  orig: 15, 31
+  offset: 0, 0
+  index: -1
+role_1002_leg41
+  rotate: false
+  xy: 62, 94
+  size: 11, 11
+  orig: 13, 13
+  offset: 1, 1
+  index: -1
+role_1004_bdy1
+  rotate: false
+  xy: 62, 478
+  size: 30, 38
+  orig: 32, 40
+  offset: 1, 1
+  index: -1
+role_1004_hand11
+  rotate: false
+  xy: 61, 233
+  size: 11, 42
+  orig: 11, 42
+  offset: 0, 0
+  index: -1
+role_1004_hand21
+  rotate: false
+  xy: 62, 107
+  size: 11, 39
+  orig: 11, 39
+  offset: 0, 0
+  index: -1
+role_1004_head1
+  rotate: true
+  xy: 2, 339
+  size: 75, 74
+  orig: 77, 76
+  offset: 1, 1
+  index: -1
+role_1004_leg11
+  rotate: false
+  xy: 74, 309
+  size: 18, 28
+  orig: 18, 28
+  offset: 0, 0
+  index: -1
+role_1004_leg21
+  rotate: true
+  xy: 74, 233
+  size: 16, 9
+  orig: 18, 11
+  offset: 1, 1
+  index: -1
+role_1004_leg31
+  rotate: false
+  xy: 74, 280
+  size: 18, 27
+  orig: 18, 27
+  offset: 0, 0
+  index: -1
+role_1004_leg41
+  rotate: true
+  xy: 63, 155
+  size: 15, 10
+  orig: 17, 12
+  offset: 1, 1
+  index: -1
+role_1005_bdy1
+  rotate: false
+  xy: 2, 20
+  size: 29, 39
+  orig: 31, 41
+  offset: 1, 1
+  index: -1
+role_1005_hand11
+  rotate: false
+  xy: 78, 391
+  size: 14, 42
+  orig: 14, 42
+  offset: 0, 0
+  index: -1
+role_1005_hand21
+  rotate: false
+  xy: 75, 128
+  size: 13, 38
+  orig: 14, 38
+  offset: 0, 0
+  index: -1
+role_1005_head1
+  rotate: false
+  xy: 2, 210
+  size: 57, 65
+  orig: 59, 67
+  offset: 1, 1
+  index: -1
+role_1005_leg11
+  rotate: false
+  xy: 74, 251
+  size: 18, 27
+  orig: 18, 27
+  offset: 0, 0
+  index: -1
+role_1005_leg21
+  rotate: false
+  xy: 76, 168
+  size: 16, 8
+  orig: 18, 10
+  offset: 1, 1
+  index: -1
+role_1005_leg31
+  rotate: true
+  xy: 34, 2
+  size: 17, 26
+  orig: 17, 26
+  offset: 0, 0
+  index: -1
+role_1005_leg41
+  rotate: false
+  xy: 62, 424
+  size: 14, 9
+  orig: 16, 11
+  offset: 1, 1
+  index: -1
+ty
+  rotate: false
+  xy: 2, 61
+  size: 44, 24
+  orig: 54, 26
+  offset: 5, 1
+  index: -1

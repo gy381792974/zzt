@@ -1,0 +1,35 @@
+ManifestFileVersion: 0
+CRC: 3828631493
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 168492e7e6ba3d36f09c7c11d32fd5f1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9dcac6b3f4155b35a5cb497a0644cf6b
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1727e63696d7ff5428af82f2e8499f49, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 722ce11b1d41e0843924bff1a0ed6ca4, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/A_Prefabs/Staff/cook.prefab
+Dependencies:
+- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/staff3

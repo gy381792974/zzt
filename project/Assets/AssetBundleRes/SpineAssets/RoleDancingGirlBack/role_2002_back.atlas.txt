@@ -1,0 +1,69 @@
+
+role_2002_back.png
+size: 62,181
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+role_2002_bdy1
+  rotate: false
+  xy: 2, 67
+  size: 52, 49
+  orig: 52, 49
+  offset: 0, 0
+  index: -1
+role_2002_hand11
+  rotate: false
+  xy: 48, 29
+  size: 12, 36
+  orig: 12, 36
+  offset: 0, 0
+  index: -1
+role_2002_hand21
+  rotate: false
+  xy: 2, 2
+  size: 10, 37
+  orig: 10, 37
+  offset: 0, 0
+  index: -1
+role_2002_head1
+  rotate: false
+  xy: 2, 118
+  size: 56, 61
+  orig: 58, 63
+  offset: 1, 1
+  index: -1
+role_2002_leg11
+  rotate: true
+  xy: 14, 8
+  size: 15, 31
+  orig: 15, 31
+  offset: 0, 0
+  index: -1
+role_2002_leg21
+  rotate: false
+  xy: 47, 6
+  size: 13, 10
+  orig: 15, 12
+  offset: 1, 1
+  index: -1
+role_2002_leg31
+  rotate: true
+  xy: 14, 25
+  size: 14, 32
+  orig: 14, 32
+  offset: 0, 0
+  index: -1
+role_2002_leg41
+  rotate: false
+  xy: 48, 18
+  size: 12, 9
+  orig: 14, 11
+  offset: 1, 1
+  index: -1
+ty
+  rotate: false
+  xy: 2, 41
+  size: 44, 24
+  orig: 54, 26
+  offset: 5, 1
+  index: -1

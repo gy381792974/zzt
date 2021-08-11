@@ -1,0 +1,13 @@
+
+stall_20064_2.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+coffee_gz1
+  rotate: false
+  xy: 2, 2
+  size: 170, 177
+  orig: 170, 177
+  offset: 0, 0
+  index: -1

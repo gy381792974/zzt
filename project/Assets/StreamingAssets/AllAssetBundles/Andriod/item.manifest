@@ -1,0 +1,45 @@
+ManifestFileVersion: 0
+CRC: 888337435
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: bb43c64d84e14b23b71f38501e926177
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 21482870528e7d2628a6440114387582
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/SpineAssets/Item/fk_003.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/Item/fk_004_Material.mat
+- Assets/AssetBundleRes/SpineAssets/Item/fk_004.png
+- Assets/AssetBundleRes/SpineAssets/Item/fk_002.png
+- Assets/AssetBundleRes/SpineAssets/Item/fk_002_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/Item/fk_002.json
+- Assets/AssetBundleRes/SpineAssets/Item/fk_003.png
+- Assets/AssetBundleRes/SpineAssets/Item/fk_004_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/Item/fk_003_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/Item/fk_002_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/Item/fk_002.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/Item/fk_003.json
+- Assets/AssetBundleRes/SpineAssets/Item/fk_002_Material.mat
+- Assets/AssetBundleRes/SpineAssets/Item/fk_003_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/Item/fk_004.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/Item/fk_004_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/Item/fk_004.json
+- Assets/AssetBundleRes/SpineAssets/Item/fk_003_Material.mat
+Dependencies: []

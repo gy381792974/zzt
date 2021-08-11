@@ -1,0 +1,31 @@
+ManifestFileVersion: 0
+CRC: 4183925946
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9fa768acf33ed99cd2fd57016c7abdbd
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9e6ad29cbd2df8fbe1a15315db0e51ab
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/A_Textures/FolderPack/FoodIcon/stall_2002_food.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/FoodIcon/stall_2010_food.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/FoodIcon/stall_2004_food.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/FoodIcon/stall_2014_food.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/FoodIcon/stall_2001_food.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/FoodIcon/stall_2013_food.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/FoodIcon/stall_2011_food.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/FoodIcon/stall_2008_food.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/FoodIcon/stall_2005_food.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/FoodIcon/stall_2007_food.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/FoodIcon/stall_2009_food.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/FoodIcon/stall_2012_food.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/FoodIcon/stall_2003_food.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/FoodIcon/stall_2006_food.png
+Dependencies: []

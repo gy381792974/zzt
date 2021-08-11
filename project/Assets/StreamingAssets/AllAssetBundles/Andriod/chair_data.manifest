@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2389529227
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 64bb1a5d77da8efede8d2233fbb2f1d2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/JsonDatas/GameDatas/Chair_Data.txt
+Dependencies: []

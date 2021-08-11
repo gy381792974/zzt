@@ -1,0 +1,43 @@
+ManifestFileVersion: 0
+CRC: 875065280
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 767a024ff3199a3792fc04e71517425d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9e6ad29cbd2df8fbe1a15315db0e51ab
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_5_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/3_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_10_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_3.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/3.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_7_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_6.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_9.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_4_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_2_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/2.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_10.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_9_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/1.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_6_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_2.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_3_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_1.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/2_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_7.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_5.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_8_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_4.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_1_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/1_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_8.png
+Dependencies: []

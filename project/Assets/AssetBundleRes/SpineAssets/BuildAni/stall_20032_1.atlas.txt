@@ -1,0 +1,13 @@
+
+stall_20032_1.png
+size: 128,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sushi_2_1
+  rotate: true
+  xy: 2, 2
+  size: 36, 70
+  orig: 36, 70
+  offset: 0, 0
+  index: -1

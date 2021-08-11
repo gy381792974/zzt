@@ -1,0 +1,48 @@
+
+stall_20053.png
+size: 128,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ice_2_1
+  rotate: false
+  xy: 41, 18
+  size: 35, 36
+  orig: 37, 38
+  offset: 1, 1
+  index: -1
+ice_2_2
+  rotate: true
+  xy: 78, 2
+  size: 21, 24
+  orig: 23, 26
+  offset: 1, 1
+  index: -1
+ice_2_3
+  rotate: true
+  xy: 36, 6
+  size: 10, 33
+  orig: 12, 35
+  offset: 1, 1
+  index: -1
+ice_2_4
+  rotate: false
+  xy: 78, 25
+  size: 31, 29
+  orig: 33, 31
+  offset: 1, 1
+  index: -1
+ice_2_5
+  rotate: false
+  xy: 2, 18
+  size: 37, 36
+  orig: 39, 38
+  offset: 1, 1
+  index: -1
+ice_2_ty
+  rotate: false
+  xy: 2, 2
+  size: 32, 14
+  orig: 34, 16
+  offset: 1, 1
+  index: -1

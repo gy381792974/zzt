@@ -1,0 +1,66 @@
+﻿[
+	{
+		"ID":1,		"beizhuA":"饭团",		"AbName":"Square",		"TextureName":"1",		"SoundName":"c_cube_clear_7"	},
+	{
+		"ID":2,		"beizhuA":"棒棒糖",		"AbName":"Square",		"TextureName":"2",		"SoundName":"c_cube_clear_7"	},
+	{
+		"ID":3,		"beizhuA":"小蛋糕",		"AbName":"Square",		"TextureName":"3",		"SoundName":"c_cube_clear_3"	},
+	{
+		"ID":4,		"beizhuA":"奶茶",		"AbName":"Square",		"TextureName":"4",		"SoundName":"c_cube_clear_2"	},
+	{
+		"ID":5,		"beizhuA":"寿司",		"AbName":"Square",		"TextureName":"5",		"SoundName":"c_cube_clear_1"	},
+	{
+		"ID":6,		"beizhuA":"起司",		"AbName":"Square",		"TextureName":"6",		"SoundName":"c_cube_clear_1"	},
+	{
+		"ID":7,		"beizhuA":"冰淇淋",		"AbName":"Square",		"TextureName":"7",		"SoundName":"c_cube_clear_6"	},
+	{
+		"ID":8,		"beizhuA":"猪肉排",		"AbName":"Square",		"TextureName":"8",		"SoundName":"c_cube_clear_6"	},
+	{
+		"ID":9,		"beizhuA":"樱桃",		"AbName":"Square",		"TextureName":"9",		"SoundName":"c_cube_clear_4"	},
+	{
+		"ID":10,		"beizhuA":"草莓",		"AbName":"Square",		"TextureName":"10",		"SoundName":"c_cube_clear_4"	},
+	{
+		"ID":11,		"beizhuA":"糖果-红",		"AbName":"Square",		"TextureName":"11",		"SoundName":"c_cube_clear_4"	},
+	{
+		"ID":12,		"beizhuA":"雪糕",		"AbName":"Square",		"TextureName":"12",		"SoundName":"c_cube_clear_8"	},
+	{
+		"ID":13,		"beizhuA":"鸡腿",		"AbName":"Square",		"TextureName":"13",		"SoundName":"c_cube_clear_3"	},
+	{
+		"ID":14,		"beizhuA":"罐装可乐",		"AbName":"Square",		"TextureName":"14",		"SoundName":"c_cube_clear_9"	},
+	{
+		"ID":15,		"beizhuA":"蓝莓",		"AbName":"Square",		"TextureName":"15",		"SoundName":"c_cube_clear_3"	},
+	{
+		"ID":16,		"beizhuA":"太阳蛋",		"AbName":"Square",		"TextureName":"16",		"SoundName":"c_cube_clear_8"	},
+	{
+		"ID":17,		"beizhuA":"肉串",		"AbName":"Square",		"TextureName":"17",		"SoundName":"c_cube_clear_8"	},
+	{
+		"ID":18,		"beizhuA":"咖啡",		"AbName":"Square",		"TextureName":"18",		"SoundName":"c_cube_clear_3"	},
+	{
+		"ID":19,		"beizhuA":"甜甜圈",		"AbName":"Square",		"TextureName":"19",		"SoundName":"c_cube_clear_3"	},
+	{
+		"ID":20,		"beizhuA":"披萨",		"AbName":"Square",		"TextureName":"20",		"SoundName":"c_cube_clear_6"	},
+	{
+		"ID":21,		"beizhuA":"虾",		"AbName":"Square",		"TextureName":"21",		"SoundName":"c_cube_clear_6"	},
+	{
+		"ID":22,		"beizhuA":"火山蛋糕",		"AbName":"Square",		"TextureName":"22",		"SoundName":"c_cube_clear_8"	},
+	{
+		"ID":23,		"beizhuA":"雪碧",		"AbName":"Square",		"TextureName":"23",		"SoundName":"c_cube_clear_9"	},
+	{
+		"ID":24,		"beizhuA":"长棍面包",		"AbName":"Square",		"TextureName":"24",		"SoundName":"c_cube_clear_2"	},
+	{
+		"ID":25,		"beizhuA":"糖果-蓝",		"AbName":"Square",		"TextureName":"25",		"SoundName":"c_cube_clear_7"	},
+	{
+		"ID":26,		"beizhuA":"卡布奇诺",		"AbName":"Square",		"TextureName":"26",		"SoundName":"c_cube_clear_2"	},
+	{
+		"ID":27,		"beizhuA":"鱼子酱寿司",		"AbName":"Square",		"TextureName":"27",		"SoundName":"c_cube_clear_5"	},
+	{
+		"ID":28,		"beizhuA":"苹果",		"AbName":"Square",		"TextureName":"28",		"SoundName":"c_cube_clear_5"	},
+	{
+		"ID":29,		"beizhuA":"彩蛋",		"AbName":"Square",		"TextureName":"29",		"SoundName":"c_cube_clear_1"	},
+	{
+		"ID":30,		"beizhuA":"波板糖",		"AbName":"Square",		"TextureName":"30",		"SoundName":"c_cube_clear_7"	},
+	{
+		"ID":31,		"beizhuA":"汉堡包",		"AbName":"Square",		"TextureName":"31",		"SoundName":"c_cube_clear_5"	},
+	{
+		"ID":32,		"beizhuA":"山竹",		"AbName":"Square",		"TextureName":"32",		"SoundName":"c_cube_clear_5"	}
+]

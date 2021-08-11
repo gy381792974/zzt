@@ -1,0 +1,34 @@
+ManifestFileVersion: 0
+CRC: 2209862752
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 177d9da6e01fd469700c52967dd03b56
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7a5e87a977bbf087825668303d06da21
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: c1a6ba2182e6cb24fa2a25f8ec397e9d, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 025e8d22c1ddccd4db2a9bc8d93803c6, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/A_Prefabs/A_AINavigent/Capsule.prefab
+Dependencies: []

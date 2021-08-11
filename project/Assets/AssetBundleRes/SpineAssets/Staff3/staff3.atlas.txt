@@ -1,0 +1,132 @@
+
+staff3.png
+size: 512,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+panzi
+  rotate: true
+  xy: 2, 26
+  size: 100, 76
+  orig: 152, 98
+  offset: 24, 17
+  index: -1
+staff3_1bdy
+  rotate: true
+  xy: 223, 3
+  size: 28, 39
+  orig: 30, 41
+  offset: 1, 1
+  index: -1
+staff3_1hand1
+  rotate: true
+  xy: 171, 32
+  size: 13, 43
+  orig: 13, 43
+  offset: 0, 0
+  index: -1
+staff3_1hand2
+  rotate: true
+  xy: 126, 26
+  size: 14, 43
+  orig: 14, 43
+  offset: 0, 0
+  index: -1
+staff3_1leg1
+  rotate: true
+  xy: 139, 8
+  size: 16, 40
+  orig: 16, 40
+  offset: 0, 0
+  index: -1
+staff3_1leg2
+  rotate: true
+  xy: 100, 5
+  size: 19, 37
+  orig: 19, 37
+  offset: 0, 0
+  index: -1
+staff3_1tou
+  rotate: false
+  xy: 163, 47
+  size: 78, 79
+  orig: 80, 81
+  offset: 1, 1
+  index: -1
+staff3_1wj
+  rotate: true
+  xy: 277, 64
+  size: 28, 15
+  orig: 30, 17
+  offset: 1, 1
+  index: -1
+staff3_1wqq
+  rotate: true
+  xy: 264, 15
+  size: 30, 28
+  orig: 30, 28
+  offset: 0, 0
+  index: -1
+staff3_bdy
+  rotate: true
+  xy: 181, 2
+  size: 28, 40
+  orig: 30, 42
+  offset: 1, 1
+  index: -1
+staff3_hand1
+  rotate: true
+  xy: 216, 33
+  size: 12, 40
+  orig: 12, 40
+  offset: 0, 0
+  index: -1
+staff3_hand2
+  rotate: true
+  xy: 80, 26
+  size: 14, 44
+  orig: 14, 44
+  offset: 0, 0
+  index: -1
+staff3_leg1
+  rotate: true
+  xy: 2, 7
+  size: 17, 47
+  orig: 17, 47
+  offset: 0, 0
+  index: -1
+staff3_leg2
+  rotate: true
+  xy: 51, 7
+  size: 17, 47
+  orig: 17, 47
+  offset: 0, 0
+  index: -1
+staff3_tou
+  rotate: false
+  xy: 80, 42
+  size: 81, 84
+  orig: 83, 86
+  offset: 1, 1
+  index: -1
+staff3_wj
+  rotate: true
+  xy: 243, 47
+  size: 33, 32
+  orig: 33, 32
+  offset: 0, 0
+  index: -1
+staff3_wqq
+  rotate: true
+  xy: 269, 94
+  size: 32, 25
+  orig: 32, 25
+  offset: 0, 0
+  index: -1
+ty
+  rotate: true
+  xy: 243, 82
+  size: 44, 24
+  orig: 54, 26
+  offset: 5, 1
+  index: -1

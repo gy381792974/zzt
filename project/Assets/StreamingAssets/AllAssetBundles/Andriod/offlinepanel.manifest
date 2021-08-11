@@ -1,0 +1,47 @@
+ManifestFileVersion: 0
+CRC: 1598878767
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 71bfc821803049616792fff3f66ca925
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 11f1c629e2c8bcc88319754488b8d7e2
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b9551f23e92cce74493017fa13b6d10a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d85b887af7e6c3f45a2e2d2920d641bc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 60b1c2ab19b0b794db6d3ffbd13b6fdc, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/A_Prefabs/A_UIPanelPrefabs/OffLinePanel.prefab
+Dependencies:
+- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
+- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/fonts
+- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/ui

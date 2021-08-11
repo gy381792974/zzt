@@ -1,0 +1,20 @@
+
+ui_1007.png
+size: 455,272
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+ball1
+  rotate: false
+  xy: 272, 87
+  size: 181, 183
+  orig: 198, 195
+  offset: 8, 6
+  index: -1
+ballg
+  rotate: false
+  xy: 2, 2
+  size: 268, 268
+  orig: 278, 278
+  offset: 5, 5
+  index: -1

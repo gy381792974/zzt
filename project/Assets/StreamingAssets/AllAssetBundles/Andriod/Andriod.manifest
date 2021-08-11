@@ -1,0 +1,490 @@
+ManifestFileVersion: 0
+CRC: 612477460
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: sharetextures
+      Dependencies: {}
+    Info_1:
+      Name: pausepanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: ui
+    Info_2:
+      Name: cn
+      Dependencies: {}
+    Info_3:
+      Name: card
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_4:
+      Name: facilitypanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_5:
+      Name: shopnewpanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: starpanel
+        Dependency_2: goldpanel
+        Dependency_3: fonts
+    Info_6:
+      Name: starpanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_7:
+      Name: mainpanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: starpanel
+        Dependency_2: goldpanel
+        Dependency_3: fonts
+        Dependency_4: bottle
+    Info_8:
+      Name: builddetailspanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_9:
+      Name: capsule
+      Dependencies: {}
+    Info_10:
+      Name: goldpanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_11:
+      Name: rolemagicianback
+      Dependencies: {}
+    Info_12:
+      Name: helppanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_13:
+      Name: cus3
+      Dependencies:
+        Dependency_0: roledancinggirlback
+        Dependency_1: roledancinggirl
+    Info_14:
+      Name: rolemagician
+      Dependencies: {}
+    Info_15:
+      Name: rolecardpanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_16:
+      Name: roledancinggirlback
+      Dependencies: {}
+    Info_17:
+      Name: en
+      Dependencies: {}
+    Info_18:
+      Name: fonts
+      Dependencies: {}
+    Info_19:
+      Name: effectgreen_txt
+      Dependencies:
+        Dependency_0: fonts
+    Info_20:
+      Name: fangkuangingpanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_21:
+      Name: roledancinggirl
+      Dependencies: {}
+    Info_22:
+      Name: sitpos1
+      Dependencies: {}
+    Info_23:
+      Name: roleclownback
+      Dependencies: {}
+    Info_24:
+      Name: textbiaoti_img
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_25:
+      Name: roleclown
+      Dependencies: {}
+    Info_26:
+      Name: beizhu
+      Dependencies: {}
+    Info_27:
+      Name: cardbgpanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_28:
+      Name: normalrole2back
+      Dependencies: {}
+    Info_29:
+      Name: settingpanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_30:
+      Name: buildani
+      Dependencies: {}
+    Info_31:
+      Name: normalrole2
+      Dependencies: {}
+    Info_32:
+      Name: materials
+      Dependencies: {}
+    Info_33:
+      Name: redpoint_obj
+      Dependencies:
+        Dependency_0: sharetextures
+    Info_34:
+      Name: normalrole1back
+      Dependencies: {}
+    Info_35:
+      Name: cus4
+      Dependencies:
+        Dependency_0: rolemagician
+    Info_36:
+      Name: victorypanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_37:
+      Name: normalrole1
+      Dependencies: {}
+    Info_38:
+      Name: buildtex
+      Dependencies: {}
+    Info_39:
+      Name: roledialoguepanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_40:
+      Name: sounds
+      Dependencies: {}
+    Info_41:
+      Name: effectred_txt
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_42:
+      Name: guidespanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: card
+        Dependency_2: fonts
+    Info_43:
+      Name: testtexture
+      Dependencies: {}
+    Info_44:
+      Name: cus2
+      Dependencies:
+        Dependency_0: roleclown
+    Info_45:
+      Name: startpanel
+      Dependencies:
+        Dependency_0: sharetextures
+    Info_46:
+      Name: itemprop
+      Dependencies: {}
+    Info_47:
+      Name: square
+      Dependencies: {}
+    Info_48:
+      Name: item
+      Dependencies: {}
+    Info_49:
+      Name: ui
+      Dependencies: {}
+    Info_50:
+      Name: coin
+      Dependencies:
+        Dependency_0: coin_material
+    Info_51:
+      Name: clowngamepanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_52:
+      Name: comrewardpanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+        Dependency_2: itemprop
+    Info_53:
+      Name: itembuypanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_54:
+      Name: rolemapinfopanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+        Dependency_2: cusicon
+    Info_55:
+      Name: rolemappanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+        Dependency_2: cusicon
+    Info_56:
+      Name: dancinggirlgamepanel
+      Dependencies:
+        Dependency_0: sharetextures
+    Info_57:
+      Name: magicgamepanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_58:
+      Name: maskpanel
+      Dependencies: {}
+    Info_59:
+      Name: starnotenough
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_60:
+      Name: cubegameitem
+      Dependencies:
+        Dependency_0: square
+    Info_61:
+      Name: cubemainpanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_62:
+      Name: staff1
+      Dependencies: {}
+    Info_63:
+      Name: staff2
+      Dependencies: {}
+    Info_64:
+      Name: staff3
+      Dependencies: {}
+    Info_65:
+      Name: coin_material
+      Dependencies:
+        Dependency_0: coin_img
+    Info_66:
+      Name: offlinepanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+        Dependency_2: ui
+    Info_67:
+      Name: tippanel
+      Dependencies:
+        Dependency_0: fonts
+    Info_68:
+      Name: cusnor1
+      Dependencies: {}
+    Info_69:
+      Name: cusnor2
+      Dependencies: {}
+    Info_70:
+      Name: cusnor3
+      Dependencies: {}
+    Info_71:
+      Name: cusnor4
+      Dependencies: {}
+    Info_72:
+      Name: cusnor5
+      Dependencies: {}
+    Info_73:
+      Name: cusnor6
+      Dependencies: {}
+    Info_74:
+      Name: cusnor7
+      Dependencies: {}
+    Info_75:
+      Name: cubeguide
+      Dependencies: {}
+    Info_76:
+      Name: cusicon
+      Dependencies: {}
+    Info_77:
+      Name: clownpdpanel
+      Dependencies: {}
+    Info_78:
+      Name: cubefailpanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+        Dependency_2: coin_img
+    Info_79:
+      Name: screenhandlepanel
+      Dependencies:
+        Dependency_0: materials
+    Info_80:
+      Name: ttgypypanel
+      Dependencies: {}
+    Info_81:
+      Name: ttgypypanel2
+      Dependencies: {}
+    Info_82:
+      Name: comdialogpanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_83:
+      Name: guidepanel
+      Dependencies: {}
+    Info_84:
+      Name: staffpanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+        Dependency_2: cusicon
+    Info_85:
+      Name: cook
+      Dependencies:
+        Dependency_0: staff3
+    Info_86:
+      Name: reception
+      Dependencies:
+        Dependency_0: staff1
+    Info_87:
+      Name: waiter
+      Dependencies:
+        Dependency_0: staff2
+    Info_88:
+      Name: buildcollect
+      Dependencies:
+        Dependency_0: fonts
+    Info_89:
+      Name: buildflytxt
+      Dependencies:
+        Dependency_0: fonts
+    Info_90:
+      Name: cusnor8
+      Dependencies: {}
+    Info_91:
+      Name: bottle
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_92:
+      Name: foodicon
+      Dependencies: {}
+    Info_93:
+      Name: newrole
+      Dependencies: {}
+    Info_94:
+      Name: areaunlockpanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+        Dependency_2: buildtex
+    Info_95:
+      Name: bubblepanel
+      Dependencies:
+        Dependency_0: bubble
+    Info_96:
+      Name: buildupgradepanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+        Dependency_2: buildtex
+        Dependency_3: foodicon
+    Info_97:
+      Name: chairpanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_98:
+      Name: cookpanel
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_99:
+      Name: bubble
+      Dependencies:
+        Dependency_0: sharetextures
+        Dependency_1: fonts
+    Info_100:
+      Name: goldspine
+      Dependencies:
+        Dependency_0: sharetextures
+    Info_101:
+      Name: toggle
+      Dependencies:
+        Dependency_0: sharetextures
+    Info_102:
+      Name: adorn_data
+      Dependencies: {}
+    Info_103:
+      Name: appconst_data
+      Dependencies: {}
+    Info_104:
+      Name: buildarea_data
+      Dependencies: {}
+    Info_105:
+      Name: buildcommboinital_data
+      Dependencies: {}
+    Info_106:
+      Name: buildinital_data
+      Dependencies: {}
+    Info_107:
+      Name: buildmaskarea_data
+      Dependencies: {}
+    Info_108:
+      Name: chair_data
+      Dependencies: {}
+    Info_109:
+      Name: cubeconfig_data
+      Dependencies: {}
+    Info_110:
+      Name: cubeitem_data
+      Dependencies: {}
+    Info_111:
+      Name: cube_data
+      Dependencies: {}
+    Info_112:
+      Name: cusfashion_data
+      Dependencies: {}
+    Info_113:
+      Name: customernorbubble_data
+      Dependencies: {}
+    Info_114:
+      Name: customernormal_data
+      Dependencies: {}
+    Info_115:
+      Name: customerspecial_data
+      Dependencies: {}
+    Info_116:
+      Name: equip_data
+      Dependencies: {}
+    Info_117:
+      Name: guidestep_data
+      Dependencies: {}
+    Info_118:
+      Name: item_data
+      Dependencies: {}
+    Info_119:
+      Name: kitchen_data
+      Dependencies: {}
+    Info_120:
+      Name: splitarray_data
+      Dependencies: {}
+    Info_121:
+      Name: staff_data
+      Dependencies: {}
+    Info_122:
+      Name: staff_level_data
+      Dependencies: {}
+    Info_123:
+      Name: stalllevel_data
+      Dependencies: {}
+    Info_124:
+      Name: stall_data
+      Dependencies: {}
+    Info_125:
+      Name: coin_img
+      Dependencies: {}

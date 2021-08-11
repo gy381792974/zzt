@@ -1,0 +1,55 @@
+
+fk_003.png
+size: 179,807
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+b_1
+  rotate: true
+  xy: 2, 662
+  size: 143, 145
+  orig: 210, 221
+  offset: 39, 41
+  index: -1
+b_2
+  rotate: true
+  xy: 2, 662
+  size: 143, 145
+  orig: 210, 221
+  offset: 39, 41
+  index: -1
+b_3
+  rotate: true
+  xy: 2, 188
+  size: 160, 173
+  orig: 210, 221
+  offset: 27, 29
+  index: -1
+b_4
+  rotate: true
+  xy: 2, 188
+  size: 160, 173
+  orig: 210, 221
+  offset: 27, 29
+  index: -1
+b_5
+  rotate: true
+  xy: 2, 350
+  size: 157, 165
+  orig: 210, 221
+  offset: 38, 28
+  index: -1
+fk03_1
+  rotate: false
+  xy: 2, 2
+  size: 175, 184
+  orig: 176, 185
+  offset: 0, 1
+  index: -1
+fk03_1g
+  rotate: true
+  xy: 2, 509
+  size: 151, 158
+  orig: 155, 161
+  offset: 2, 2
+  index: -1

@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 733341316
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2676b315c7887369a5f8d979314ecb6b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ed358ef916c60c59c5016d4fa9dc27c5
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: a5056dc16a84ae244bf5b98ad9c1d492, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: cc3bde2296cfd40488cc00b3e5cd540f, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/A_Prefabs/A_UIPanelPrefabs/BubblePanel.prefab
+Dependencies:
+- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/bubble

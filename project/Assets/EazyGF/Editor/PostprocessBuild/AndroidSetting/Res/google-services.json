@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "917862608347",
+    "firebase_url": "https://drive-in-d211b.firebaseio.com",
+    "project_id": "drive-in-d211b",
+    "storage_bucket": "drive-in-d211b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917862608347:android:8b0f80aa5334f6bf",
+        "android_client_info": {
+          "package_name": "com.acoingames.Idle.drivein"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917862608347-k2rc5jmoarmaimd4it9noqha0kou6ccu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu8z2Ahz8lMO_0mhMupfXqvj8512O-GBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917862608347-k2rc5jmoarmaimd4it9noqha0kou6ccu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "917862608347-bs6fpq0efa72ufhcvp2bei5do8ikb27o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.longames.idle.drivein1",
+                "app_store_id": "1460115522"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917862608347:android:32ac9ec54486eb0f9f4bfe",
+        "android_client_info": {
+          "package_name": "com.acoingames.idle.drive.in"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917862608347-k2rc5jmoarmaimd4it9noqha0kou6ccu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu8z2Ahz8lMO_0mhMupfXqvj8512O-GBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917862608347-k2rc5jmoarmaimd4it9noqha0kou6ccu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "917862608347-bs6fpq0efa72ufhcvp2bei5do8ikb27o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.longames.idle.drivein1",
+                "app_store_id": "1460115522"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

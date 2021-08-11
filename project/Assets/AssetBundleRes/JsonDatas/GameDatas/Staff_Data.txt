@@ -1,0 +1,18 @@
+﻿[
+	{
+		"ID":1,		"bz":"前台",		"Name":[12,3],		"IconName":"1",		"ObjType":0,		"ObjName":[12,1],		"SpecialSkill":[12,2],		"SkillType":0,		"Path":"reception",		"UnlockDes":[11,16],		"UnlockParam":12001	},
+	{
+		"ID":2,		"bz":"服务员",		"Name":[12,6],		"IconName":"2",		"ObjType":1,		"ObjName":[12,4],		"SpecialSkill":[12,5],		"SkillType":1,		"Path":"waiter",		"UnlockDes":[11,16],		"UnlockParam":12002	},
+	{
+		"ID":3,		"bz":"厨师1",		"Name":[12,19],		"IconName":"3",		"ObjType":2,		"ObjName":[12,16],		"SpecialSkill":[12,17],		"SkillType":2,		"Path":"cook",		"UnlockDes":[11,16],		"UnlockParam":12003	},
+	{
+		"ID":4,		"bz":"厨师2",		"Name":[12,20],		"IconName":"4",		"ObjType":2,		"ObjName":[12,16],		"SpecialSkill":[12,17],		"SkillType":2,		"Path":"cook",		"UnlockDes":[11,16],		"UnlockParam":12004	},
+	{
+		"ID":5,		"bz":"厨师3",		"Name":[12,21],		"IconName":"5",		"ObjType":2,		"ObjName":[12,16],		"SpecialSkill":[12,17],		"SkillType":2,		"Path":"cook",		"UnlockDes":[11,16],		"UnlockParam":12005	},
+	{
+		"ID":6,		"bz":"蛋糕柜服务员",		"Name":[12,15],		"IconName":"6",		"ObjType":1,		"ObjName":[12,13],		"SpecialSkill":[12,14],		"SkillType":1,		"Path":"waiter",		"UnlockDes":[11,16],		"UnlockParam":12006	},
+	{
+		"ID":7,		"bz":"果汁机服务员",		"Name":[12,12],		"IconName":"7",		"ObjType":1,		"ObjName":[12,10],		"SpecialSkill":[12,11],		"SkillType":1,		"Path":"waiter",		"UnlockDes":[11,16],		"UnlockParam":12007	},
+	{
+		"ID":8,		"bz":"吧台调酒师",		"Name":[12,9],		"IconName":"8",		"ObjType":1,		"ObjName":[12,7],		"SpecialSkill":[12,8],		"SkillType":1,		"Path":"waiter",		"UnlockDes":[11,16],		"UnlockParam":12008	}
+]

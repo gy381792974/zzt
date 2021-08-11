@@ -1,0 +1,40 @@
+ManifestFileVersion: 0
+CRC: 1559720970
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4cf32d0d1d906cfc9a5d8b71f75ad2a1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c81949c45ec37b6bf355243ae861c8ab
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 7925bcc534c7c7640a3eed07829ca353, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3c54b6d773c8b494bb891d03ccd138a5, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/A_Prefabs/A_UIPanelPrefabs/StarNotEnough.prefab
+Dependencies:
+- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
+- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/fonts

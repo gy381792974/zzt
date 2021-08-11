@@ -1,0 +1,76 @@
+
+ui_1011.png
+size: 988,536
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+pause_bt
+  rotate: false
+  xy: 657, 121
+  size: 112, 112
+  orig: 118, 118
+  offset: 3, 3
+  index: -1
+pause_home
+  rotate: false
+  xy: 771, 75
+  size: 47, 44
+  orig: 49, 46
+  offset: 1, 1
+  index: -1
+pause_mz1
+  rotate: false
+  xy: 771, 121
+  size: 112, 112
+  orig: 118, 118
+  offset: 3, 3
+  index: -1
+pause_mz2
+  rotate: false
+  xy: 657, 7
+  size: 112, 112
+  orig: 118, 118
+  offset: 3, 3
+  index: -1
+pause_off
+  rotate: false
+  xy: 853, 257
+  size: 54, 41
+  orig: 56, 43
+  offset: 1, 1
+  index: -1
+pause_on
+  rotate: false
+  xy: 909, 257
+  size: 48, 41
+  orig: 50, 43
+  offset: 1, 1
+  index: -1
+pause_start
+  rotate: false
+  xy: 657, 418
+  size: 329, 116
+  orig: 335, 122
+  offset: 3, 3
+  index: -1
+pause_sx
+  rotate: false
+  xy: 657, 300
+  size: 329, 116
+  orig: 335, 122
+  offset: 3, 3
+  index: -1
+pause_txt
+  rotate: false
+  xy: 657, 235
+  size: 194, 63
+  orig: 198, 66
+  offset: 2, 1
+  index: -1
+pause_uid
+  rotate: true
+  xy: 2, 2
+  size: 532, 653
+  orig: 534, 655
+  offset: 1, 1
+  index: -1

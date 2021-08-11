@@ -1,0 +1,62 @@
+ManifestFileVersion: 0
+CRC: 3506120746
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3136b07446da5022daa5edba471d995f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 99c6fef18671c73d48a68266bd1e521a
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: ffcd70b09b808424fae7ac36e1e9d356, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b9551f23e92cce74493017fa13b6d10a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 74374cb77b4eae54a9567763bcf79b09, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3c54b6d773c8b494bb891d03ccd138a5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d85b887af7e6c3f45a2e2d2920d641bc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 63fd272c6e91a664684b1eaa74b1453b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dcf1320f85d9d5340bc13deebd561eac, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/A_Prefabs/A_UIPanelPrefabs/CubeMainPanel.prefab
+Dependencies:
+- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
+- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/fonts

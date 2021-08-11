@@ -1,0 +1,66 @@
+﻿[
+	{
+		"ID":32001,		"bz":"雏菊花坛",		"Level":1,		"UnlockCoin":0,		"NeedStar":0,		"CapacityNum":0,		"BuildName":[6,2],		"BuildIntro":[9,2],		"Desc":[1,1,1,1],		"Path":"decoration_20021",		"IconName":"shop_decoration_20011",		"ExtraGold":12	},
+	{
+		"ID":32001,		"bz":"金盏花花坛",		"Level":2,		"UnlockCoin":42000,		"NeedStar":5,		"CapacityNum":0,		"BuildName":[6,3],		"BuildIntro":[9,3],		"Desc":[1,1,2,2],		"Path":"decoration_20022",		"IconName":"shop_decoration_20012",		"ExtraGold":24	},
+	{
+		"ID":32001,		"bz":"天竺葵花坛",		"Level":3,		"UnlockCoin":860000,		"NeedStar":10,		"CapacityNum":0,		"BuildName":[6,4],		"BuildIntro":[9,4],		"Desc":[1,1],		"Path":"decoration_20023",		"IconName":"shop_decoration_20013",		"ExtraGold":40	},
+	{
+		"ID":32001,		"bz":"茑萝松花坛",		"Level":4,		"UnlockCoin":2350000,		"NeedStar":20,		"CapacityNum":0,		"BuildName":[6,5],		"BuildIntro":[9,5],		"Desc":[1,1,1,1],		"Path":"decoration_20024",		"IconName":"shop_decoration_20014",		"ExtraGold":60	},
+	{
+		"ID":32002,		"bz":"普通招待台",		"Level":1,		"UnlockCoin":0,		"NeedStar":0,		"CapacityNum":0,		"BuildName":[6,7],		"BuildIntro":[9,7],		"Desc":[1,1,2,2],		"Path":"decoration_20051",		"IconName":"shop_decoration_20021",		"ExtraGold":2	},
+	{
+		"ID":32002,		"bz":"高级招待台",		"Level":2,		"UnlockCoin":30000,		"NeedStar":5,		"CapacityNum":0,		"BuildName":[6,8],		"BuildIntro":[9,8],		"Desc":[1,1],		"Path":"decoration_20052",		"IconName":"shop_decoration_20022",		"ExtraGold":5	},
+	{
+		"ID":32002,		"bz":"银牌招待台",		"Level":3,		"UnlockCoin":630000,		"NeedStar":3,		"CapacityNum":0,		"BuildName":[6,9],		"BuildIntro":[9,9],		"Desc":[1,1,1,1],		"Path":"decoration_20053",		"IconName":"shop_decoration_20023",		"ExtraGold":10	},
+	{
+		"ID":32002,		"bz":"金牌招待台",		"Level":4,		"UnlockCoin":1800000,		"NeedStar":4,		"CapacityNum":0,		"BuildName":[6,10],		"BuildIntro":[9,10],		"Desc":[1,1,2,2],		"Path":"decoration_20054",		"IconName":"shop_decoration_20024",		"ExtraGold":20	},
+	{
+		"ID":32003,		"bz":"精灵女神雕塑",		"Level":1,		"UnlockCoin":1000,		"NeedStar":10,		"CapacityNum":2,		"BuildName":[6,12],		"BuildIntro":[9,12],		"Desc":[1,1,1,1],		"Path":"decoration_20071",		"IconName":"shop_decoration_20031",		"ExtraGold":10	},
+	{
+		"ID":32003,		"bz":"金羽毛雕塑",		"Level":2,		"UnlockCoin":120000,		"NeedStar":15,		"CapacityNum":2,		"BuildName":[6,13],		"BuildIntro":[9,13],		"Desc":[1,1,2,2],		"Path":"decoration_20072",		"IconName":"shop_decoration_20032",		"ExtraGold":15	},
+	{
+		"ID":32003,		"bz":"古典唱片机",		"Level":3,		"UnlockCoin":300000,		"NeedStar":20,		"CapacityNum":2,		"BuildName":[6,14],		"BuildIntro":[9,14],		"Desc":[1,1],		"Path":"decoration_20073",		"IconName":"shop_decoration_20033",		"ExtraGold":30	},
+	{
+		"ID":32003,		"bz":"小型室内喷泉",		"Level":4,		"UnlockCoin":6500000,		"NeedStar":25,		"CapacityNum":2,		"BuildName":[6,15],		"BuildIntro":[9,15],		"Desc":[1,1,1,1],		"Path":"decoration_20074",		"IconName":"shop_decoration_20034",		"ExtraGold":50	},
+	{
+		"ID":32004,		"bz":"木质花盆",		"Level":1,		"UnlockCoin":500,		"NeedStar":1,		"CapacityNum":2,		"BuildName":[6,17],		"BuildIntro":[9,17],		"Desc":[1,1,2,2],		"Path":"decoration_20081",		"IconName":"shop_decoration_20041",		"ExtraGold":5	},
+	{
+		"ID":32004,		"bz":"大理石花盆",		"Level":2,		"UnlockCoin":70000,		"NeedStar":2,		"CapacityNum":2,		"BuildName":[6,18],		"BuildIntro":[9,18],		"Desc":[1,1],		"Path":"decoration_20082",		"IconName":"shop_decoration_20042",		"ExtraGold":10	},
+	{
+		"ID":32004,		"bz":"方形独立花盆",		"Level":3,		"UnlockCoin":450000,		"NeedStar":3,		"CapacityNum":2,		"BuildName":[6,19],		"BuildIntro":[9,19],		"Desc":[1,1,1,1],		"Path":"decoration_20083",		"IconName":"shop_decoration_20043",		"ExtraGold":20	},
+	{
+		"ID":32004,		"bz":"水族景观花盆",		"Level":4,		"UnlockCoin":3500000,		"NeedStar":4,		"CapacityNum":2,		"BuildName":[6,20],		"BuildIntro":[9,20],		"Desc":[1,1,2,2],		"Path":"decoration_20084",		"IconName":"shop_decoration_20044",		"ExtraGold":30	},
+	{
+		"ID":32005,		"bz":"红毯楼梯",		"Level":1,		"UnlockCoin":0,		"NeedStar":1,		"CapacityNum":0,		"BuildName":[6,22],		"BuildIntro":[9,22],		"Desc":[1,1,1,1],		"Path":"decoration_20091",		"IconName":"shop_decoration_20051",		"ExtraGold":2	},
+	{
+		"ID":32005,		"bz":"黑酸枝楼梯",		"Level":2,		"UnlockCoin":5000,		"NeedStar":2,		"CapacityNum":0,		"BuildName":[6,23],		"BuildIntro":[9,23],		"Desc":[1,1,2,2],		"Path":"decoration_20092",		"IconName":"shop_decoration_20052",		"ExtraGold":5	},
+	{
+		"ID":32005,		"bz":"时尚青年楼梯",		"Level":3,		"UnlockCoin":40000,		"NeedStar":3,		"CapacityNum":0,		"BuildName":[6,24],		"BuildIntro":[9,24],		"Desc":[1,1],		"Path":"decoration_20093",		"IconName":"shop_decoration_20053",		"ExtraGold":10	},
+	{
+		"ID":32005,		"bz":"玻璃镂空楼梯",		"Level":4,		"UnlockCoin":200000,		"NeedStar":4,		"CapacityNum":0,		"BuildName":[6,25],		"BuildIntro":[9,25],		"Desc":[1,1,1,1],		"Path":"decoration_20094",		"IconName":"shop_decoration_20054",		"ExtraGold":20	},
+	{
+		"ID":32006,		"bz":"精致的花坛",		"Level":1,		"UnlockCoin":500,		"NeedStar":1,		"CapacityNum":2,		"BuildName":[6,27],		"BuildIntro":[9,27],		"Desc":[1,1],		"Path":"decoration_20061",		"IconName":"shop_decoration_20061",		"ExtraGold":5	},
+	{
+		"ID":32006,		"bz":"典雅的花坛",		"Level":2,		"UnlockCoin":15000,		"NeedStar":2,		"CapacityNum":2,		"BuildName":[6,28],		"BuildIntro":[9,28],		"Desc":[1,1,1,1],		"Path":"decoration_20062",		"IconName":"shop_decoration_20062",		"ExtraGold":10	},
+	{
+		"ID":32006,		"bz":"精巧的花坛",		"Level":3,		"UnlockCoin":48000,		"NeedStar":3,		"CapacityNum":2,		"BuildName":[6,29],		"BuildIntro":[9,29],		"Desc":[1,1],		"Path":"decoration_20063",		"IconName":"shop_decoration_20063",		"ExtraGold":20	},
+	{
+		"ID":32006,		"bz":"别致的花坛",		"Level":4,		"UnlockCoin":120000,		"NeedStar":4,		"CapacityNum":2,		"BuildName":[6,30],		"BuildIntro":[9,30],		"Desc":[1,1,1,1],		"Path":"decoration_20064",		"IconName":"shop_decoration_20064",		"ExtraGold":30	},
+	{
+		"ID":32007,		"bz":"珍珠路灯",		"Level":1,		"UnlockCoin":1500,		"NeedStar":1,		"CapacityNum":0,		"BuildName":[6,32],		"BuildIntro":[9,32],		"Desc":[1,1,2,2],		"Path":"decoration_200101",		"IconName":"shop_decoration_20071",		"ExtraGold":5	},
+	{
+		"ID":32007,		"bz":"经典路灯",		"Level":2,		"UnlockCoin":22000,		"NeedStar":2,		"CapacityNum":0,		"BuildName":[6,33],		"BuildIntro":[9,33],		"Desc":[1,1],		"Path":"decoration_200102",		"IconName":"shop_decoration_20072",		"ExtraGold":10	},
+	{
+		"ID":32007,		"bz":"伞状路灯",		"Level":3,		"UnlockCoin":50000,		"NeedStar":3,		"CapacityNum":0,		"BuildName":[6,34],		"BuildIntro":[9,34],		"Desc":[1,1,1,1],		"Path":"decoration_200103",		"IconName":"shop_decoration_20073",		"ExtraGold":20	},
+	{
+		"ID":32007,		"bz":"天使路灯",		"Level":4,		"UnlockCoin":260000,		"NeedStar":4,		"CapacityNum":0,		"BuildName":[6,35],		"BuildIntro":[9,35],		"Desc":[1,1,2,2],		"Path":"decoration_200104",		"IconName":"shop_decoration_20074",		"ExtraGold":30	},
+	{
+		"ID":32008,		"bz":"纯洁浪漫花篮",		"Level":1,		"UnlockCoin":1500,		"NeedStar":5,		"CapacityNum":0,		"BuildName":[6,37],		"BuildIntro":[9,37],		"Desc":[1,1,2,2],		"Path":"decoration_200111",		"IconName":"shop_decoration_20081",		"ExtraGold":5	},
+	{
+		"ID":32008,		"bz":"热带雨林花篮",		"Level":2,		"UnlockCoin":22000,		"NeedStar":10,		"CapacityNum":0,		"BuildName":[6,38],		"BuildIntro":[9,38],		"Desc":[1,1],		"Path":"decoration_200112",		"IconName":"shop_decoration_20082",		"ExtraGold":10	},
+	{
+		"ID":32008,		"bz":"夏威夷风情花篮",		"Level":3,		"UnlockCoin":50000,		"NeedStar":15,		"CapacityNum":0,		"BuildName":[6,39],		"BuildIntro":[9,39],		"Desc":[1,1,1,1],		"Path":"decoration_200113",		"IconName":"shop_decoration_20083",		"ExtraGold":20	},
+	{
+		"ID":32008,		"bz":"小镇故事花篮",		"Level":4,		"UnlockCoin":260000,		"NeedStar":20,		"CapacityNum":0,		"BuildName":[6,40],		"BuildIntro":[9,40],		"Desc":[1,1,2,2],		"Path":"decoration_200114",		"IconName":"shop_decoration_20084",		"ExtraGold":30	}
+]

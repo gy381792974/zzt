@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 420773342
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ef3f80f6c7889a7c880f830d15aa7daa
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8a9948e9b15edd8376aa6fd3012e9ae1
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 45b5fec1eef752f4d853fe0160de2756, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 722ce11b1d41e0843924bff1a0ed6ca4, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/A_Prefabs/Customer/cus3.prefab
+Dependencies:
+- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/roledancinggirlback
+- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/roledancinggirl

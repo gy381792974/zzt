@@ -1,0 +1,48 @@
+
+ui_1009.png
+size: 166,126
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+star1_playing
+  rotate: false
+  xy: 2, 3
+  size: 35, 34
+  orig: 45, 46
+  offset: 5, 6
+  index: -1
+star2_playing
+  rotate: true
+  xy: 39, 2
+  size: 35, 34
+  orig: 45, 46
+  offset: 5, 6
+  index: -1
+star_g
+  rotate: true
+  xy: 93, 55
+  size: 69, 65
+  orig: 71, 67
+  offset: 1, 1
+  index: -1
+star_g1
+  rotate: false
+  xy: 2, 39
+  size: 89, 85
+  orig: 91, 87
+  offset: 1, 1
+  index: -1
+star_g2
+  rotate: false
+  xy: 144, 33
+  size: 20, 20
+  orig: 22, 21
+  offset: 1, 0
+  index: -1
+star_g3
+  rotate: false
+  xy: 93, 4
+  size: 49, 49
+  orig: 53, 53
+  offset: 2, 2
+  index: -1

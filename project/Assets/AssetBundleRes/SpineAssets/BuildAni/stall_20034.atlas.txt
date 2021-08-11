@@ -1,0 +1,20 @@
+
+stall_20034.png
+size: 256,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sushi_4_bdy
+  rotate: true
+  xy: 2, 2
+  size: 97, 126
+  orig: 99, 128
+  offset: 1, 1
+  index: -1
+sushi_4_hand
+  rotate: false
+  xy: 130, 45
+  size: 30, 54
+  orig: 32, 56
+  offset: 1, 1
+  index: -1

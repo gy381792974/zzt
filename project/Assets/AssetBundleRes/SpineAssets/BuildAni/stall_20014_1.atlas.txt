@@ -1,0 +1,13 @@
+
+stall_20014_1.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+pizza_4_1
+  rotate: false
+  xy: 2, 2
+  size: 176, 164
+  orig: 176, 164
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,76 @@
+
+role_2003_back.png
+size: 212,78
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+role_2003_bdy
+  rotate: false
+  xy: 124, 24
+  size: 32, 52
+  orig: 32, 52
+  offset: 0, 0
+  index: -1
+role_2003_hand1
+  rotate: true
+  xy: 124, 8
+  size: 14, 43
+  orig: 14, 43
+  offset: 0, 0
+  index: -1
+role_2003_hand2
+  rotate: true
+  xy: 169, 15
+  size: 15, 39
+  orig: 15, 39
+  offset: 0, 0
+  index: -1
+role_2003_hat
+  rotate: true
+  xy: 2, 2
+  size: 74, 60
+  orig: 76, 62
+  offset: 1, 1
+  index: -1
+role_2003_head
+  rotate: false
+  xy: 64, 12
+  size: 58, 64
+  orig: 60, 66
+  offset: 1, 1
+  index: -1
+role_2003_leg1
+  rotate: true
+  xy: 184, 60
+  size: 16, 26
+  orig: 16, 26
+  offset: 0, 0
+  index: -1
+role_2003_leg2
+  rotate: false
+  xy: 169, 4
+  size: 16, 9
+  orig: 18, 11
+  offset: 1, 1
+  index: -1
+role_2003_leg3
+  rotate: false
+  xy: 184, 32
+  size: 16, 26
+  orig: 16, 26
+  offset: 0, 0
+  index: -1
+role_2003_leg4
+  rotate: false
+  xy: 187, 4
+  size: 15, 9
+  orig: 17, 11
+  offset: 1, 1
+  index: -1
+ty
+  rotate: true
+  xy: 158, 32
+  size: 44, 24
+  orig: 54, 26
+  offset: 5, 1
+  index: -1

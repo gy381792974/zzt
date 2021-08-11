@@ -1,0 +1,97 @@
+
+staff7.png
+size: 235,78
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+staf7_1
+  rotate: true
+  xy: 2, 11
+  size: 65, 83
+  orig: 67, 85
+  offset: 1, 1
+  index: -1
+staf7_10
+  rotate: true
+  xy: 176, 18
+  size: 12, 36
+  orig: 14, 38
+  offset: 1, 1
+  index: -1
+staf7_11
+  rotate: false
+  xy: 87, 33
+  size: 50, 43
+  orig: 52, 45
+  offset: 1, 1
+  index: -1
+staf7_2
+  rotate: true
+  xy: 139, 36
+  size: 13, 40
+  orig: 15, 42
+  offset: 1, 1
+  index: -1
+staf7_3
+  rotate: true
+  xy: 139, 51
+  size: 25, 55
+  orig: 25, 55
+  offset: 0, 0
+  index: -1
+staf7_4
+  rotate: true
+  xy: 87, 2
+  size: 29, 36
+  orig: 31, 38
+  offset: 1, 1
+  index: -1
+staf7_5
+  rotate: true
+  xy: 125, 2
+  size: 29, 28
+  orig: 31, 30
+  offset: 1, 1
+  index: -1
+staf7_6
+  rotate: true
+  xy: 194, 7
+  size: 9, 33
+  orig: 11, 35
+  offset: 1, 1
+  index: -1
+staf7_7
+  rotate: false
+  xy: 176, 2
+  size: 16, 14
+  orig: 20, 16
+  offset: 3, 1
+  index: -1
+staf7_8
+  rotate: false
+  xy: 222, 40
+  size: 10, 36
+  orig: 12, 38
+  offset: 1, 1
+  index: -1
+staf7_9
+  rotate: false
+  xy: 222, 26
+  size: 11, 12
+  orig: 13, 14
+  offset: 1, 1
+  index: -1
+staf7_by
+  rotate: true
+  xy: 155, 8
+  size: 26, 19
+  orig: 34, 25
+  offset: 4, 3
+  index: -1
+ty
+  rotate: true
+  xy: 196, 32
+  size: 44, 24
+  orig: 54, 26
+  offset: 5, 1
+  index: -1

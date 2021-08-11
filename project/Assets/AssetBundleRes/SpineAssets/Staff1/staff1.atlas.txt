@@ -1,0 +1,76 @@
+
+staff1.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+staff1_bdy
+  rotate: true
+  xy: 2, 2
+  size: 35, 54
+  orig: 35, 54
+  offset: 0, 0
+  index: -1
+staff1_e
+  rotate: true
+  xy: 116, 109
+  size: 4, 10
+  orig: 7, 12
+  offset: 2, 1
+  index: -1
+staff1_eye
+  rotate: false
+  xy: 86, 38
+  size: 28, 18
+  orig: 29, 19
+  offset: 1, 0
+  index: -1
+staff1_hand1
+  rotate: false
+  xy: 70, 42
+  size: 14, 45
+  orig: 14, 45
+  offset: 0, 0
+  index: -1
+staff1_hand2
+  rotate: true
+  xy: 86, 74
+  size: 13, 40
+  orig: 13, 40
+  offset: 0, 0
+  index: -1
+staff1_leg1
+  rotate: false
+  xy: 58, 8
+  size: 13, 29
+  orig: 15, 31
+  offset: 1, 1
+  index: -1
+staff1_leg2
+  rotate: true
+  xy: 86, 58
+  size: 14, 35
+  orig: 16, 37
+  offset: 1, 1
+  index: -1
+staff1_qz
+  rotate: false
+  xy: 73, 15
+  size: 27, 21
+  orig: 29, 23
+  offset: 1, 1
+  index: -1
+staff1_tou
+  rotate: false
+  xy: 2, 39
+  size: 66, 74
+  orig: 68, 76
+  offset: 1, 1
+  index: -1
+ty
+  rotate: false
+  xy: 70, 89
+  size: 44, 24
+  orig: 54, 26
+  offset: 5, 1
+  index: -1

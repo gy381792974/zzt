@@ -1,0 +1,177 @@
+ManifestFileVersion: 0
+CRC: 3391632685
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e74a142e981187f9b57603f8ecc7c6d8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 21482870528e7d2628a6440114387582
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20064_3_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20062.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20064_2.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20064_1.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20092.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20014_2_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20034_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20033_1.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20033_1.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20064_3_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20092_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20064_3.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20064_3.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20091_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20034_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20044_1_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20024_2_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20014_1_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20064_3_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20023.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20062.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20032_1.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20083_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20033_1_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20083.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20084.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20092_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20013_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20032_2.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20063.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20013.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20033_2_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20013.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20043_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20024_1.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20024_2_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20092.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20084_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20044_2_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20044_2_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20032_2_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20092_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20044_2.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20033_2_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20064_2.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20014_1.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20024_1.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20043.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20044_1.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20044_2.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20084.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20091_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20033_2_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20063.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20053.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20032_2.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20023_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20053.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20013_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20063_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20062_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20032_2_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20023_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20064_1_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20033_1.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20034_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20044_1_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20053_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20091.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20083_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20143.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20063_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20014_1.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20014_1_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20143.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20023.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20032_1_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20064_2_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20024_1_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20064_1.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20084.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20064_2_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20032_2_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20044_2_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20024_2.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20063.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20044_1.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20024_2.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20053.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20044_1.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20091.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20043_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20034.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20014_2.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20092.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20064_1.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20044_2.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20024_1.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20064_2.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20043.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20091_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20014_2.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20032_2.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20044_1_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20033_2.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20062_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20032_1.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20083.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20034.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20084_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20014_2_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20064_1_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20064_1_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20032_1.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20014_2.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20024_1_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20143_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20143_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20032_1_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20013.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20083.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20023.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20033_2.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20083_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20033_2.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20033_1_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20023_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20084_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20064_3.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20014_2_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20013_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20043_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20014_1.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20091.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20064_2_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20062.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20043.atlas.txt
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20034.json
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20032_1_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20024_1_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20024_2_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20063_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20062_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20053_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20024_2.png
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20143_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20014_1_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20053_Material.mat
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20033_1_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/BuildAni/stall_20143.json
+Dependencies: []

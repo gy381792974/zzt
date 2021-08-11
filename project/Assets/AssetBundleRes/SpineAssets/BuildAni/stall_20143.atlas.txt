@@ -1,0 +1,20 @@
+
+stall_20143.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sha_1
+  rotate: true
+  xy: 2, 2
+  size: 224, 202
+  orig: 224, 202
+  offset: 0, 0
+  index: -1
+sha_2
+  rotate: true
+  xy: 206, 10
+  size: 216, 181
+  orig: 216, 181
+  offset: 0, 0
+  index: -1

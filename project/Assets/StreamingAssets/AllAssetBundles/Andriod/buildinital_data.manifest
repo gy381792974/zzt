@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 666504267
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6dd3a7c2fc87142273ed835f108cd93d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/JsonDatas/GameDatas/BuildInital_Data.txt
+Dependencies: []

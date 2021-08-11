@@ -1,0 +1,20 @@
+﻿[
+	{
+		"ID":1,		"BZ":"二楼包间",		"IsUnLock":0,		"MaskAreaId":1	},
+	{
+		"ID":2,		"BZ":"吧台用餐区",		"IsUnLock":0,		"MaskAreaId":1	},
+	{
+		"ID":3,		"BZ":"普通餐位区",		"IsUnLock":1,		"MaskAreaId":-1	},
+	{
+		"ID":4,		"BZ":"餐厅入口",		"IsUnLock":0,		"MaskAreaId":-1	},
+	{
+		"ID":5,		"BZ":"餐具区",		"IsUnLock":0,		"MaskAreaId":2	},
+	{
+		"ID":6,		"BZ":"卫生间",		"IsUnLock":0,		"MaskAreaId":-1	},
+	{
+		"ID":7,		"BZ":"一楼露台",		"IsUnLock":0,		"MaskAreaId":3	},
+	{
+		"ID":8,		"BZ":"厨房",		"IsUnLock":0,		"MaskAreaId":-1	},
+	{
+		"ID":9,		"BZ":"餐厅出口",		"IsUnLock":0,		"MaskAreaId":-1	}
+]

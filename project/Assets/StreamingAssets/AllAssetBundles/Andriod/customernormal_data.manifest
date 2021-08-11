@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 554454346
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b4de3369e18bf1c110a31222415ad54e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/JsonDatas/GameDatas/CustomerNormal_Data.txt
+Dependencies: []

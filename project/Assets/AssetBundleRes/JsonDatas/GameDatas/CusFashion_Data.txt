@@ -1,0 +1,30 @@
+﻿[
+	{
+		"ID":2,		"StallId":12006,		"GTNum":1,		"FashionId":1	},
+	{
+		"ID":3,		"StallId":12014,		"GTNum":2,		"FashionId":1	},
+	{
+		"ID":4,		"StallId":12002,		"GTNum":3,		"FashionId":1	},
+	{
+		"ID":5,		"StallId":12004,		"GTNum":4,		"FashionId":1	},
+	{
+		"ID":6,		"StallId":12011,		"GTNum":5,		"FashionId":1	},
+	{
+		"ID":7,		"StallId":12008,		"GTNum":6,		"FashionId":1	},
+	{
+		"ID":8,		"StallId":12001,		"GTNum":7,		"FashionId":1	},
+	{
+		"ID":9,		"StallId":12001,		"GTNum":8,		"FashionId":1	},
+	{
+		"ID":10,		"StallId":12001,		"GTNum":9,		"FashionId":1	},
+	{
+		"ID":11,		"StallId":12001,		"GTNum":10,		"FashionId":1	},
+	{
+		"ID":12,		"StallId":12001,		"GTNum":11,		"FashionId":1	},
+	{
+		"ID":13,		"StallId":12001,		"GTNum":12,		"FashionId":1	},
+	{
+		"ID":14,		"StallId":12001,		"GTNum":13,		"FashionId":1	},
+	{
+		"ID":15,		"StallId":12001,		"GTNum":14,		"FashionId":1	}
+]

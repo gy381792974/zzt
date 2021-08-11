@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 2926221073
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0a0ec12b6a857bb0fcd806ace64f831a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 21482870528e7d2628a6440114387582
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/AssetBundleRes/SpineAssets/RoleMagicianBack/role_2003_back_SkeletonData.asset
+- Assets/AssetBundleRes/SpineAssets/RoleMagicianBack/role_2003_back_Material.mat
+- Assets/AssetBundleRes/SpineAssets/RoleMagicianBack/role_2003_back.json
+- Assets/AssetBundleRes/SpineAssets/RoleMagicianBack/role_2003_back_Atlas.asset
+- Assets/AssetBundleRes/SpineAssets/RoleMagicianBack/role_2003_back.png
+- Assets/AssetBundleRes/SpineAssets/RoleMagicianBack/role_2003_back.atlas.txt
+Dependencies: []
