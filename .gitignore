@@ -37,3 +37,9 @@ project/project.sln
 project/.vs/project/v15/Server/sqlite3/storage.ide
 project/.vs/project/v15/Server/sqlite3/storage.ide-shm
 project/.vs/project/v15/Server/sqlite3/storage.ide-wal
+
+project/OtherAssets/
+
+project/Temp/
+
+project/obj/
