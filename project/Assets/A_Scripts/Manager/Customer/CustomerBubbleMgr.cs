@@ -23,12 +23,16 @@ namespace EazyGF
     [System.Serializable]
     public class BubbleSerData
     {
-        public Dictionary<int, int> sCusGTStallDic;
+        public Dictionary<int, int> sCusGTStallDic;  
+
+        public List<int> sCusHappyIds;
     }
 
     public class CustomerBubbleMgr : SingleClass<CustomerBubbleMgr>
     {
         Dictionary<int, int> cusGTStallDic = new Dictionary<int, int>();
+
+        List<int> cusHappyIds = new List<int>();
 
         private bool isUserBubble = true;
 
@@ -66,7 +70,7 @@ namespace EazyGF
                 return;
             }
 
-            if (cn.Data.MustGoStall == -1)
+            if (cn.Data.MustGoStall == -1 || cn.Data.MustGoStall != cn.targetStallId)
             {
                 return;
             }
@@ -78,9 +82,9 @@ namespace EazyGF
 
             if (targetBuildLevel >= needLevel)
             {
-                if (GetGTStallNum(id) == 0)
+                if (IsContainsHappyId(id) || UICommonUtil.Instance.IsFillConditByRotia(30))
                 {
-                    AddGTStallNum(id);
+                    AddHappyCusId(id);
 
                     string txt = LanguageMgr.GetTranstion(cn.BubbleData.HappyTxt);
                     BubbleData bubbleData = new BubbleData(1, txt, cn.transform);
@@ -150,6 +154,19 @@ namespace EazyGF
             return 0;
         }
 
+        public void AddHappyCusId(int id)
+        {
+            if (!cusHappyIds.Contains(id))
+            {
+                cusHappyIds.Add(id);
+            }
+        }
+
+        public bool IsContainsHappyId(int id)
+        {
+            return cusHappyIds.Contains(id);
+        }
+
         public bool ReadData()
         {
             BubbleSerData serData = SerializHelp.DeserializeFileToObj<BubbleSerData>(SavePath, out bool loadSuccess);
@@ -157,6 +174,7 @@ namespace EazyGF
             if (loadSuccess)
             {
                 cusGTStallDic = serData.sCusGTStallDic;
+                cusHappyIds = serData.sCusHappyIds;
             }
 
             return loadSuccess;
@@ -166,6 +184,7 @@ namespace EazyGF
         {
             BubbleSerData serData = new BubbleSerData();
             serData.sCusGTStallDic = cusGTStallDic;
+            serData.sCusHappyIds = cusHappyIds;
             SerializHelp.SerializeFile(SavePath, serData);
         }
     }

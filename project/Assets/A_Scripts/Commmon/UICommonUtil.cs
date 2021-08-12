@@ -211,5 +211,13 @@ namespace EazyGF
         //{
         //    return Color.
         //}
+        
+        //是否满足顾客条件
+        public bool IsFillConditByRotia(int rotia)
+        {
+            int value = UnityEngine.Random.Range(0, 101);
+
+            return rotia <= value;
+        }
     }
 }
