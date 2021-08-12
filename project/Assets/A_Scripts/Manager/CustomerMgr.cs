@@ -234,7 +234,7 @@ namespace EazyGF
             fCNum = (int)obj;
         }
 
-        #region 顾客用餐流程 开始阶段
+        #region 顾客用餐流程
 
         //创建预备解锁的顾客
         public void NCReadyUnLockCreate()
@@ -708,7 +708,9 @@ namespace EazyGF
 
             CustomerBubbleMgr.Instance.TargetBubble(cn);
 
-            yield return new WaitForSeconds(BuildMgr.GetUserBuildStayTimeById(cn.targetStallId));
+            int stayTime = BuildMgr.GetUserBuildStayTimeById(cn.targetStallId);
+
+            yield return new WaitForSeconds(2);
 
             SetBuyFoodEndData(cn);
 
