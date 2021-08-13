@@ -159,7 +159,7 @@ public class BuildEditTool : MonoBehaviour
             bool isShowbox = (i/4 != 5);
             //bool isShowbox = false;
 
-            string name = mName[i].Replace("\r", "");
+            string name = mName[i].Replace("\r", "").Replace("\t", "");
 
             Debug.LogWarning(name + " " + i);
 
@@ -177,81 +177,6 @@ public class BuildEditTool : MonoBehaviour
         }
 
         //buildModelGrid.gameObject.SetActive(false);
-    }
-
-
-    [ContextMenu("TestSetBuildPos")]
-    public void SetSingleBuildPos()
-    {
-        //string str = ReadFile("stall1");
-
-        //string[] mName = str.Split('\n');
-
-        //for (int i = 0; i < mName.Length; i++)
-        //{
-        //    string name = mName[i].Replace("\r", "");
-
-        //    Debug.LogWarning(name + " " + i);
-
-        //    GameObject pre = FindObj(name);
-
-        //    if (pre == null)
-        //    {
-        //        //Debug.LogError(name + " " + i + "  no hava res");
-        //        continue;
-        //    }
-        //    mainSpace.stallList[i / 4].buildPos[i % 4].localPosition = Vector3.zero;
-        //    CreatePre(mainSpace.stallList[i / 4].buildPos[i % 4], pre, true, i % 4 == 0, (i / 4) == 11);
-        //}
-
-        //string str = ReadFile("equip1");
-
-        //string[] mName = str.Split('\n');
-
-        //for (int i = 0; i < mName.Length; i++)
-        //{
-        //    string name = mName[i].Replace("\r", "").Replace("\t", "");
-
-        //    Debug.LogWarning(name + " " + i);
-
-        //    GameObject pre = FindObj(name);
-
-        //    if (pre == null)
-        //    {
-        //        //Debug.LogError(name + " " + i + "  no hava res");
-        //        continue;
-        //    }
-
-        //    mainSpace.equipList[i / 4].buildPos[i % 4].localPosition = Vector3.zero;
-        //    CreatePre(mainSpace.equipList[i / 4].buildPos[i % 4], pre, true, i % 4 == 0);
-        //}
-
-        //str = ReadFile("born1");
-
-        //mName = str.Split('\n');
-
-        //for (int i = 0; i < mName.Length; i++)
-        //{
-        //    bool isShowbox = (i / 4 != 5);
-        //    //bool isShowbox = false;
-
-
-        //    string name = mName[i].Replace("\r", "");
-
-        //    Debug.LogWarning(name + " " + i);
-
-        //    GameObject pre = FindObj(name);
-
-        //    if (pre == null)
-        //    {
-        //        //Debug.LogError(name + " " + i + "  no hava res");
-        //        continue;
-        //    }
-
-        //    mainSpace.adornList[i / 4].buildPos[i % 4].localPosition = Vector3.zero;
-        //    CreatePre(mainSpace.adornList[i / 4].buildPos[i % 4], pre, isShowbox, i % 4 == 0 && isShowbox);
-        //}
-
     }
 
     [ContextMenu("SetShadow")]
@@ -371,33 +296,136 @@ public class BuildEditTool : MonoBehaviour
     }
 
     public EazyGF.BuildArea ba;
-    public Transform buildAreaTf;
-    [ContextMenu("InitBuildArea")]
-    private void InitBuildArea()
+    // public Transform buildAreaTf;
+    //[ContextMenu("InitBuildArea")]
+    //private void InitBuildArea()
+    //{
+    //    string str = ReadFile("stall1");
+
+    //    string[] mName = str.Split('\n');
+
+    //    for (int i = 0; i < 9; i++)
+    //    {
+    //        string name = mName[i * 4].Replace("\r", "");
+
+    //        Debug.LogWarning(name + " " + i);
+
+    //        GameObject pre = FindObj(name, buildAreaTf);
+
+    //        if (pre == null)
+    //        {
+    //            continue;
+    //        }
+
+    //       ba.areaItems[i].transform.position = Vector3.zero;
+
+    //       GameObject go = CreateNewPreToTargetTf(ba.areaItems[i].transform, pre, $"area");
+    //       ba.areaItems[i].areaObj = go;
+    //       CreateBoxByPre(ba.areaItems[i].transform, pre, "box").layer = 14;
+    //    }
+    //}
+
+
+    public Transform stallUnLockTf;
+    public Transform areaGrid;
+    public Transform areaMaskGrid;
+
+    [ContextMenu("SetAreaModel")]
+    public void SetSingleBuildPos()
     {
-        string str = ReadFile("stall1");
+        string str = ReadFile("stall2");
 
         string[] mName = str.Split('\n');
 
-        for (int i = 0; i < 9; i++)
+        for (int i = 0; i < mName.Length; i++)
         {
-            string name = mName[i * 4].Replace("\r", "");
+            string name = mName[i].Replace("\r", "");
 
             Debug.LogWarning(name + " " + i);
 
-            GameObject pre = FindObj(name, buildAreaTf);
+            GameObject pre = FindObj(name, stallUnLockTf, true);
 
             if (pre == null)
             {
                 continue;
             }
 
-           ba.areaItems[i].transform.position = Vector3.zero;
+            CreateNewPreToTargetTf(mainSpace.stallList[i].lockObj.transform, pre, $"obj{i}");
+            CreateBoxByPre(mainSpace.stallList[i].lockObj.transform, pre, $"box{i}").layer = 13;
+        }
 
-           GameObject go = CreateNewPreToTargetTf(ba.areaItems[i].transform, pre, $"area");
-           ba.areaItems[i].areaObj = go;
+        str = ReadFile("area");
+        mName = str.Split('\n');
+        for (int i = 0; i < mName.Length; i++)
+        {
+            string name = mName[i].Replace("\r", "").Replace("\t", "");
 
-           CreateBoxByPre(ba.areaItems[i].transform, pre, "box").layer = 14;
+            Debug.LogWarning(name + " " + i);
+
+            GameObject pre = null;
+
+            if (name == "-1")
+            {
+                //pre = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                //pre.transform.localScale = Vector3.one * 0.01f;
+
+                //pre.transform.position = new Vector3(-33, 11, -8);
+
+                //pre.gameObject.SetActive(false);
+
+                RemoveChild(ba.areaItems[i].transform);
+                continue;
+            }
+            else
+            {
+                pre = FindObj(name, areaGrid, true);
+            }
+
+            if (pre == null)
+            {
+                continue;
+            }
+
+            ba.areaItems[i].transform.position = Vector3.zero;
+
+            GameObject go = CreateNewPreToTargetTf(ba.areaItems[i].transform, pre, $"area");
+            ba.areaItems[i].areaObj = go;
+
+            CreateBoxByPre(ba.areaItems[i].transform, pre, "box").layer = 14;
+
+            if (name == "-1")
+            {
+                GameObject.DestroyImmediate(pre.gameObject);
+            }
+        }
+
+        int index = 1;
+        if (index == 1)
+        {
+            return;
+        }
+
+        str = ReadFile("areaMask");
+        mName = str.Split('\n');
+        for (int i = 0; i < mName.Length; i++)
+        {
+            string name = mName[i].Replace("\r", "").Replace("\t", "");
+
+            Debug.LogWarning(name + " " + i);
+
+            GameObject pre = FindObj(name, areaMaskGrid, true);
+
+            if (pre == null)
+            {
+                continue;
+            }
+
+            ba.buildMaskItems[i].transform.position = Vector3.zero;
+
+            GameObject go = CreateNewPreToTargetTf(ba.buildMaskItems[i].transform, pre, $"areaMaks");
+            ba.buildMaskItems[i].areaObj = go;
+
+            CreateBoxByPre(ba.buildMaskItems[i].transform, pre, "box").layer = 14;
         }
 
     }
@@ -447,6 +475,8 @@ public class BuildEditTool : MonoBehaviour
     
         if (isCreaetUnlockBox)
         {
+            return;
+
             Transform lockTf = root.GetChild(1);
 
             if (lockTf.gameObject.name != "Lock")
@@ -616,6 +646,12 @@ public class BuildEditTool : MonoBehaviour
         Vector3 localScale = pre.transform.localScale * 100;
 
         MeshRenderer mesh = pre.GetComponentInChildren<MeshRenderer>();
+
+        if (name == "-1")
+        {
+            Debug.LogError("name " + mesh);
+        }
+
         if (mesh != null)
         {
             pos = mesh.bounds.center;

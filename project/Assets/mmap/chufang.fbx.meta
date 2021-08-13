@@ -7,7 +7,7 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: chufang
+      name: chufang2
     second: {fileID: 2100000, guid: ddc6cb991c2fceb4da882e8050ccf04d, type: 2}
   materials:
     materialImportMode: 1

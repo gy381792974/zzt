@@ -15,6 +15,11 @@ namespace EazyGF
 
         public void BindData(int id, bool isUnLock, int type)
         {
+            if (areaObj == null)
+            {
+                return;
+            }
+
             areaObj.layer = 14;
 
             this.id = id;
