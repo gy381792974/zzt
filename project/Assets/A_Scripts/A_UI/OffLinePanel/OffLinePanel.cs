@@ -65,7 +65,7 @@ namespace EazyGF
             for (int i = 0; i < StallIds.Count; i++)
             {
                 int level = BuildMgr.GetUserBuildLevelById(StallIds[i]);
-                Adorn_Property adorn = BuildMgr.GetAdorn_Property(Adorn_Data.DataArray[i].ID, level);
+                Adorn_Property adorn = BuildMgr.GetAdorn_Property(StallIds[i], level);
                 sum += adorn.ExtraGold;
             }
             return sum;

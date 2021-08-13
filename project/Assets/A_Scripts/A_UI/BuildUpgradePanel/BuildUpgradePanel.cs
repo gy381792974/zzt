@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
-
+using DG.Tweening;
 namespace EazyGF
 {
     [System.Serializable]
@@ -65,6 +65,7 @@ namespace EazyGF
         int curFoodLevel = 1;
 
         BuildStatus bs;
+        [SerializeField] GameObject FX;
         protected override void OnInit()
         {
             InitAllButton();
@@ -140,9 +141,9 @@ namespace EazyGF
             foodMaxLevel_text.text = $"Lv.{stallLevel.FoodMaxLevel}";
             fill_img.fillAmount = (float)curFoodLevel / stallLevel.FoodMaxLevel;
             //  if (curMeal > stallLevel.TakeMealMax) curMeal = stallLevel.TakeMealMax;
-            mealNum_text.text = "Take a table" + $"{curMeal}/{stallLevel.TakeMealMax}";
+            mealNum_text.text = "Take a table" + $" {curMeal}/ {stallLevel.TakeMealMax}";
             //  if (curQueue > stallLevel.MaxQueueNum) curQueue = stallLevel.MaxQueueNum;
-            queueNum_text.text = "Queuing space" + $"{curQueue}/{stallLevel.MaxQueueNum}";
+            queueNum_text.text = "Queuing space" + $" {curQueue}/ {stallLevel.MaxQueueNum}";
             ShowFoodText(stallLevel);
             ShowTipText(stallLevel);
             ShowBtnText(stallLevel);
@@ -236,6 +237,8 @@ namespace EazyGF
                 food_coin = stall.FoodPrice[0] * (int)Mathf.Pow(stall.FoodPrice[1], curFoodLevel - 1);
                 upFood_text.text = food_coin.ToString();
                 ShowFoodText(stall);
+                PalyFoodUpgradeFX();
+                PlayUpgradeAnim(null);
                 SaveData();
             }
             upFood_btn.interactable = curFoodLevel < stall.FoodMaxLevel && bottleNum >= stall.BotNeedNum;
@@ -260,7 +263,7 @@ namespace EazyGF
                     meal.GetChild(1).gameObject.SetActive(true);
                 }
                 curMeal++;
-                string takeMealText = "Take a table " + $"{curMeal}/{stall.TakeMealMax}";
+                string takeMealText = "Take a table " + $" {curMeal}/ {stall.TakeMealMax}";
                 mealNum_text.text = takeMealText;//LanguageMgr.GetTranstion(2, 1, takeMealText);
                 meal_coin = stall.TakeMealPrice[0] * (int)Mathf.Pow(stall.TakeMealPrice[1], curMeal - 1);
                 upgradeMeal_text.text = meal_coin.ToString();
@@ -289,7 +292,7 @@ namespace EazyGF
                     queue.GetChild(1).gameObject.SetActive(true);
                 }
                 curQueue++;
-                string queueText = "Queuin space " + $"{curQueue}/{stall.MaxQueueNum}";
+                string queueText = "Queuin space " + $" {curQueue}/ {stall.MaxQueueNum}";
                 queueNum_text.text = queueText;
                 queue_coin = stall.QueuePrice[0] * (int)Mathf.Pow(stall.QueuePrice[1], curQueue - 1);
                 Upgrade_text.text = queue_coin.ToString();
@@ -375,6 +378,32 @@ namespace EazyGF
             }
 
         }
+        private void PlayUpgradeAnim(string endValue, string endValue2)
+        {
+            food_text.DOText(endValue, 2f, true, ScrambleMode.Numerals);
+            next_text.DOText(endValue2, 4f);
+        }
+        private void PlayUpgradeAnim(string endValue)
+        {
+            Sequence sqe = DOTween.Sequence();
+            sqe.Join(food_text.rectTransform.DOScale(1.1f, 0.3f).SetEase(Ease.OutBack));
+            sqe.Append(food_text.rectTransform.DOScale(1, 0.4f).SetEase(Ease.OutBack));
+        }
+        private void PalyFoodUpgradeFX()
+        {
+            if (FX != null)
+            {
+                //FX.SetActive(false);
+                //FX.SetActive(true);
+                ParticleSystem particle = FX.GetComponent<ParticleSystem>();
+                particle.Play();
+                Debug.Log("播放特效");
+            }
+        }
+
+
+
+
 
         private void SaveData()
         {
