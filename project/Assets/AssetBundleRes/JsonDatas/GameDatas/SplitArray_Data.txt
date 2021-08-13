@@ -1,6 +1,0 @@
-﻿[
-	{
-		"ID":1,		"TestStr_1":"aa",		"TestStr2":"\"aa\"",		"TestInt":1,		"TestLong":1,		"TestFloat":1,		"TestStr1Arr":["aa","bb"],				"TestBigInter":1,		"TestDouble":0.5000000000,		"TestStr1Arr2":["bb","bb"],				"TestMArray":["aa","bb"]	},
-	{
-		"ID":2,		"TestStr_1":"bb",		"TestStr2":"\"bb\"",		"TestInt":1000000,		"TestLong":10000000,		"TestFloat":0.0001,		"TestStr1Arr":["cc","dd"],				"TestBigInter":100000000000000000000,		"TestDouble":0.0000000100,		"TestStr1Arr2":["cc","dd"],				"TestMArray":["cc","dd"]	}
-]

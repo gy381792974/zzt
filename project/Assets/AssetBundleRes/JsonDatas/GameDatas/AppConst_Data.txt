@@ -1,5 +1,0 @@
-﻿{
-	"WishHouseCD":300,
-	"RemoveCubeAddTime":2,
-	"CubeGameTotalTime":100
-}

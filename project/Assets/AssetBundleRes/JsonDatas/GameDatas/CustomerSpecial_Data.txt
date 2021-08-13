@@ -1,8 +1,0 @@
-﻿[
-	{
-		"ID":1,		"Name":[14,1],		"LockIntro":[14,2],		"Intro":[14,3,14,4,14,5],		"Content":[15,1],		"GameSuc":[15,3],		"GameFail":[-1],		"titleText":[15,2],		"RoleIndex":0,		"ABName":"RoleClown",		"ABBackName":"RoleClownBack",		"RoleName":"role_2001",		"RoleBackName":"role_2001_back",		"Path":"cus2",		"IconName":"client_2001"	},
-	{
-		"ID":2,		"Name":[14,6],		"LockIntro":[14,7],		"Intro":[14,8,14,9,14,10],		"Content":[15,4],		"GameSuc":[15,5],		"GameFail":[15,6],		"titleText":[-1],		"RoleIndex":1,		"ABName":"RoleDancingGirl",		"ABBackName":"RoleDancingGirlBack",		"RoleName":"role_2002",		"RoleBackName":"role_2002_back",		"Path":"cus3",		"IconName":"client_2002"	},
-	{
-		"ID":3,		"Name":[14,11],		"LockIntro":[14,12],		"Intro":[14,13,14,14,14,15],		"Content":[15,7],		"GameSuc":[15,9],		"GameFail":[15,10],		"titleText":[15,8],		"RoleIndex":2,		"ABName":"RoleMagician",		"ABBackName":"RoleMagicianBack",		"RoleName":"role_2003",		"RoleBackName":"role_2003_back",		"Path":"cus4",		"IconName":"client_2003"	}
-]
