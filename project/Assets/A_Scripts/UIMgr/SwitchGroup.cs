@@ -17,9 +17,13 @@ public class SwitchGroup : MonoBehaviour
 
     public void SwitchesController(Switch sw)
     {
-        if (lastSwitch == null || lastSwitch == sw)
+        if (lastSwitch == null)
         {
             lastSwitch = sw;
+            return;
+        }
+        else if (lastSwitch == sw)
+        {
             return;
         }
         else

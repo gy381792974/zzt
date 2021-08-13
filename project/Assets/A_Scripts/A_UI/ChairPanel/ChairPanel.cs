@@ -32,7 +32,9 @@ namespace EazyGF
         Image img;
         Toggle[] toggles;
         List<BuildDataModel> builds;
+        ChairItem item;
         [SerializeField] ScrollViewInfinity InfinityScroll;
+        [SerializeField] GameObject maxObj;
         protected override void OnInit()
         {
             //BuildUpgradeMgr.Instance.Init();
@@ -42,6 +44,7 @@ namespace EazyGF
             chair_obj.SetActive(true);
             left_btn.onClick.AddListener(LeftBtn);
             right_btn.onClick.AddListener(RightBtn);
+            maxObj.SetActive(false);
         }
 
         protected override void OnShow(UIDataBase chairpanelData = null)
@@ -62,20 +65,14 @@ namespace EazyGF
 
         protected override void OnHide()
         {
-            //builds.Clear();
             EventManager.Instance.TriggerEvent(EventKey.MoveCamerToTargetPos2,
       new CameraViewMove(GetPositionById(), false));
-
-            //toggles.Initialize();
         }
 
         private void UpdateItem(int arg0, Transform arg1)
         {
             ChairItem item = arg1.GetComponent<ChairItem>();
             SetItem(item, arg0);
-            //if (toggles[arg0] == null)
-            //{
-            //}
         }
 
         //将外部的List转化为内部的List
@@ -197,10 +194,13 @@ namespace EazyGF
         {
             if (isOn)
             {
+                this.item = item;
                 img = item.Img;
                 Icon_img.sprite = img.sprite;
+                Icon_img.SetNativeSize();
                 index = item.Index;
                 Chair_Property chair = GetChairByIndex(index);
+                item.SetItemLevelState(chair);
                 SetCurLevel(chair);
                 UpdateUI(chair);
                 BtnInteraction(chair);
@@ -332,6 +332,7 @@ namespace EazyGF
                     builds[index].Level = level;
                     BuildMgr.UpgradeComBuild(id, mPanelData.index);
                     chair = BuildMgr.GetChairByIdAndLevel(id, level);
+                    item.SetItemLevelState(chair);
                     UpdateImage(chair);
                     UpdateUI(chair);
                     return;
@@ -350,13 +351,8 @@ namespace EazyGF
         private void BtnInteraction(Chair_Property chair)
         {
             build_btn.interactable = curLevel < chair.maxLevel || chair.level < 4;
-            //满级
-            if (!build_btn.interactable)
-            {
-                //upgrade_coin = chair.buildPrice[0] * (int)Mathf.Pow(chair.buildPrice[1], level);
-                //build_text.text = $"已满级";
-                //Coin_text.gameObject.SetActive(false);
-            }
+            maxObj.SetActive(!build_btn.interactable);
+
         }
 
         private void ShowImage(int index, Sprite sp)

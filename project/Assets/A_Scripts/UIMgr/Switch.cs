@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class Switch : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] GameObject closeBg;
-    [SerializeField] GameObject openBg;
+    [SerializeField] GameObject hideBg;
+    [SerializeField] GameObject showBg;
     public Image targetImg;
     private bool isOn = false;
     public SwitchGroup group;
@@ -18,7 +18,7 @@ public class Switch : MonoBehaviour, IPointerClickHandler
         set
         {
             isOn = value;
-            openBg.SetActive(isOn);
+            showBg.SetActive(isOn);
             onValueChanged?.Invoke(isOn);  //执行两次
             switchState?.Invoke(this);
         }
@@ -29,6 +29,7 @@ public class Switch : MonoBehaviour, IPointerClickHandler
 
     private void Start()
     {
+        hideBg?.SetActive(true);
         if (group != null)
         {
             group.AddSwitch(this);
@@ -46,7 +47,7 @@ public class Switch : MonoBehaviour, IPointerClickHandler
     public void SetCloseState()
     {
         this.isOn = false;
-        openBg.SetActive(IsOn);
+        showBg.SetActive(IsOn);
     }
 
 

@@ -40,31 +40,43 @@ namespace EazyGF
         protected override void OnHide()
         {
 
+
+
         }
         //LanguageMgr.GetTranstion(2, 1, adorn.UnlockCoin)
         private void GetPropetyByType(int type)
-        {
-            //int coin = ItemPropsManager.Intance.GetItemNum((int)CurrencyType.Coin);
-            switch (type)
+        { 
+        //{
+        //    switch (type)
+        //    {
+        //        case 1:
+        //            break;
+        //        case 2:
+        //        case 3:
+        //        //Equip_Property equip = BuildMgr.GetEquip_Property(mPanelData.id, mPanelData.level);
+        //        //needCoin = equip.UnlockCoin;
+        //        //UpdateContent(AssetMgr.Instance.LoadTexture("buildtex", equip.IconName),
+        //        //     LanguageMgr.GetTranstion(equip.BuildIntro), $"{equip.UnlockCoin}");
+        //        //break;
+        //        //Adorn_Property adorn = BuildMgr.GetAdorn_Property(mPanelData.id, mPanelData.level);
+        //        //needCoin = adorn.UnlockCoin;
+        //        //UpdateContent(AssetMgr.Instance.LoadTexture("buildtex", adorn.IconName),
+        //        //     LanguageMgr.GetTranstion(adorn.BuildIntro), $"{adorn.UnlockCoin}");
+        //            break;
+        //    }
+            if (type == 1)
             {
-                case 1:
-                    Stall_Property stall = BuildMgr.GetStall_Property(mPanelData.id, mPanelData.level);
-                    needCoin = stall.UnlockCoin;
-                    UpdateContent(AssetMgr.Instance.LoadTexture("buildtex", stall.IconName),
-                         LanguageMgr.GetTranstion(stall.BuildIntro), $"{stall.UnlockCoin}");
-                    break;
-                case 2:
-                    Equip_Property equip = BuildMgr.GetEquip_Property(mPanelData.id, mPanelData.level);
-                    needCoin = equip.UnlockCoin;
-                    UpdateContent(AssetMgr.Instance.LoadTexture("buildtex", equip.IconName),
-                         LanguageMgr.GetTranstion(equip.BuildIntro), $"{equip.UnlockCoin}");
-                    break;
-                case 3:
-                    Adorn_Property adorn = BuildMgr.GetAdorn_Property(mPanelData.id, mPanelData.level);
-                    needCoin = adorn.UnlockCoin;
-                    UpdateContent(AssetMgr.Instance.LoadTexture("buildtex", adorn.IconName),
-                         LanguageMgr.GetTranstion(adorn.BuildIntro), $"{adorn.UnlockCoin}");
-                    break;
+                Stall_Property stall = BuildMgr.GetStall_Property(mPanelData.id, mPanelData.level);
+                needCoin = stall.UnlockCoin;
+                UpdateContent(AssetMgr.Instance.LoadTexture("buildtex", stall.IconName),
+                     LanguageMgr.GetTranstion(stall.BuildIntro), $"{needCoin}");
+            }
+            else
+            {
+                BuildArea_Property area = BuildArea_Data.GetBuildArea_DataByID(mPanelData.data.AreaIndex);
+                needCoin = area.needCoin;
+                UpdateContent(AssetMgr.Instance.LoadTexture("AreaTexture", area.icon),
+                     LanguageMgr.GetTranstion(area.desc), $"{needCoin}");
             }
         }
 
@@ -75,6 +87,7 @@ namespace EazyGF
             //area_img.SetNativeSize();
             //区域描述文本
             areaDes_text.text = desc;
+            build_text.text = LanguageMgr.GetTranstion(1, 1);
             //建造{0}
             coin_text.text = buildTxt;
         }

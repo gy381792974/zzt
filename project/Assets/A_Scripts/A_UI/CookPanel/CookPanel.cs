@@ -32,6 +32,7 @@ namespace EazyGF
         KitchenItem item;
         List<BuildDataModel> builds = new List<BuildDataModel>();
         [SerializeField] ScrollViewInfinity infinity;
+        [SerializeField] GameObject maxObj;
         protected override void OnInit()
         {
             build_btn.onClick.AddListener(ClickUpgradeBtn);
@@ -136,7 +137,6 @@ namespace EazyGF
             descRt.sizeDelta = new Vector2(615 - width, 0);
             desc_text.text = LanguageMgr.GetTranstion(kitchen.Intro);
         }
-
 
         private void CookLockText(Kitchen_Property kitchen)
         {
@@ -250,6 +250,7 @@ namespace EazyGF
         private void BtnInteractable(Kitchen_Property property)
         {
             build_btn.interactable = level < 4 || curBuildLevel < property.maxLevel;
+            maxObj.SetActive(!build_btn.interactable);
         }
 
         /// <summary>
