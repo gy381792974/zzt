@@ -24,7 +24,8 @@ public class KitchenItem : MonoBehaviour
 
     public void SetKitchenData(Kitchen_Property kitchen, int index, int curLevel)
     {
-        Img.sprite = AssetMgr.Instance.LoadTexture("BuildTex", kitchen.Icon);
+        Img.sprite = AssetMgr.Instance.LoadTexture("BuildIcon", kitchen.Icon);
+        Img.SetNativeSize();
         Index = index;
         CurLevel = curLevel;
     }

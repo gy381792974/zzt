@@ -8,6 +8,8 @@ using System;
 public class ChairItem : MonoBehaviour
 {
     [SerializeField] Toggle toggle;
+    [SerializeField] GameObject[] imgObj;
+    Text buildLevel;
     Image img;
     ChairPanel panel;
     int index;
@@ -18,6 +20,7 @@ public class ChairItem : MonoBehaviour
     private void Awake()
     {
         panel = UIMgr.GetUI<ChairPanel>();
+        buildLevel = imgObj[0].GetComponentInChildren<Text>();
         Img = toggle.targetGraphic.GetComponent<Image>();
         toggle.group = this.GetComponentInParent<ToggleGroup>();
         toggle.onValueChanged?.AddListener((isOn) => { panel.ClickToggleChangeImage(this, isOn); });
@@ -25,9 +28,18 @@ public class ChairItem : MonoBehaviour
 
     public void SetChairData(Chair_Property chair, int index)
     {
-        Img.sprite = AssetMgr.Instance.LoadTexture("BuildTex", chair.icon);
+        Img.sprite = AssetMgr.Instance.LoadTexture("BuildIcon", chair.icon);
+        Img.SetNativeSize();
+        SetItemLevelState(chair);
         Index = index;
     }
+    public void SetItemLevelState(Chair_Property chair)
+    {
+        imgObj[0].SetActive(chair.level < 4);
+        buildLevel.text = $"{chair.level}";
+        imgObj[1].SetActive(chair.level >= 4);
+    }
+
 
 
     BuildDataModel buildDataModel;
@@ -36,11 +48,5 @@ public class ChairItem : MonoBehaviour
     {
         this.buildDataModel = buildDataModel;
     }
-
-    //public void SetCookData(Kitchen_Property kitchen, int index)
-    //{
-    //    Img.sprite = AssetMgr.Instance.LoadTexture("BuildTex", kitchen.Icon);
-    //    Index = index;
-    //}
 
 }

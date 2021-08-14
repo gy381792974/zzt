@@ -66,9 +66,14 @@ namespace EazyGF
 
         BuildStatus bs;
         [SerializeField] GameObject FX;
+        [SerializeField] GameObject[] objects;
         protected override void OnInit()
         {
             InitAllButton();
+            for (int i = 0; i < objects.Length; i++)
+            {
+                objects[i].SetActive(false);
+            }
         }
 
         protected override void OnShow(UIDataBase buildupgradepanelData = null)
@@ -124,12 +129,16 @@ namespace EazyGF
         {
             //食物升级按钮
             upFood_btn.interactable = curFoodLevel < stallLevel.FoodMaxLevel && bottleNum >= stallLevel.BotNeedNum;
+            objects[0].SetActive(stallLevel.Level >= 4 && curFoodLevel >= stallLevel.FoodMaxLevel);
             //建筑升级按钮
             remould_btn.interactable = bottleNum >= stallLevel.BotNeedNum && stallLevel.Level < 4 && curFoodLevel >= stallLevel.FoodMaxLevel;
+            objects[1].SetActive(stallLevel.Level >= 4);
             //取餐位升级按钮
             upgradeMeal_btn.interactable = curMeal < stallLevel.TakeMealMax;
+            objects[2].SetActive(stallLevel.Level >= 4 && curMeal >= stallLevel.TakeMealMax);
             //排队位升级按钮
             Upgrade_btn.interactable = curQueue < stallLevel.MaxQueueNum;
+            objects[3].SetActive(stallLevel.Level >= 4 && curQueue >= stallLevel.MaxQueueNum);
         }
 
         private void ShowAllText(Stall_Property stall, StallLevel_Property stallLevel)
@@ -158,9 +167,6 @@ namespace EazyGF
             desRt.sizeDelta = new Vector2(615 - width, 0);
             stallDes_text.text = LanguageMgr.GetTranstion(stall.BuildIntro);
         }
-
-
-
 
         private void ShowTipText(StallLevel_Property stallLevel)
         {
@@ -242,6 +248,7 @@ namespace EazyGF
                 SaveData();
             }
             upFood_btn.interactable = curFoodLevel < stall.FoodMaxLevel && bottleNum >= stall.BotNeedNum;
+            objects[0].SetActive(stall.Level >= 4 && curFoodLevel >= stall.FoodMaxLevel);
         }
 
         /// <summary>
@@ -270,6 +277,7 @@ namespace EazyGF
                 SaveData();
             }
             upgradeMeal_btn.interactable = curMeal < stall.TakeMealMax;
+            objects[2].SetActive(stall.Level >= 4 && curMeal >= stall.TakeMealMax);
         }
 
         /// <summary>
@@ -299,6 +307,7 @@ namespace EazyGF
                 SaveData();
             }
             Upgrade_btn.interactable = curQueue < stall.MaxQueueNum;
+            objects[3].SetActive(stall.Level >= 4 && curQueue >= stall.MaxQueueNum);
         }
 
         private void ShowFoodText(StallLevel_Property stall)
