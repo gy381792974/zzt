@@ -133,7 +133,7 @@ namespace EazyGF
                     buildDataModel.Level = level;
                 }
 
-                if (buildDataModel.Level != -1 && buildDataModel.CommboType == 1)
+                if (buildDataModel.Level != -1 && buildDataModel.CommboType >= 1)
                 {
                     buildDataModel.Level = 1;
 

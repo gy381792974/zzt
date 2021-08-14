@@ -34,7 +34,7 @@ namespace EazyGF
             UpateContent();
         }
 
-        public void FlyBBUpdate()
+        public virtual void FlyBBUpdate()
         {
             Vector2 vector3 = ScreenToWorldMgr.Instance.GetUILocalPostion(followTf.position) + Vector2.up * 50;
             transform.localPosition = vector3;

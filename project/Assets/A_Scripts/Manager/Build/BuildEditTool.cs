@@ -143,8 +143,7 @@ public class BuildEditTool : MonoBehaviour
                 continue;
             }
 
-            bool isCreateBox = true;
-
+            bool isCreateBox = mainSpace.equipList[i / 4].GetComponent<BuildChair>() == null;
 
             mainSpace.equipList[i / 4].buildPos[i % 4].localPosition = Vector3.zero;
             CreatePre(mainSpace.equipList[i / 4].buildPos[i % 4], pre , isCreateBox, i % 4 == 0);
@@ -156,7 +155,7 @@ public class BuildEditTool : MonoBehaviour
 
         for (int i = 0; i < mName.Length; i++)
         {
-            bool isShowbox = (i/4 != 5);
+            //bool isShowbox = (i/4 != 5);
             //bool isShowbox = false;
 
             string name = mName[i].Replace("\r", "").Replace("\t", "");
@@ -167,13 +166,14 @@ public class BuildEditTool : MonoBehaviour
 
             if (pre == null)
             {
-                //Debug.LogError(name + " " + i + "  no hava res");
                 continue;
             }
 
+            bool isCb = mainSpace.equipList[i / 4].GetComponent<BuildAdornCom>() == null;
+
             mainSpace.adornList[i / 4].buildPos[i % 4].localPosition = Vector3.zero;
 
-            CreatePre(mainSpace.adornList[i / 4].buildPos[i % 4], pre , isShowbox, i % 4 == 0 && isShowbox);
+            CreatePre(mainSpace.adornList[i / 4].buildPos[i % 4], pre , isCb, i % 4 == 0 && isCb);
         }
 
         //buildModelGrid.gameObject.SetActive(false);

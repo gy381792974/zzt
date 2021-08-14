@@ -49,7 +49,6 @@ namespace EazyGF
             {
                 if (item.Value > BuildCollectMgr.cCoinMinShowNum)
                 {
-                    CBBData cBBData = new CBBData();
 
                     int posIndex = BuildMgr.GetStallPosById(item.Key);
 
@@ -58,13 +57,8 @@ namespace EazyGF
                         continue;
                     }
 
-                    cBBData.type = 1;
-                    cBBData.tf = MainSpace.Instance.stallList[posIndex - 1].GetShowBuildBoxTf();
-
-                    cBBData.id = item.Key;
-                    cBBData.num = item.Value;
-
-                    EventManager.Instance.TriggerEvent(EventKey.SendCBBData, cBBData);
+                    LocalCommonUtil.ShowBB(1, MainSpace.Instance.stallList[posIndex - 1].GetShowBuildBoxTf(), 
+                        item.Key, item.Value);
                 }
             }
         }

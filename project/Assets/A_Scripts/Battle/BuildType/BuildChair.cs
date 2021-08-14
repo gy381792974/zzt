@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace EazyGF
 {
+    //设备的组合
     public class BuildChair : BuildEquip
     {
         
@@ -26,8 +27,25 @@ namespace EazyGF
             combuildGrid.Clear();
             for (int i = 0; i < buildPos.Count; i++)
             {
-                combuildGrid.Add(buildPos[i].GetChild(0).GetChild(0));
+                combuildGrid.Add(GetTfTyChildNum(buildPos[i].GetChild(0)));
             }
+        }
+
+        private Transform GetTfTyChildNum(Transform grid)
+        {
+            Transform tf = grid;
+            while (tf.childCount < 3)
+            {
+                tf = tf.GetChild(0);
+
+                if (tf == null)
+                {
+                    Debug.LogError("获得子物体错误");
+                    return null;
+                }
+            }
+
+            return tf;
         }
 
         public Transform boxGrid;

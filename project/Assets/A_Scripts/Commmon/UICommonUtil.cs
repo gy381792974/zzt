@@ -88,8 +88,6 @@ namespace EazyGF
 
         public Vector2 GetUIPosByWorldPos(Vector3 worldPos)
         {
-
-
             Vector3 scrPos = Camera.main.WorldToScreenPoint(worldPos);
 
 

@@ -93,12 +93,14 @@ namespace EazyGF
                 Transform go = null;
                 if (type == 1)
                 {
-
                     go = AssetMgr.Instance.LoadGameobj("BuildCollect");
                 }
                 else if (type == 2)
                 {
                     go = AssetMgr.Instance.LoadGameobj("BuildFlyTxt");
+                }else if(type == 3)
+                {
+                    go = AssetMgr.Instance.LoadGameobj("CusTMWait");
                 }
 
                 if (go != null)

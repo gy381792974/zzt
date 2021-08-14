@@ -122,7 +122,7 @@ namespace EazyGF
 
                 int id = -1;
 
-                if (buildItem.MBuildDataModel.CommboType == 1)
+                if (buildItem.MBuildDataModel.CommboType >= 1)
                 {
                     id = hitInfo.transform.name.ToInt();
                 }

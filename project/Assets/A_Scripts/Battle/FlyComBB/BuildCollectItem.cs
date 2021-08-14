@@ -23,12 +23,7 @@ namespace EazyGF
         {
             EventManager.Instance.TriggerEvent(EventKey.RecycleCBBData, this);
 
-            CBBData cBBData = new CBBData();
-            cBBData.type = 2;
-            cBBData.num = data.num;
-            cBBData.tf = data.tf;
-            cBBData.id = data.id;
-            EventManager.Instance.TriggerEvent(EventKey.SendCBBData, cBBData);
+            LocalCommonUtil.ShowBB(2, data.tf, data.id, data.num);
         }
     }
 }

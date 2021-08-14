@@ -154,7 +154,6 @@ namespace EazyGF
                     return new int[] { value.Length, 0 };
                 }
 
-
                 teamIndex = 0;
                 num = value[0];
                 for (int i = 0; i < teamNum; i++)
@@ -445,7 +444,9 @@ namespace EazyGF
         {
             CustomerLogic.AddUnLockCN(cn.Data);
 
-            yield return new WaitForSeconds(0.5f);
+            int watitTime = 2;
+            LocalCommonUtil.ShowBB(3, cn.transform, cn.GetHashCode(), watitTime);
+            yield return new WaitForSeconds(watitTime);
 
             int key = (int)NCSuatus.TakeMeal - 100;
 
@@ -1035,15 +1036,8 @@ namespace EazyGF
 
             if (num >= BuildCollectMgr.cCoinMinShowNum)
             {
-                CBBData cBBData = new CBBData();
-
-                cBBData.type = 1;
-                cBBData.tf = MainSpace.Instance.stallList[cn.posIndex].GetShowBuildBoxTf();
-
-                cBBData.id = cn.targetStallId;
-                cBBData.num = num;
-
-                EventManager.Instance.TriggerEvent(EventKey.SendCBBData, cBBData);
+                LocalCommonUtil.ShowBB(1, MainSpace.Instance.stallList[cn.posIndex].GetShowBuildBoxTf(),
+                    cn.targetStallId, num);
             }
 
             cn.AddBaveStall(cn.targetStallId);
@@ -1054,7 +1048,6 @@ namespace EazyGF
 
             cn.SetBX(bxIndex);
         }
-
 
         Dictionary<int, int[]> occupyDic = new Dictionary<int, int[]>();
 
