@@ -34,6 +34,9 @@ namespace EazyGF
 
         void Start()
         {
+            areaGrid.gameObject.SetActive(true);
+            maskItemGrid.gameObject.SetActive(true);
+
             Dictionary<int, bool> areaMaskData = BuildAreaMgr.Instance.buildAreaMash;
             int index = 0;
             foreach (var item in areaMaskData)

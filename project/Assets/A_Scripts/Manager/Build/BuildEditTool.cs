@@ -60,6 +60,9 @@ public class BuildEditTool : MonoBehaviour
         {
             mainSpace.adornList[i].ShowBuild("", level);
         }
+
+        ba.areaGrid.gameObject.SetActive(level == 0);
+        ba.maskItemGrid.gameObject.SetActive(level == 0);
     }
 
     [ContextMenu("HideBuildShow")]

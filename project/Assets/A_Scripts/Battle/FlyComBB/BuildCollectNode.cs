@@ -6,7 +6,7 @@ namespace EazyGF
 {
     public class CBBData
     {
-        public int type; //1建筑金币的收集 2飘字
+        public int type; //1建筑金币的收集 2飘字 3取餐等待
         public Transform tf;
 
         public string txt;

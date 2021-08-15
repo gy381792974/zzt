@@ -49,6 +49,8 @@ namespace EazyGF
 
         BuildAreaDataUpdate, //建筑数据更新
 
+        SecFloorTip, //二楼给小费
+
         TestEvent,
         Null,
     }

@@ -255,7 +255,14 @@ namespace EazyGF
             {
                 SetTurnByDir();
 
-                SetRoalStatus(NormalRoleStatus.Sit);
+                if (lineIndex == 0 && isEnterStatus) 
+                {
+                    SetRoalStatus(NormalRoleStatus.Breath_meal);
+                }
+                else
+                {
+                    SetRoalStatus(NormalRoleStatus.Sit);
+                }
             }
             else
             {

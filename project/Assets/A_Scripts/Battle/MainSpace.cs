@@ -246,7 +246,14 @@ namespace EazyGF
         public void SetBuildData(BuildItem buildItem, BuildDataModel unLockBuild, bool isPlayEffect)
         {
             buildItem.BuildData(unLockBuild);
-            bool isUnlockArea = unLockBuild.Type == 1|| BuildAreaMgr.Instance.GetIsUnLockAreaById(unLockBuild.AreaIndex);
+
+            if (unLockBuild.Level == -1)
+            {
+                buildItem.gameObject.SetActive(false);
+                return;
+            }
+
+            bool isUnlockArea = unLockBuild.AreaIndex == 0 || BuildAreaMgr.Instance.GetIsUnLockAreaById(unLockBuild.AreaIndex);
             buildItem.gameObject.SetActive(isUnlockArea);
 
             if (!isUnlockArea)

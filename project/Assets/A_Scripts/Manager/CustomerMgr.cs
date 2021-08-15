@@ -105,8 +105,8 @@ namespace EazyGF
         List<int> diningIndexs = new List<int>();
         int[] dinOccupyPosArr;
 
-        //0 二楼包间 1 一楼露台 2 高级餐位区 3 一楼普通用餐(3靠近一楼包间， 4靠近露台的)
-        int[] diningAreaIds = new int[4] { 22003, 22004, 22002, 22001 };
+        //0 二楼包间 1 一楼露台 2 吧台 3 一楼普通用餐(3靠近一楼包间， 4靠近露台的)
+        int[] diningAreaIds = new int[4] { 22003, 22004, 12007, 22001 };
 
         public List<PosQueue> diningSeats;
         public List<PosQueue> diningDir;
@@ -1263,16 +1263,22 @@ namespace EazyGF
 
             //int value = 5;
 
-            int[] sDRatio = new int[4];
+            int[] sDRatio = new int[2];
           
             int ratio = 0;
-            for (int i = 0; i < sDRatio.Length - 1; i++)
+
+            for (int i = 0; i < sDRatio.Length; i++)
             {
-                ratio += 10 * IsHaveSeatAndIsIsUnlock(diningAreaIds[i], diningSeats[i].tfs.Count);
+                ratio += 20 * IsHaveSeatAndIsIsUnlock(diningAreaIds[i], diningSeats[i].tfs.Count);
                 sDRatio[i] = ratio;
             }
 
-            if (value <= sDRatio[0])
+            if (cn.targetStallId == diningAreaIds[2] &&
+                IsHaveSeatAndIsIsUnlock(diningAreaIds[2], diningSeats[2].tfs.Count) > 0)
+            {
+                cn.lineIndex = 2;
+            }
+            else if (value <= sDRatio[0])
             {
                 cn.lineIndex = 0;
             }
@@ -1280,16 +1286,43 @@ namespace EazyGF
             {
                 cn.lineIndex = 1;
             }
-            else if (value > sDRatio[1] && value <= sDRatio[2])
-            {
-                cn.lineIndex = 2;
-            }
             else
             {
                 cn.lineIndex = -1;
             }
 
-            if (cn.lineIndex >= 0 && cn.lineIndex <= 2)
+            cn.lineIndex = 0;
+
+            if (cn.lineIndex == 0)
+            {
+                int level = StaffMgr.Instance.FindStaffById(2).level;
+                if (level <= 0)
+                {
+                    int index = GetOccupyDic(diningAreaIds[cn.lineIndex], diningSeats[cn.lineIndex].tfs.Count, true);
+                    GoToDiningSeat(cn, index);
+                }
+                else
+                {
+                    cn.SetCurState(NCSuatus.Dining);
+                    cn.isEnterStatus = true;
+
+
+                    Vector3 enterPos = mNavigate[cn.lineIndex].bfs[0].Pos;
+                    Vector3 waitPos = mNavigate[cn.lineIndex].bfs[1].Pos;
+                    cn.DirPos = waitPos + Vector3.forward * 100;
+
+                    List<Vector3> strPos = BFS_Mgr.GetMoveList(bfs, cn.transform.position, enterPos);
+                    cn.MoveToTargetPoint(strPos);
+
+                    List<Vector3> mPath = BFS_Mgr.GetMoveList(mNavigate[cn.lineIndex].bfs, enterPos,
+                        waitPos);
+                    cn.MoveToTargetPoint(mPath);
+                }
+
+                return;
+            }
+
+            if (cn.lineIndex > 0 && cn.lineIndex <= 2)
             {
                 int index = GetOccupyDic(diningAreaIds[cn.lineIndex], diningSeats[cn.lineIndex].tfs.Count, true);
                 GoToDiningSeat(cn, index);
@@ -1315,6 +1348,7 @@ namespace EazyGF
             }
         }
 
+        //去找用餐的座位
         private void GoToDiningSeat(CustomerNor cn, int index, int enterIndex = 0)
         {
             cn.QueueIndex = index;
@@ -1325,14 +1359,39 @@ namespace EazyGF
             cn.DirPos = diningDir[cn.lineIndex].tfs[i].position;
 
             cn.enterIndex = enterIndex;
-            Vector3 enterPos = mNavigate[cn.lineIndex].bfs[enterIndex].Pos;//入口点
 
-            List<Vector3> strPos = BFS_Mgr.GetMoveList(bfs, cn.transform.position, enterPos);
+            Vector3 enterPos = cn.transform.position;
+
+            //不从入口点走
+            if (cn.lineIndex != 2)
+            {
+                enterPos = mNavigate[cn.lineIndex].bfs[enterIndex].Pos;//入口点
+                List<Vector3> strPos = BFS_Mgr.GetMoveList(bfs, cn.transform.position, enterPos);
+                cn.MoveToTargetPoint(strPos);
+            }
+
             List<Vector3> mPath = BFS_Mgr.GetMoveList(mNavigate[cn.lineIndex].bfs, enterPos, diningSeats[cn.lineIndex].tfs[index].position);
-
-            cn.MoveToTargetPoint(strPos);
             cn.MoveToTargetPoint(mPath);
             cn.MoveToTargetPoint(diningSeats[cn.lineIndex].tfs[index]);
+        }
+
+        private void GTSecFloorSeat(CustomerNor cn)
+        {
+            Vector3 waitPos = mNavigate[cn.lineIndex].bfs[1].Pos;
+
+            cn.isEnterStatus = false;
+
+            int index = GetOccupyDic(diningAreaIds[cn.lineIndex], diningSeats[cn.lineIndex].tfs.Count, true);
+            cn.QueueIndex = index;
+
+            Vector3 pos = diningSeats[cn.lineIndex].tfs[index].position;
+
+            List<Vector3> endPath = BFS_Mgr.GetMoveList(mNavigate[cn.lineIndex].bfs, waitPos,
+                pos);
+
+            cn.MoveToTargetPoint(endPath);
+
+            cn.MoveToTargetPoint(pos);
         }
 
         private int IsHaveSeatAndIsIsUnlock(int buildId, int SeatNum = 5)
@@ -1498,9 +1557,16 @@ namespace EazyGF
 
             return false;
         }
-
-
         #endregion 
+
+        // 去二楼包见给小费处
+        public IEnumerator DiningTip(CustomerNor cn)
+        {
+            yield return new WaitForSeconds(1);
+
+            GTSecFloorSeat(cn);
+            EventManager.Instance.RegisterEvent(EventKey.SecFloorTip, null);
+        }
 
         //用餐结束（不管是在那个区）
         public IEnumerator NCDiningEnd(CustomerNor cn)
@@ -1873,8 +1939,14 @@ namespace EazyGF
             }
             else if (cn.curState == NCSuatus.Dining)
             {
-
-                StartCoroutine(NCDiningEnd(cn));
+                if (cn.lineIndex == 0 && cn.isEnterStatus)
+                {
+                    StartCoroutine(DiningTip(cn));
+                }
+                else
+                {
+                    StartCoroutine(NCDiningEnd(cn));
+                }
             }
             else if (cn.curState == NCSuatus.Leave)
             {
