@@ -110,5 +110,10 @@ namespace EazyGF
         {
             return combuildGrid[level - 1].GetChild(pos).GetComponentInChildren<MeshRenderer>();
         }
+
+        public override Transform GetShowBuildBoxTf(int pos)
+        {
+            return boxGrid.GetChild(pos);
+        }
     }
 }

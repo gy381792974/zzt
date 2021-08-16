@@ -1291,6 +1291,8 @@ namespace EazyGF
                 cn.lineIndex = -1;
             }
 
+            cn.lineIndex = 1;
+            
             if (cn.lineIndex == 0)
             {
                 int level = StaffMgr.Instance.FindStaffById(2).level;
@@ -1381,6 +1383,13 @@ namespace EazyGF
 
             int index = GetOccupyDic(diningAreaIds[cn.lineIndex], diningSeats[cn.lineIndex].tfs.Count, true);
             cn.QueueIndex = index;
+
+            if (index >= -1)
+            {
+                RemoveCn(cn);
+                Debug.LogWarning("没有位置");
+                return;
+            }
 
             Vector3 pos = diningSeats[cn.lineIndex].tfs[index].position;
 
@@ -1570,7 +1579,21 @@ namespace EazyGF
         public IEnumerator NCDiningEnd(CustomerNor cn)
         {
             yield return new WaitForSeconds(5);
-            cn.RandomTip();
+
+            if (cn.lineIndex == 1)
+            {
+                bool isGaveTip = UICommonUtil.Instance.IsFillConditByRotia(cn.Data.TipRatio);
+                if (isGaveTip|| true)
+                {
+                    BuildDataModel bdm = BuildMgr.GetUserBuildDataById(diningAreaIds[1]);
+
+                    Transform tf = MainSpace.Instance.equipList[bdm.Pos].GetShowBuildBoxTf(cn.QueueIndex / 2);
+
+                    int tipMultiple = LocalCommonUtil.TipMultipleNor(cn.Data.TipMultiple);
+
+                    LocalCommonUtil.ShowBB(4, tf, bdm.Id + cn.QueueIndex / 2, tipMultiple * 100);
+                }
+            }
 
             if (cn.lineIndex == 4)
             {

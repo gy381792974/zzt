@@ -118,6 +118,17 @@ namespace EazyGF
             return buildPos[0].GetChild(1).transform;
         }
 
+        public virtual Transform GetShowBuildBoxTf(int pos)
+        {
+            if (level >= 1 && level <= 4)
+            {
+                return buildPos[level - 1].GetChild(1).transform;
+            }
+
+            return buildPos[0].GetChild(1).transform;
+        }
+
+
         public void HideShow()
         {
             for (int i = 0; i < showPos.Count; i++)

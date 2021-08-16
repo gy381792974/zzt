@@ -91,7 +91,7 @@ namespace EazyGF
             if (flyBBBase == null)
             {
                 Transform go = null;
-                if (type == 1)
+                if (type == 1 || type == 4)
                 {
                     go = AssetMgr.Instance.LoadGameobj("BuildCollect");
                 }
@@ -111,6 +111,11 @@ namespace EazyGF
 
                     flyBBBase = go.GetComponent<FlyBBBase>();
                 }
+            }
+
+            if (flyBBBase != null)
+            {
+                flyBBBase.gameObject.name = $"type{type}";
             }
 
             return flyBBBase;
