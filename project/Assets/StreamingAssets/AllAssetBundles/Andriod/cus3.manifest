@@ -34,5 +34,5 @@ ClassTypes:
 Assets:
 - Assets/AssetBundleRes/A_Prefabs/Customer/cus3.prefab
 Dependencies:
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/roledancinggirlback
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/roledancinggirl
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/roledancinggirlback
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/roledancinggirl

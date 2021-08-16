@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 480497355
+CRC: 3661964738
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b2cf277552c81da08fdd2092ea6a06a9
+    Hash: 69631a758af521d79796bebc3ca8f843
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 1713e7ecf9f58dd51b43a8b7613fdfbc
+    Hash: 8a032a34ba0784a65995219f63962933
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -18,8 +18,6 @@ ClassTypes:
 - Class: 23
   Script: {instanceID: 0}
 - Class: 33
-  Script: {instanceID: 0}
-- Class: 65
   Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
@@ -34,4 +32,4 @@ ClassTypes:
 Assets:
 - Assets/AssetBundleRes/A_Prefabs/Staff/waiter.prefab
 Dependencies:
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/staff2
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/staff2

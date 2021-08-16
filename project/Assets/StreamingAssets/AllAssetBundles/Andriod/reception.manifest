@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1576948602
+CRC: 1239882640
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 68d8faa1043c050dc9530c137392bae3
+    Hash: 798764cfc00dcbd376b02961fe2dd48b
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 4c6fa8e5437c87dbdbee99a957594e5b
+    Hash: 080fa104aefce17c260d6ffde02a28d8
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -32,4 +32,4 @@ ClassTypes:
 Assets:
 - Assets/AssetBundleRes/A_Prefabs/Staff/reception.prefab
 Dependencies:
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/staff1
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/staff1

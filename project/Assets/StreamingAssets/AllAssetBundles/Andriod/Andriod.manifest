@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 612477460
+CRC: 1953733863
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -286,205 +286,277 @@ AssetBundleManifest:
       Name: cusnor1
       Dependencies: {}
     Info_69:
-      Name: cusnor2
-      Dependencies: {}
-    Info_70:
-      Name: cusnor3
-      Dependencies: {}
-    Info_71:
-      Name: cusnor4
-      Dependencies: {}
-    Info_72:
-      Name: cusnor5
-      Dependencies: {}
-    Info_73:
-      Name: cusnor6
-      Dependencies: {}
-    Info_74:
-      Name: cusnor7
-      Dependencies: {}
-    Info_75:
       Name: cubeguide
       Dependencies: {}
-    Info_76:
+    Info_70:
       Name: cusicon
       Dependencies: {}
-    Info_77:
+    Info_71:
       Name: clownpdpanel
       Dependencies: {}
-    Info_78:
+    Info_72:
       Name: cubefailpanel
       Dependencies:
         Dependency_0: sharetextures
         Dependency_1: fonts
         Dependency_2: coin_img
-    Info_79:
+    Info_73:
       Name: screenhandlepanel
       Dependencies:
         Dependency_0: materials
-    Info_80:
+    Info_74:
       Name: ttgypypanel
       Dependencies: {}
-    Info_81:
+    Info_75:
       Name: ttgypypanel2
       Dependencies: {}
-    Info_82:
+    Info_76:
       Name: comdialogpanel
       Dependencies:
         Dependency_0: sharetextures
         Dependency_1: fonts
-    Info_83:
+    Info_77:
       Name: guidepanel
       Dependencies: {}
-    Info_84:
+    Info_78:
       Name: staffpanel
       Dependencies:
         Dependency_0: sharetextures
         Dependency_1: fonts
         Dependency_2: cusicon
-    Info_85:
+    Info_79:
       Name: cook
       Dependencies:
         Dependency_0: staff3
-    Info_86:
+    Info_80:
       Name: reception
       Dependencies:
         Dependency_0: staff1
-    Info_87:
+    Info_81:
       Name: waiter
       Dependencies:
         Dependency_0: staff2
-    Info_88:
+    Info_82:
       Name: buildcollect
       Dependencies:
         Dependency_0: fonts
-    Info_89:
+    Info_83:
       Name: buildflytxt
       Dependencies:
         Dependency_0: fonts
-    Info_90:
-      Name: cusnor8
-      Dependencies: {}
-    Info_91:
+    Info_84:
       Name: bottle
       Dependencies:
         Dependency_0: sharetextures
         Dependency_1: fonts
-    Info_92:
+    Info_85:
       Name: foodicon
       Dependencies: {}
-    Info_93:
+    Info_86:
       Name: newrole
       Dependencies: {}
-    Info_94:
+    Info_87:
       Name: areaunlockpanel
       Dependencies:
         Dependency_0: sharetextures
         Dependency_1: fonts
         Dependency_2: buildtex
-    Info_95:
+    Info_88:
       Name: bubblepanel
       Dependencies:
         Dependency_0: bubble
-    Info_96:
+    Info_89:
       Name: buildupgradepanel
       Dependencies:
         Dependency_0: sharetextures
         Dependency_1: fonts
         Dependency_2: buildtex
         Dependency_3: foodicon
-    Info_97:
+    Info_90:
       Name: chairpanel
       Dependencies:
         Dependency_0: sharetextures
         Dependency_1: fonts
-    Info_98:
+        Dependency_2: toggle
+        Dependency_3: buildicon
+    Info_91:
       Name: cookpanel
       Dependencies:
         Dependency_0: sharetextures
         Dependency_1: fonts
-    Info_99:
+        Dependency_2: switchstate
+    Info_92:
       Name: bubble
       Dependencies:
         Dependency_0: sharetextures
         Dependency_1: fonts
-    Info_100:
+    Info_93:
       Name: goldspine
       Dependencies:
         Dependency_0: sharetextures
-    Info_101:
+    Info_94:
       Name: toggle
       Dependencies:
         Dependency_0: sharetextures
+        Dependency_1: fonts
+        Dependency_2: buildicon
+    Info_95:
+      Name: staff4
+      Dependencies: {}
+    Info_96:
+      Name: staff7
+      Dependencies: {}
+    Info_97:
+      Name: staff5
+      Dependencies: {}
+    Info_98:
+      Name: staff8
+      Dependencies: {}
+    Info_99:
+      Name: staff6
+      Dependencies: {}
+    Info_100:
+      Name: switchstate
+      Dependencies:
+        Dependency_0: sharetextures
+    Info_101:
+      Name: areatexture
+      Dependencies: {}
     Info_102:
-      Name: adorn_data
+      Name: areatitle
       Dependencies: {}
     Info_103:
-      Name: appconst_data
+      Name: buildicon
       Dependencies: {}
     Info_104:
-      Name: buildarea_data
+      Name: coin_img
       Dependencies: {}
     Info_105:
-      Name: buildcommboinital_data
+      Name: custmwait
       Dependencies: {}
     Info_106:
-      Name: buildinital_data
+      Name: cusnor10
       Dependencies: {}
     Info_107:
-      Name: buildmaskarea_data
+      Name: cusnor11
       Dependencies: {}
     Info_108:
-      Name: chair_data
+      Name: cusnor12
       Dependencies: {}
     Info_109:
-      Name: cubeconfig_data
+      Name: cusnor13
       Dependencies: {}
     Info_110:
-      Name: cubeitem_data
+      Name: cusnor14
       Dependencies: {}
     Info_111:
-      Name: cube_data
+      Name: cusnor15
       Dependencies: {}
     Info_112:
-      Name: cusfashion_data
+      Name: cusnor2
       Dependencies: {}
     Info_113:
-      Name: customernorbubble_data
+      Name: cusnor3
       Dependencies: {}
     Info_114:
-      Name: customernormal_data
+      Name: cusnor4
       Dependencies: {}
     Info_115:
-      Name: customerspecial_data
+      Name: cusnor5
       Dependencies: {}
     Info_116:
-      Name: equip_data
+      Name: cusnor6
       Dependencies: {}
     Info_117:
-      Name: guidestep_data
+      Name: cusnor7
       Dependencies: {}
     Info_118:
-      Name: item_data
+      Name: cusnor8
       Dependencies: {}
     Info_119:
-      Name: kitchen_data
+      Name: cusnor9
       Dependencies: {}
     Info_120:
-      Name: splitarray_data
+      Name: bar
       Dependencies: {}
     Info_121:
-      Name: staff_data
+      Name: cook2
       Dependencies: {}
     Info_122:
-      Name: staff_level_data
+      Name: cook3
       Dependencies: {}
     Info_123:
-      Name: stalllevel_data
+      Name: juice
       Dependencies: {}
     Info_124:
-      Name: stall_data
+      Name: pastry
       Dependencies: {}
     Info_125:
-      Name: coin_img
+      Name: adorn_data
+      Dependencies: {}
+    Info_126:
+      Name: appconst_data
+      Dependencies: {}
+    Info_127:
+      Name: buildarea_data
+      Dependencies: {}
+    Info_128:
+      Name: buildcommboinital_data
+      Dependencies: {}
+    Info_129:
+      Name: buildinital_data
+      Dependencies: {}
+    Info_130:
+      Name: buildmaskarea_data
+      Dependencies: {}
+    Info_131:
+      Name: chair_data
+      Dependencies: {}
+    Info_132:
+      Name: cubeconfig_data
+      Dependencies: {}
+    Info_133:
+      Name: cubeitem_data
+      Dependencies: {}
+    Info_134:
+      Name: cube_data
+      Dependencies: {}
+    Info_135:
+      Name: cusfashion_data
+      Dependencies: {}
+    Info_136:
+      Name: customernorbubble_data
+      Dependencies: {}
+    Info_137:
+      Name: customernormal_data
+      Dependencies: {}
+    Info_138:
+      Name: customerspecial_data
+      Dependencies: {}
+    Info_139:
+      Name: equip_data
+      Dependencies: {}
+    Info_140:
+      Name: guidestep_data
+      Dependencies: {}
+    Info_141:
+      Name: item_data
+      Dependencies: {}
+    Info_142:
+      Name: kitchen_data
+      Dependencies: {}
+    Info_143:
+      Name: splitarray_data
+      Dependencies: {}
+    Info_144:
+      Name: staff_data
+      Dependencies: {}
+    Info_145:
+      Name: staff_level_data
+      Dependencies: {}
+    Info_146:
+      Name: stalllevel_data
+      Dependencies: {}
+    Info_147:
+      Name: stall_data
       Dependencies: {}

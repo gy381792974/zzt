@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 513572981
+CRC: 2222450684
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ce9fa510bed5aa26763b6ba0e072eca2
+    Hash: c43bc103a9717f83f350c4d123047762
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ca3a1681a6e6d0b8586204d388deb6dc
+    Hash: c144106c85b38a30345294222e902470
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -30,8 +30,6 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 6b03a1f5636772244ad423c48ae729a4, type: 3}
@@ -41,6 +39,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: ceccc66d788a0564387151d710c77a3b, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 23fc51ee34b592d48945677a74e476bc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 2fafe2cfe61f6974895a912c3755e8f1, type: 3}
 - Class: 115
@@ -56,5 +56,7 @@ ClassTypes:
 Assets:
 - Assets/AssetBundleRes/A_Prefabs/A_UIPanelPrefabs/ChairPanel.prefab
 Dependencies:
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/fonts
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/fonts
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/toggle
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/buildicon

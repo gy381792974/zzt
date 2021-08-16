@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 1557737553
+CRC: 3554697225
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 2db5e0b075a4e8a18060005a2b1ad0ec
+    Hash: 4fcddd696eb62dd1a1812371810ff85e
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 692da2d81ab641102c8ff42cf5a94eb7
+    Hash: 154344f36bde16f174f8fa26590c1acd
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -26,13 +26,23 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  Script: {fileID: 11500000, guid: 7d585ba1aa771fd428fd28ec198e1937, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6b03a1f5636772244ad423c48ae729a4, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4170b88774dd25e4bbb46998607cb663, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 2fafe2cfe61f6974895a912c3755e8f1, type: 3}
+  Script: {fileID: 11500000, guid: 0f42829916e5b1343b61fcf4fd884e9d, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 4170b88774dd25e4bbb46998607cb663, type: 3}
+  Script: {fileID: 11500000, guid: 6d15979bf38b4144581b34f096f4e656, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2fafe2cfe61f6974895a912c3755e8f1, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 128
@@ -46,5 +56,6 @@ ClassTypes:
 Assets:
 - Assets/AssetBundleRes/A_Prefabs/A_UIPanelPrefabs/CookPanel.prefab
 Dependencies:
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/fonts
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/fonts
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/switchstate

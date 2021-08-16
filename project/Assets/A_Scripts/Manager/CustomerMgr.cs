@@ -283,6 +283,11 @@ namespace EazyGF
 
         private void LoadCus(CustomerNormal_Property pro, bool isFirst)
         {
+            if (!BuildAreaMgr.Instance.GetIsUnLockAreaById(1))
+            {
+                return;
+            }
+
             CustomerNor cn = AssetMgr.Instance.LoadGameobjFromPool(pro.Path).GetComponent<CustomerNor>();
             cn.ResetData();
 
@@ -1291,7 +1296,7 @@ namespace EazyGF
                 cn.lineIndex = -1;
             }
 
-            cn.lineIndex = 1;
+            //cn.lineIndex = 1;
             
             if (cn.lineIndex == 0)
             {
@@ -1587,7 +1592,7 @@ namespace EazyGF
                 {
                     BuildDataModel bdm = BuildMgr.GetUserBuildDataById(diningAreaIds[1]);
 
-                    Transform tf = MainSpace.Instance.equipList[bdm.Pos].GetShowBuildBoxTf(cn.QueueIndex / 2);
+                    Transform tf = MainSpace.Instance.equipList[bdm.Pos - 1].GetShowBuildBoxTf(cn.QueueIndex / 2);
 
                     int tipMultiple = LocalCommonUtil.TipMultipleNor(cn.Data.TipMultiple);
 

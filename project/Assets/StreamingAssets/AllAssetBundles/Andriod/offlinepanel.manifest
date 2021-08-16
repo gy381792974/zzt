@@ -42,6 +42,6 @@ ClassTypes:
 Assets:
 - Assets/AssetBundleRes/A_Prefabs/A_UIPanelPrefabs/OffLinePanel.prefab
 Dependencies:
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/fonts
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/ui
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/fonts
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/ui

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 875065280
+CRC: 1784381898
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 767a024ff3199a3792fc04e71517425d
+    Hash: 7dd17b4930787db9eec8ec1ec310e09c
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9e6ad29cbd2df8fbe1a15315db0e51ab
@@ -16,28 +16,54 @@ ClassTypes:
 Assets:
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_5_shadow.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/3_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_15.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_2003.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_10_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/8.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_3.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/3.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_7_shadow.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_6.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/5_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_12_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/4.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_2002_shadow.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_9.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_2003_shadow.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_4_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_15_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_2002.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_13_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/5.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_2_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_2001.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/2.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_14.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_12.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_10.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/7.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_9_shadow.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/1.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_11_shadow.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_6_shadow.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_2.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_14_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/6_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/4_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_2001_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_13.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_3_shadow.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_1.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/2_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_11.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_7.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_5.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_8_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/7_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/6.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_4.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_1_shadow.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/1_shadow.png
+- Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/8_shadow.png
 - Assets/AssetBundleRes/A_Textures/FolderPack/CusIcon/client_8.png
 Dependencies: []

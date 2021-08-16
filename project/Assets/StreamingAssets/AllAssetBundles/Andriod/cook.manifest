@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3828631493
+CRC: 428967733
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 168492e7e6ba3d36f09c7c11d32fd5f1
+    Hash: 8db4f4cb69496e56121c9e4c223ccea0
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 9dcac6b3f4155b35a5cb497a0644cf6b
+    Hash: df8e077e2f10fd7e540e63bf73d17dc0
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -32,4 +32,4 @@ ClassTypes:
 Assets:
 - Assets/AssetBundleRes/A_Prefabs/Staff/cook.prefab
 Dependencies:
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/staff3
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/staff3

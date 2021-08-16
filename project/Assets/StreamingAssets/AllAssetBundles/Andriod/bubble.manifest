@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3370578238
+CRC: 2964780334
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: e999dce26612be3efa169d3faecb08fe
+    Hash: 595a45b72f5c2cac9e8b9f6f39499867
   TypeTreeHash:
     serializedVersion: 2
-    Hash: de5d133bb07be1499b04c14624afa1e0
+    Hash: f0c40b93df91e32f22faaa9e7fbd1308
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -18,9 +18,9 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: a5056dc16a84ae244bf5b98ad9c1d492, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 128
@@ -34,5 +34,5 @@ ClassTypes:
 Assets:
 - Assets/AssetBundleRes/A_Prefabs/Bubble/Bubble.prefab
 Dependencies:
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/fonts
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/fonts

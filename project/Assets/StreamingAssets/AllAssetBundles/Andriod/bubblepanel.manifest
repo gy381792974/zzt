@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 733341316
+CRC: 3696183956
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 2676b315c7887369a5f8d979314ecb6b
+    Hash: 563cf77ac52ea0b872d6a80f6b343e66
   TypeTreeHash:
     serializedVersion: 2
-    Hash: ed358ef916c60c59c5016d4fa9dc27c5
+    Hash: 2832b88b47966880afba9eacebab5785
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -22,4 +22,4 @@ ClassTypes:
 Assets:
 - Assets/AssetBundleRes/A_Prefabs/A_UIPanelPrefabs/BubblePanel.prefab
 Dependencies:
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/bubble
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/bubble

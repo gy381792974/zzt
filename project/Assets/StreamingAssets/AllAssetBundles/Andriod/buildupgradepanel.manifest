@@ -1,17 +1,21 @@
 ManifestFileVersion: 0
-CRC: 938146828
+CRC: 629977893
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c448b2ce3277ed5f3e004a75f59d86c1
+    Hash: a871e4481fa06f47f84b6fd39fc351aa
   TypeTreeHash:
     serializedVersion: 2
-    Hash: cbcac5adb7f4aa0e62acd11a0dfe0dcd
+    Hash: c8e3db53350dd153a8a02cc48ace54f5
 HashAppended: 0
 ClassTypes:
 - Class: 1
   Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
 - Class: 28
+  Script: {instanceID: 0}
+- Class: 48
   Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -33,6 +37,10 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 128
   Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
 - Class: 222
@@ -42,7 +50,7 @@ ClassTypes:
 Assets:
 - Assets/AssetBundleRes/A_Prefabs/A_UIPanelPrefabs/BuildUpgradePanel.prefab
 Dependencies:
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/fonts
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/buildtex
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/foodicon
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/fonts
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/buildtex
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/foodicon

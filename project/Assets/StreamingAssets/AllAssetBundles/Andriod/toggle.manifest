@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3756172090
+CRC: 1599424869
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6b2bb3b6181bd965b3c51170dcbcd05c
+    Hash: 3551705770650fbf88bf57fbf38ac34a
   TypeTreeHash:
     serializedVersion: 2
-    Hash: a3646911a494618d0c1b53904319c8d4
+    Hash: 3b123977981eec5ee1bd593011886cf7
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -14,10 +14,16 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 23fc51ee34b592d48945677a74e476bc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
 - Class: 115
+  Script: {instanceID: 0}
+- Class: 128
   Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
@@ -28,4 +34,6 @@ ClassTypes:
 Assets:
 - Assets/AssetBundleRes/A_Prefabs/Bubble/Toggle.prefab
 Dependencies:
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/fonts
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/buildicon

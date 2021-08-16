@@ -6,6 +6,7 @@ namespace EazyGF
     public class BuildCollcetSerData
     {
         public Dictionary<int, int> SBCollctCoinDic;
+        public Dictionary<int[], int> SEquipCollectDic;
     }
 
 
@@ -31,6 +32,9 @@ namespace EazyGF
 
         //id，coin
         public Dictionary<int, int> bCollctCoinDic = new Dictionary<int, int>();
+
+        //设备的
+        public Dictionary<int[], int> equipCollectDic = new Dictionary<int[], int>();
 
         public override void Init()
         {
@@ -74,6 +78,40 @@ namespace EazyGF
             }
         }
 
+        //存到建筑中
+        public int AddEquipCoin(int[] id, int coin)
+        {
+            int total = coin;
+            if (equipCollectDic.TryGetValue(id, out int value))
+            {
+                total = value + coin;
+                equipCollectDic[id] = total;
+            }
+            else
+            {
+                equipCollectDic.Add(id, coin);
+            }
+
+            SaveData();
+
+            return total;
+        }
+
+        public void GetEquipCoin(int[] id)
+        {
+            if (equipCollectDic.TryGetValue(id, out int value))
+            {
+                if (value > 0)
+                {
+                    ItemPropsManager.Intance.AddItem(1, value);
+
+                    equipCollectDic[id] = 0;
+
+                    SaveData();
+                }
+            }
+        }
+
         public bool ReadBuildData()
         {
             BuildCollcetSerData serData = SerializHelp.DeserializeFileToObj<BuildCollcetSerData>(SavePath, out bool loadSuccess);
@@ -81,6 +119,7 @@ namespace EazyGF
             if (loadSuccess)
             {
                 bCollctCoinDic = serData.SBCollctCoinDic;
+                equipCollectDic = serData.SEquipCollectDic;
             }
 
             return loadSuccess;
@@ -90,6 +129,7 @@ namespace EazyGF
         {
             BuildCollcetSerData buildSerData = new BuildCollcetSerData();
             buildSerData.SBCollctCoinDic = bCollctCoinDic;
+            buildSerData.SEquipCollectDic = equipCollectDic;
             SerializHelp.SerializeFile(SavePath, buildSerData);
         }
     }

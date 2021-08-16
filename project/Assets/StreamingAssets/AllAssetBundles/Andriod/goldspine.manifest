@@ -1,17 +1,15 @@
 ManifestFileVersion: 0
-CRC: 920249923
+CRC: 1137363528
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 94c89a2e65716bef69afbe2eaf5994a9
+    Hash: 01e2c375a3295f8eba1a3985e22658ae
   TypeTreeHash:
     serializedVersion: 2
-    Hash: b5d0cd196f84d5394f4c24cb1a32ca98
+    Hash: 6d2a3e5d5cf1c2939a15840b29730684
 HashAppended: 0
 ClassTypes:
 - Class: 1
-  Script: {instanceID: 0}
-- Class: 61
   Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -28,4 +26,4 @@ ClassTypes:
 Assets:
 - Assets/AssetBundleRes/A_Prefabs/Bubble/GoldSpine.prefab
 Dependencies:
-- E:/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
+- E:/xm/workXm/new/zzt/project/Assets/StreamingAssets/AllAssetBundles/Andriod/sharetextures
