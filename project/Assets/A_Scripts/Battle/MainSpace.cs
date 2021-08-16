@@ -49,7 +49,6 @@ namespace EazyGF
             {
                 if (item.Value > BuildCollectMgr.cCoinMinShowNum)
                 {
-
                     int posIndex = BuildMgr.GetStallPosById(item.Key);
 
                     if (posIndex == -1)
@@ -111,7 +110,7 @@ namespace EazyGF
         {
             BuildDataModel buildDataModel = (BuildDataModel)arg0;
 
-            if (buildDataModel.Type == 2)
+            if (buildDataModel.CommboType >= 1)
             {
                 for (int i = 0; i < equipList.Count; i++)
                 {
@@ -129,7 +128,7 @@ namespace EazyGF
         {
             BuildAreadInfo buildAreadInfo = (BuildAreadInfo)arg0;
 
-            if (buildAreadInfo.maskAreaId != -1)
+            if (buildAreadInfo.type == 0 && BuildAreaMgr.Instance.GetIsUnLockAreaById(buildAreadInfo.id))
             {
                 List<BuildDataModel> list = BuildMgr.GetBuildDatasByArea(buildAreadInfo.id);
 
