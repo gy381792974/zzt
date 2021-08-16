@@ -1291,8 +1291,6 @@ namespace EazyGF
                 cn.lineIndex = -1;
             }
 
-            cn.lineIndex = 0;
-
             if (cn.lineIndex == 0)
             {
                 int level = StaffMgr.Instance.FindStaffById(2).level;
