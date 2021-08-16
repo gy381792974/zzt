@@ -11,6 +11,7 @@ public class TextureRenderCamera : MonoBehaviour
     [SerializeField] float offset;
     BitBenderGames.MobileTouchCamera cam;
     Tween tween;
+    Sequence sqe;
     Vector2 initMinBoundary;
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class TextureRenderCamera : MonoBehaviour
         renderCam = GetComponent<Camera>();
         cam = GetComponent<BitBenderGames.MobileTouchCamera>();
         initMinBoundary = cam.BoundaryMin;
+        sqe = DOTween.Sequence();
         //renderCam.orthographicSize = cam.CamZoomMax;
     }
 
@@ -27,6 +29,7 @@ public class TextureRenderCamera : MonoBehaviour
     }
     private void MoveCameraToTarget(object arg)
     {
+        sqe.Kill(true);
         CameraViewMove camera = (CameraViewMove)arg;
         offset = camera.point.y > 12 ? 8 : 11;
         Vector3 tarPos = transform.forward * -21 + camera.point - transform.forward * offset;
@@ -35,9 +38,9 @@ public class TextureRenderCamera : MonoBehaviour
         {
             cam.BoundaryMin = new Vector2(initMinBoundary.x - 10, initMinBoundary.y - 10);
             //放大
-            ShortcutExtensions.DOOrthoSize(renderCam, endOrthographicSize, duration);
-            tween = transform.DOMove(tarPos, duration);
-            tween.OnUpdate(() =>
+            sqe.Join(ShortcutExtensions.DOOrthoSize(renderCam, endOrthographicSize, duration));
+            sqe.Join(transform.DOMove(tarPos, duration));
+            sqe.OnUpdate(() =>
             {
                 cam.CamZoom = renderCam.orthographicSize;
             });
@@ -46,9 +49,9 @@ public class TextureRenderCamera : MonoBehaviour
         {
             cam.BoundaryMin = initMinBoundary;
             //缩小
-            ShortcutExtensions.DOOrthoSize(renderCam, initOrthographicSize, duration);
-            tween = transform.DOMove(tarPos, duration);
-            tween.OnUpdate(() =>
+            sqe.Join(ShortcutExtensions.DOOrthoSize(renderCam, initOrthographicSize, duration));
+            sqe.Join(transform.DOMove(tarPos, duration));
+            sqe.OnUpdate(() =>
             {
                 //cam.Awake();
                 cam.CamZoom = renderCam.orthographicSize;

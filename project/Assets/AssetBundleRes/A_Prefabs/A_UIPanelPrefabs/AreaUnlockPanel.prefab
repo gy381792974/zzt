@@ -374,6 +374,7 @@ MonoBehaviour:
   build_btn: {fileID: 249826203582101657}
   build_text: {fileID: 3575744116047600818}
   coin_text: {fileID: 1389543615355200349}
+  title_img: {fileID: 3022688650995626585}
   areaDes_text: {fileID: 3518625394353193696}
   area_img: {fileID: 246276564446049466}
   close_btn: {fileID: 9165868255713276507}
@@ -467,7 +468,7 @@ GameObject:
   - component: {fileID: 7457533336376910998}
   - component: {fileID: 3022688650995626585}
   m_Layer: 5
-  m_Name: titleimg
+  m_Name: title_img
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

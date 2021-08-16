@@ -11,10 +11,12 @@ public class Switch : MonoBehaviour, IPointerClickHandler
     [SerializeField] GameObject showBg;
     public Image targetImg;
     private bool isOn = false;
+    [SerializeField]
     public SwitchGroup group;
     public bool IsOn
     {
         get { return isOn; }
+
         set
         {
             isOn = value;
@@ -24,25 +26,33 @@ public class Switch : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    UnityEvent<Switch> switchState;
-    public UnityEvent<bool> onValueChanged;
+
+    public OnValueChange onValueChanged;
+    SwitchState switchState = new SwitchState();
+
+
+    private void Awake()
+    {
+        hideBg?.SetActive(true);
+        SetCloseState();
+    }
 
     private void Start()
     {
-        hideBg?.SetActive(true);
         if (group != null)
         {
             group.AddSwitch(this);
             switchState.AddListener(group.SwitchesController);
+            group.SetLastSwitch(this);
         }
+        //IsOn = isOn;
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (IsOn && EventSystem.current.gameObject == this.gameObject)
+        if (IsOn)
             return;
         IsOn = !isOn;
-        // openBg.SetActive(IsOn);
     }
     public void SetCloseState()
     {
@@ -65,4 +75,5 @@ public class Switch : MonoBehaviour, IPointerClickHandler
     //}
 }
 [System.Serializable]
-public class OnValueChange<T> : UnityEvent<T> { }
+public class OnValueChange : UnityEvent<bool> { }
+public class SwitchState : UnityEvent<Switch> { }

@@ -85,13 +85,11 @@ public class AssetEditorLoader : IAssetLoader
             callBackAction?.Invoke(sprites);
         }
     }
-    
 
     public Sprite LoadTexture(string abName, string textureName)
     {
         return GetAsset<Sprite>(textureName, texture_ab_SearchFolder);
     }
-
 
     public Dictionary<string, Sprite> LoadAllTexture(string abName)
     {

@@ -36,39 +36,11 @@ public class Kitchen_DataBase
 public class Kitchen_PropertyBase
 {
 	/// <summary>
-	/// 厨具Id
+	/// 厨房设施ID
 	/// </summary>
 	public int ID { get; set; }
 	/// <summary>
-	/// 厨具等级
-	/// </summary>
-	public int level { get; set; }
-	/// <summary>
-	/// 厨具名称
-	/// </summary>
-	public int[] Name { get; set; }
-	/// <summary>
-	/// 厨具介绍
-	/// </summary>
-	public int[] Intro { get; set; }
-	/// <summary>
-	/// 建造初始价格_增长倍率
-	/// </summary>
-	public int[] buildPrice { get; set; }
-	/// <summary>
-	/// 每阶段升级初始价格_增长倍率
-	/// </summary>
-	public int[] upgradePrice { get; set; }
-	/// <summary>
-	/// 当前阶段升级奖励
-	/// </summary>
-	public int reward { get; set; }
-	/// <summary>
-	/// 图标Icon
+	/// 厨房设施图标
 	/// </summary>
 	public string Icon { get; set; }
-	/// <summary>
-	/// 当前阶段最大等级
-	/// </summary>
-	public int maxLevel { get; set; }
 }

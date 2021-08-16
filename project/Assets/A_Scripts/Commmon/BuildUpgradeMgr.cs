@@ -92,7 +92,6 @@ public class BuildUpgradeMgr : SingleClass<BuildUpgradeMgr>
             UIMgr.ShowPanel<AreaUnlockPanel>(new AreaUnlockPanelData(model));
             return;
         }
-
         if (model.AreaIndex == 0)
         {
             UIMgr.ShowPanel<BuildUpgradePanel>(new BuildUpgradePanelData(model));
@@ -101,11 +100,17 @@ public class BuildUpgradeMgr : SingleClass<BuildUpgradeMgr>
                 new CameraViewMove(point, true));
             ColorGradientUtil.Instance.PlayerCGradientEff(MainSpace.Instance.stallList[model.Pos - 1].GetShowBuildMR());
         }
-        else if (model.AreaIndex == 3 || model.AreaIndex == 1 || model.AreaIndex == 7)
+        else if (model.AreaIndex == 3 || model.AreaIndex == 1 || model.AreaIndex == 7 || model.AreaIndex == 5)
         {
             List<BuildDataModel> buildDataModels = BuildMgr.GetBuildDatasByArea(model.AreaIndex);
             Debug.Log("index " + index);
             UIMgr.ShowPanel<ChairPanel>(new ChairPanelData(buildDataModels, model.Id, index));
+        }
+        else if (model.AreaIndex == 8)
+        {
+            List<BuildDataModel> buildDataModels = BuildMgr.GetBuildDatasByArea(model.AreaIndex);
+
+            UIMgr.ShowPanel<CookPanel>(new CookPanelData(buildDataModels, model.Id, index));
         }
     }
 

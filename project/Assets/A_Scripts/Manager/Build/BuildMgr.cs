@@ -696,9 +696,9 @@ namespace EazyGF
             Debug.LogError("没有找到 厨房表 的数据");
             return null;
         }
-        public static Kitchen_Property GetKitchenPropertyByIdAndLevel(int id, int level)
+        public static KitchenLevel_Property GetKitchenPropertyByIdAndLevel(int id, int level)
         {
-            Kitchen_Property[] kitchens = Kitchen_Data.DataArray;
+            KitchenLevel_Property[] kitchens = KitchenLevel_Data.DataArray;
             foreach (var kitchen in kitchens)
             {
                 if (kitchen.ID == id)

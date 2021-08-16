@@ -33,6 +33,7 @@ public class ChairItem : MonoBehaviour
         SetItemLevelState(chair);
         Index = index;
     }
+
     public void SetItemLevelState(Chair_Property chair)
     {
         imgObj[0].SetActive(chair.level < 4);

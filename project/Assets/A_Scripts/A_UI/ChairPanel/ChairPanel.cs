@@ -100,6 +100,7 @@ namespace EazyGF
             }
             toggles = new Toggle[builds.Count];
             id = mPanelData.id;
+            Debug.Log("id:" + id);
             index = GetIndexById();
             InfinityScroll.InitScrollView(builds.Count, 4);
 
@@ -107,7 +108,7 @@ namespace EazyGF
 
         private void SetItem(ChairItem item, int index)
         {
-            Chair_Property chair = BuildMgr.GetChairByIdAndLevel(builds[index].Id, builds[index].Level);
+            Chair_Property chair = GetChairByIndex(index);
             item.SetChairData(chair, index);
             toggles[index] = item.GetComponent<Toggle>();
             Image img = item.Img;
@@ -117,6 +118,18 @@ namespace EazyGF
 
         private int GetIndexById()
         {
+            if (mPanelData.index == -1)
+            {
+                for (int i = 0; i < builds.Count; i++)
+                {
+                    if (builds[i].Id == id)
+                    {
+                        return i;
+                    }
+                }
+            }
+
+
             for (int i = 0; i < builds.Count; i++)
             {
                 if (builds[i].Id == id)
@@ -149,21 +162,32 @@ namespace EazyGF
             }
             return BuildMgr.GetChairByIdAndLevel(id, level);
         }
+
         private void LeftBtn()
         {
             List<BuildDataModel> buildList = BuildMgr.GetBuildDatasByArea(btns[0]);
-            if (buildList.Count > 0)
+            if (buildList[0].AreaIndex != 8)
             {
                 OnShow(new ChairPanelData(buildList, buildList[0].Id, 0));
+            }
+            else
+            {
+                UIMgr.HideUI<ChairPanel>();
+                UIMgr.ShowPanel<CookPanel>(new CookPanelData(buildList, buildList[0].Id, -1));
             }
         }
 
         private void RightBtn()
         {
             List<BuildDataModel> buildList = BuildMgr.GetBuildDatasByArea(btns[1]);
-            if (buildList.Count > 0)
+            if (buildList[0].AreaIndex != 8)
             {
                 OnShow(new ChairPanelData(buildList, buildList[0].Id, 0));
+            }
+            else
+            {
+                UIMgr.HideUI<ChairPanel>();
+                UIMgr.ShowPanel<CookPanel>(new CookPanelData(buildList, buildList[0].Id, -1));
             }
         }
 
@@ -256,10 +280,6 @@ namespace EazyGF
             Debug.LogError("在建筑表\" Adorn \"中未找到id：" + id);
             return -1;
         }
-
-
-
-
         private void UpdateUI(Chair_Property chair)
         {
             ShowChairStatus(chair);
@@ -372,7 +392,6 @@ namespace EazyGF
             toggles[index].isOn = true;
             img = toggles[index].targetGraphic.GetComponent<Image>();
             Icon_img.sprite = img.sprite;
-
         }
 
         private void ShowInView()

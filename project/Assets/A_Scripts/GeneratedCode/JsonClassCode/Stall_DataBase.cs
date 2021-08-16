@@ -84,6 +84,10 @@ public class Stall_PropertyBase
 	/// </summary>
 	public string foodIcon { get; set; }
 	/// <summary>
+	/// 标题图片
+	/// </summary>
+	public string title { get; set; }
+	/// <summary>
 	/// 图标名字
 	/// </summary>
 	public string IconName { get; set; }

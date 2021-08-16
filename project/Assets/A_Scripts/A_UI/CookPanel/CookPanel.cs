@@ -22,13 +22,13 @@ namespace EazyGF
     public partial class CookPanel : UIBase
     {
         int id;
-        int level; //阶段等级 最大4  通过id和level读表获取表中的数据
+        int level;
 
         int curBuildLevel = 1; //建筑的等级
         int Upgrade_coin;
 
-        // int index; //建筑在集合里的位置  同时  也是toggle在group中位置
         int[] curLevels;
+        int[] btns;
         KitchenItem item;
         List<BuildDataModel> builds = new List<BuildDataModel>();
         [SerializeField] ScrollViewInfinity infinity;
@@ -38,7 +38,11 @@ namespace EazyGF
             build_btn.onClick.AddListener(ClickUpgradeBtn);
             infinity.onItemRender.AddListener(UpdateItem);
             cook_obj.gameObject.SetActive(true);
+            maxObj.SetActive(false);
+            left_btn.onClick.AddListener(LeftBtn);
+            right_btn.onClick.AddListener(RightBtn);
         }
+
         protected override void OnShow(UIDataBase otherpanelData = null)
         {
             if (otherpanelData != null)
@@ -46,14 +50,14 @@ namespace EazyGF
                 mPanelData = otherpanelData as CookPanelData;
             }
             InitBuildList();
-            Kitchen_Property kitchen = GetKitchenByIndex(mPanelData.index);
+            KitchenLevel_Property kitchen = GetKitchenByIndex(mPanelData.index);
             UpdateUI(kitchen);
+            LeftAndRightBtn();
         }
 
         protected override void OnHide()
         {
-
-
+            EventManager.Instance.TriggerEvent(EventKey.MoveCamerToTargetPos2, new CameraViewMove(GetPositionById(), false));
         }
 
         private void InitBuildList()
@@ -93,30 +97,81 @@ namespace EazyGF
 
         private void SetItem(KitchenItem item, int index)
         {
-            Kitchen_Property kitchen = BuildMgr.GetKitchenPropertyByIdAndLevel(builds[index].Id, builds[index].Level);
-            curBuildLevel = curLevels[index];
-            item.SetKitchenData(kitchen, index, curBuildLevel);
+            KitchenLevel_Property kitchen = BuildMgr.GetKitchenPropertyByIdAndLevel(builds[index].Id, builds[index].Level);
+            int curBuildLevel = curLevels[index];
+            int id = builds[index].Id;
+            item.SetKitchenData(kitchen, index, curBuildLevel, id);
             ShowFirstImg(item);
         }
         /// <summary>
         /// 得到第一个为此id的Index，意味着如果有相同的id则只return 第一个的index
         /// </summary>
         /// <returns></returns>
-        private int GetBuildDataModelIndex()
+        private int GetIndexBy(int id)
         {
             for (int i = 0; i < builds.Count; i++)
             {
                 if (builds[i].Id == id)
                 {
-                    return i + mPanelData.index;
+                    return i;
                 }
             }
-            Debug.LogError("此建筑不存在");
+            Debug.LogError($"没有找到{id}");
             return -1;
         }
 
-        private Kitchen_Property GetKitchenByIndex(int index)
+        private int GetLevelById(int id)
         {
+            for (int i = 0; i < builds.Count; i++)
+            {
+                if (builds[i].Id == id)
+                {
+                    return builds[i].Level;
+                }
+            }
+            Debug.LogError($"没有找到{id}");
+            return -1;
+        }
+
+        private void LeftBtn()
+        {
+            List<BuildDataModel> buildList = BuildMgr.GetBuildDatasByArea(btns[0]);
+            if (buildList[0].AreaIndex != 8)
+            {
+                UIMgr.HideUI<CookPanel>();
+                UIMgr.ShowPanel<ChairPanel>(new ChairPanelData(buildList, buildList[0].Id, 0));
+            }
+        }
+
+        private void RightBtn()
+        {
+            List<BuildDataModel> buildList = BuildMgr.GetBuildDatasByArea(btns[1]);
+            if (buildList[0].AreaIndex != 8)
+            {
+                UIMgr.HideUI<CookPanel>();
+                UIMgr.ShowPanel<ChairPanel>(new ChairPanelData(buildList, buildList[0].Id, 0));
+            }
+        }
+
+        private void LeftAndRightBtn()
+        {
+            int index = GetIndexBy(mPanelData.id);
+            int areaId = builds[index].AreaIndex;
+            btns = BuildAreaMgr.Instance.GetBoundAreas(areaId);
+            left_btn.gameObject.SetActive(btns[0] != -1);
+            right_btn.gameObject.SetActive(btns[1] != -1);
+        }
+
+
+
+        private KitchenLevel_Property GetKitchenByIndex(int index)
+        {
+            if (index == -1)
+            {
+                id = mPanelData.id;
+                level = GetLevelById(id);
+                return BuildMgr.GetKitchenPropertyByIdAndLevel(mPanelData.id, level);
+            }
             id = builds[index].Id;
             level = builds[index].Level;
             return BuildMgr.GetKitchenPropertyByIdAndLevel(id, level);
@@ -124,11 +179,7 @@ namespace EazyGF
 
         //区域内有多少个建筑  读表
         //按钮、文本、图片
-        private void ShowCommonText(Kitchen_Property kitchen)
-        {
-            desc_text.text = LanguageMgr.GetTranstion(kitchen.Intro);
-        }
-        private IEnumerator ShowBuildNameAndDesc(Kitchen_Property kitchen)
+        private IEnumerator ShowBuildNameAndDesc(KitchenLevel_Property kitchen)
         {
             name_text.text = LanguageMgr.GetTranstion(kitchen.Name) + ":";
             yield return null;
@@ -138,15 +189,15 @@ namespace EazyGF
             desc_text.text = LanguageMgr.GetTranstion(kitchen.Intro);
         }
 
-        private void CookLockText(Kitchen_Property kitchen)
+        private void CookLockText(KitchenLevel_Property kitchen)
         {
             cookLock_text.text = $"{kitchen.reward} plates for store";
             curLevel_text.text = "";
         }
 
-        private void CookUnlockText(Kitchen_Property kitchen)
+        private void CookUnlockText(KitchenLevel_Property kitchen)
         {
-            cookFill_img.fillAmount = curBuildLevel / kitchen.maxLevel;
+            cookFill_img.fillAmount = (float)curBuildLevel / kitchen.maxLevel;
             curLevel_text.text = $"LV.{level}";
             cookMaxLevel_text.text = $"lv.{kitchen.maxLevel}";
             unlockCook_text.text = $"Gain per level {kitchen.reward}";
@@ -161,16 +212,47 @@ namespace EazyGF
         {
             if (isOn)
             {
+                this.item = item;
                 Icon_img.sprite = item.Img.sprite;
                 curBuildLevel = item.CurLevel;
-                Kitchen_Property kitchen = GetKitchenByIndex(item.Index);
+                KitchenLevel_Property kitchen = GetKitchenByIndex(item.Index);
                 UpdateUI(kitchen);
+                EventManager.Instance.TriggerEvent(EventKey.MoveCamerToTargetPos2, new CameraViewMove(GetPositionById(), true));
             }
+        }
+
+        private Vector3 GetPositionById()
+        {
+            Vector3 position = Vector3.zero;
+            int i;
+            BuildDataModel bdm = builds[item.Index];
+            int pos = bdm.Pos;
+            if (bdm.Type == 2)
+            {
+                i = GetEquipIndexById(id);
+                position = MainSpace.Instance.equipList[i].GetShowBuildPos(pos, bdm.Level);
+                ColorGradientUtil.Instance.PlayerCGradientEff(MainSpace.Instance.equipList[i].GetShowBuildMR(pos, bdm.Level));
+            }
+            return position;
+        }
+
+        private int GetEquipIndexById(int id)
+        {
+            Equip_Property[] equips = Equip_Data.DataArray;
+            for (int i = 0; i < equips.Length / 4; i++)
+            {
+                if (equips[i * 4].ID == id)
+                {
+                    return i;
+                }
+            }
+            Debug.LogError("在建筑表\" Equip \"中未找到id：" + id);
+            return -1;
         }
 
         private void ShowFirstImg(KitchenItem item)
         {
-            if (this.item == null && item.Index == mPanelData.index)
+            if (item.Id == mPanelData.id)
             {
                 item.SetSwitch(true);
                 curBuildLevel = curLevels[item.Index];
@@ -178,13 +260,13 @@ namespace EazyGF
             }
         }
 
-        private void UpdateUI(Kitchen_Property kitchen)
+        private void UpdateUI(KitchenLevel_Property kitchen)
         {
             //区分解锁的情况
             //未解锁显示lock 已解锁显示unlock
             cookLock_text.gameObject.SetActive(level < 1);
             unlockCook_obj.SetActive(level >= 1);
-            if (unlockCook_obj.activeInHierarchy)
+            if (unlockCook_obj.activeSelf)
             {
                 CookUnlockText(kitchen);
             }
@@ -192,16 +274,16 @@ namespace EazyGF
             {
                 CookLockText(kitchen);
             }
-            //ShowCommonText(kitchen);
             StartCoroutine(ShowBuildNameAndDesc(kitchen));
             ShowCoin(kitchen);
+            BtnInteractable(kitchen);
         }
 
         /// <summary>
         /// 显示 button Text 金币
         /// </summary>
         /// <param name="property"></param>
-        private void ShowCoin(Kitchen_Property property)
+        private void ShowCoin(KitchenLevel_Property property)
         {
             if (curBuildLevel == property.maxLevel || level == 0)
             {
@@ -221,7 +303,7 @@ namespace EazyGF
         /// </summary>
         private void ClickUpgradeBtn()
         {
-            Kitchen_Property property = BuildMgr.GetKitchenPropertyByIdAndLevel(id, level);
+            KitchenLevel_Property property = BuildMgr.GetKitchenPropertyByIdAndLevel(id, level);
             if (curBuildLevel == property.maxLevel || level == 0)
             {
                 if (ItemPropsManager.Intance.CoseItem((int)CurrencyType.Coin, Upgrade_coin))
@@ -231,7 +313,7 @@ namespace EazyGF
                     builds[item.Index].Level = level;
                     BuildMgr.UpdateSelectBuild(id, level);
                     property = BuildMgr.GetKitchenPropertyByIdAndLevel(id, level);
-                    item.SetKitchenData(property, item.Index, curBuildLevel);
+                    item.SetKitchenData(property, item.Index, curBuildLevel, id);
                     UpdateUI(property);
                     return;
                 }
@@ -240,14 +322,15 @@ namespace EazyGF
             {
                 curBuildLevel++;
                 item.UpdateData(curBuildLevel);
+                ItemPropsManager.Intance.AddItem(3, property.reward);
             }
             SaveData();
             ShowCoin(property);
-            cookFill_img.fillAmount = curBuildLevel / property.maxLevel;
+            cookFill_img.fillAmount = (float)curBuildLevel / property.maxLevel;
             BtnInteractable(property);
         }
 
-        private void BtnInteractable(Kitchen_Property property)
+        private void BtnInteractable(KitchenLevel_Property property)
         {
             build_btn.interactable = level < 4 || curBuildLevel < property.maxLevel;
             maxObj.SetActive(!build_btn.interactable);

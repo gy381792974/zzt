@@ -111,6 +111,12 @@ public class LocalJsonDataLoader
 		Item_Data.DataArray = JsonMapper.ToObject<Item_Property[]>(jsonValue);
 		Item_Data.SetItemDataLenth();
 
+		//加载 KitchenLevel_Data
+		filePath =$"{AB_ResFilePath.jsonGameDatasRootDir}/KitchenLevel_Data.txt";
+		jsonValue = File.ReadAllText(filePath);
+		KitchenLevel_Data.DataArray = JsonMapper.ToObject<KitchenLevel_Property[]>(jsonValue);
+		KitchenLevel_Data.SetKitchenLevelDataLenth();
+
 		//加载 Kitchen_Data
 		filePath =$"{AB_ResFilePath.jsonGameDatasRootDir}/Kitchen_Data.txt";
 		jsonValue = File.ReadAllText(filePath);
@@ -235,6 +241,11 @@ public class LocalJsonDataLoader
 		Item_Data.DataArray = JsonMapper.ToObject<Item_Property[]>(textAsset.text);
 		Item_Data.SetItemDataLenth();
 		AssetMgr.Instance.UnloadAsset("item_data",true,true);
+
+		textAsset = AssetMgr.Instance.LoadAsset<TextAsset>("kitchenlevel_data","KitchenLevel_Data");
+		KitchenLevel_Data.DataArray = JsonMapper.ToObject<KitchenLevel_Property[]>(textAsset.text);
+		KitchenLevel_Data.SetKitchenLevelDataLenth();
+		AssetMgr.Instance.UnloadAsset("kitchenlevel_data",true,true);
 
 		textAsset = AssetMgr.Instance.LoadAsset<TextAsset>("kitchen_data","Kitchen_Data");
 		Kitchen_Data.DataArray = JsonMapper.ToObject<Kitchen_Property[]>(textAsset.text);

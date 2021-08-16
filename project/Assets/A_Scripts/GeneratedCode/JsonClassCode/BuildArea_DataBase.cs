@@ -48,7 +48,23 @@ public class BuildArea_PropertyBase
 	/// </summary>
 	public int IsUnLock { get; set; }
 	/// <summary>
-	/// 遮挡区 是使用BuldMaskArea的id 1有遮挡 -1没有遮挡
+	/// 遮挡区 是使用BuldMaskArea的id -1没有遮挡
 	/// </summary>
 	public int MaskAreaId { get; set; }
+	/// <summary>
+	/// 区域图标
+	/// </summary>
+	public string icon { get; set; }
+	/// <summary>
+	/// 区域标题
+	/// </summary>
+	public string title { get; set; }
+	/// <summary>
+	/// 解锁需要的金币
+	/// </summary>
+	public int needCoin { get; set; }
+	/// <summary>
+	/// 区域描述
+	/// </summary>
+	public int[] desc { get; set; }
 }

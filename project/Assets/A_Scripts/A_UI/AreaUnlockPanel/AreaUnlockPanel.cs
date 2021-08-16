@@ -45,45 +45,48 @@ namespace EazyGF
         }
         //LanguageMgr.GetTranstion(2, 1, adorn.UnlockCoin)
         private void GetPropetyByType(int type)
-        { 
-        //{
-        //    switch (type)
-        //    {
-        //        case 1:
-        //            break;
-        //        case 2:
-        //        case 3:
-        //        //Equip_Property equip = BuildMgr.GetEquip_Property(mPanelData.id, mPanelData.level);
-        //        //needCoin = equip.UnlockCoin;
-        //        //UpdateContent(AssetMgr.Instance.LoadTexture("buildtex", equip.IconName),
-        //        //     LanguageMgr.GetTranstion(equip.BuildIntro), $"{equip.UnlockCoin}");
-        //        //break;
-        //        //Adorn_Property adorn = BuildMgr.GetAdorn_Property(mPanelData.id, mPanelData.level);
-        //        //needCoin = adorn.UnlockCoin;
-        //        //UpdateContent(AssetMgr.Instance.LoadTexture("buildtex", adorn.IconName),
-        //        //     LanguageMgr.GetTranstion(adorn.BuildIntro), $"{adorn.UnlockCoin}");
-        //            break;
-        //    }
+        {
+            //{
+            //    switch (type)
+            //    {
+            //        case 1:
+            //            break;
+            //        case 2:
+            //        case 3:
+            //        //Equip_Property equip = BuildMgr.GetEquip_Property(mPanelData.id, mPanelData.level);
+            //        //needCoin = equip.UnlockCoin;
+            //        //UpdateContent(AssetMgr.Instance.LoadTexture("buildtex", equip.IconName),
+            //        //     LanguageMgr.GetTranstion(equip.BuildIntro), $"{equip.UnlockCoin}");
+            //        //break;
+            //        //Adorn_Property adorn = BuildMgr.GetAdorn_Property(mPanelData.id, mPanelData.level);
+            //        //needCoin = adorn.UnlockCoin;
+            //        //UpdateContent(AssetMgr.Instance.LoadTexture("buildtex", adorn.IconName),
+            //        //     LanguageMgr.GetTranstion(adorn.BuildIntro), $"{adorn.UnlockCoin}");
+            //            break;
+            //    }
             if (type == 1)
             {
                 Stall_Property stall = BuildMgr.GetStall_Property(mPanelData.id, mPanelData.level);
                 needCoin = stall.UnlockCoin;
                 UpdateContent(AssetMgr.Instance.LoadTexture("buildtex", stall.IconName),
-                     LanguageMgr.GetTranstion(stall.BuildIntro), $"{needCoin}");
+                    AssetMgr.Instance.LoadTexture("buildtex", stall.title),
+                     LanguageMgr.GetTranstion(stall.BuildIntro), $"{needCoin}"); ;
             }
             else
             {
                 BuildArea_Property area = BuildArea_Data.GetBuildArea_DataByID(mPanelData.data.AreaIndex);
                 needCoin = area.needCoin;
                 UpdateContent(AssetMgr.Instance.LoadTexture("AreaTexture", area.icon),
+                    AssetMgr.Instance.LoadTexture("AreaTexture", area.title),
                      LanguageMgr.GetTranstion(area.desc), $"{needCoin}");
             }
         }
 
-        public void UpdateContent(Sprite sprite, string desc, string buildTxt)
+        public void UpdateContent(Sprite sprite, Sprite spriteTitle, string desc, string buildTxt)
         {
             //build_btn.interactable = isBuild;
             area_img.sprite = sprite;
+            title_img.sprite = spriteTitle;
             //area_img.SetNativeSize();
             //区域描述文本
             areaDes_text.text = desc;

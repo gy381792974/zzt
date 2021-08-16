@@ -88,6 +88,8 @@ namespace EazyGF
             curFoodLevel = bs.foodLevel;
             Stall_Property stall = BuildMgr.GetStall_Property(mPanelData.id, mPanelData.level);
             StallLevel_Property stallLevel = BuildMgr.GetStallLevelPropertyByIdAndLevel(mPanelData.id, mPanelData.level);
+            title_img.sprite = AssetMgr.Instance.LoadTexture("AreaTitle", stall.title);
+            title_img.SetNativeSize();
             icon_img.sprite = AssetMgr.Instance.LoadTexture("buildTex", stall.IconName);
             //食物图片
             food_img.sprite = AssetMgr.Instance.LoadTexture("FoodIcon", stall.foodIcon);
