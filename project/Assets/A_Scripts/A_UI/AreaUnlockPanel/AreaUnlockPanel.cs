@@ -10,6 +10,7 @@ namespace EazyGF
         public int id;
         public int level;
         public int type;
+        public int areaIndex;
         public BuildDataModel data;
         public AreaUnlockPanelData(BuildDataModel data)
         {
@@ -17,6 +18,12 @@ namespace EazyGF
             this.level = data.Level;
             this.type = data.Type;
             this.data = data;
+        }
+        public AreaUnlockPanelData(BuildAreaItem build)
+        {
+            this.id = build.id;
+            this.type = -1;
+            this.areaIndex = build.AreaType;
         }
     }
 
@@ -46,38 +53,20 @@ namespace EazyGF
         //LanguageMgr.GetTranstion(2, 1, adorn.UnlockCoin)
         private void GetPropetyByType(int type)
         {
-            //{
-            //    switch (type)
-            //    {
-            //        case 1:
-            //            break;
-            //        case 2:
-            //        case 3:
-            //        //Equip_Property equip = BuildMgr.GetEquip_Property(mPanelData.id, mPanelData.level);
-            //        //needCoin = equip.UnlockCoin;
-            //        //UpdateContent(AssetMgr.Instance.LoadTexture("buildtex", equip.IconName),
-            //        //     LanguageMgr.GetTranstion(equip.BuildIntro), $"{equip.UnlockCoin}");
-            //        //break;
-            //        //Adorn_Property adorn = BuildMgr.GetAdorn_Property(mPanelData.id, mPanelData.level);
-            //        //needCoin = adorn.UnlockCoin;
-            //        //UpdateContent(AssetMgr.Instance.LoadTexture("buildtex", adorn.IconName),
-            //        //     LanguageMgr.GetTranstion(adorn.BuildIntro), $"{adorn.UnlockCoin}");
-            //            break;
-            //    }
             if (type == 1)
             {
                 Stall_Property stall = BuildMgr.GetStall_Property(mPanelData.id, mPanelData.level);
                 needCoin = stall.UnlockCoin;
                 UpdateContent(AssetMgr.Instance.LoadTexture("buildtex", stall.IconName),
-                    AssetMgr.Instance.LoadTexture("buildtex", stall.title),
-                     LanguageMgr.GetTranstion(stall.BuildIntro), $"{needCoin}"); ;
+                    AssetMgr.Instance.LoadTexture("AreaTitle", stall.title),
+                     LanguageMgr.GetTranstion(stall.BuildIntro), $"{needCoin}");
             }
             else
             {
-                BuildArea_Property area = BuildArea_Data.GetBuildArea_DataByID(mPanelData.data.AreaIndex);
+                BuildArea_Property area = BuildArea_Data.GetBuildArea_DataByID(mPanelData.id);
                 needCoin = area.needCoin;
                 UpdateContent(AssetMgr.Instance.LoadTexture("AreaTexture", area.icon),
-                    AssetMgr.Instance.LoadTexture("AreaTexture", area.title),
+                    AssetMgr.Instance.LoadTexture("AreaTitle", area.title),
                      LanguageMgr.GetTranstion(area.desc), $"{needCoin}");
             }
         }
@@ -85,13 +74,16 @@ namespace EazyGF
         public void UpdateContent(Sprite sprite, Sprite spriteTitle, string desc, string buildTxt)
         {
             //build_btn.interactable = isBuild;
-            area_img.sprite = sprite;
             title_img.sprite = spriteTitle;
-            //area_img.SetNativeSize();
+            title_img.SetNativeSize();
+            area_img.sprite = sprite;
+            area_img.SetNativeSize();
+            area_img.transform.localScale = mPanelData.type == 1 ? Vector3.one * 2.5f : Vector3.one;
+
             //区域描述文本
             areaDes_text.text = desc;
-            build_text.text = LanguageMgr.GetTranstion(1, 1);
             //建造{0}
+            build_text.text = LanguageMgr.GetTranstion(2, 1);
             coin_text.text = buildTxt;
         }
 
@@ -99,8 +91,15 @@ namespace EazyGF
         {
             if (ItemPropsManager.Intance.CoseItem((int)CurrencyType.Coin, needCoin))
             {
-                mPanelData.level++;
-                BuildMgr.UpgradeBuilding(mPanelData.id, mPanelData.level);
+                if (mPanelData.type == 1)
+                {
+                    mPanelData.level++;
+                    BuildMgr.UpgradeBuilding(mPanelData.id, mPanelData.level);
+                }
+                else
+                {
+                    BuildAreaMgr.Instance.TriggerUnlockArea(mPanelData.areaIndex, mPanelData.id);
+                }
                 UIMgr.HideUI<AreaUnlockPanel>();
             }
         }

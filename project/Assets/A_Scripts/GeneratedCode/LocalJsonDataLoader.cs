@@ -117,12 +117,6 @@ public class LocalJsonDataLoader
 		KitchenLevel_Data.DataArray = JsonMapper.ToObject<KitchenLevel_Property[]>(jsonValue);
 		KitchenLevel_Data.SetKitchenLevelDataLenth();
 
-		//加载 Kitchen_Data
-		filePath =$"{AB_ResFilePath.jsonGameDatasRootDir}/Kitchen_Data.txt";
-		jsonValue = File.ReadAllText(filePath);
-		Kitchen_Data.DataArray = JsonMapper.ToObject<Kitchen_Property[]>(jsonValue);
-		Kitchen_Data.SetKitchenDataLenth();
-
 		//加载 SplitArray_Data
 		filePath =$"{AB_ResFilePath.jsonGameDatasRootDir}/SplitArray_Data.txt";
 		jsonValue = File.ReadAllText(filePath);
@@ -246,11 +240,6 @@ public class LocalJsonDataLoader
 		KitchenLevel_Data.DataArray = JsonMapper.ToObject<KitchenLevel_Property[]>(textAsset.text);
 		KitchenLevel_Data.SetKitchenLevelDataLenth();
 		AssetMgr.Instance.UnloadAsset("kitchenlevel_data",true,true);
-
-		textAsset = AssetMgr.Instance.LoadAsset<TextAsset>("kitchen_data","Kitchen_Data");
-		Kitchen_Data.DataArray = JsonMapper.ToObject<Kitchen_Property[]>(textAsset.text);
-		Kitchen_Data.SetKitchenDataLenth();
-		AssetMgr.Instance.UnloadAsset("kitchen_data",true,true);
 
 		textAsset = AssetMgr.Instance.LoadAsset<TextAsset>("splitarray_data","SplitArray_Data");
 		SplitArray_Data.DataArray = JsonMapper.ToObject<SplitArray_Property[]>(textAsset.text);

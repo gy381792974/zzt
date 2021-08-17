@@ -52,6 +52,7 @@ namespace EazyGF
             InitBuildList();
             KitchenLevel_Property kitchen = GetKitchenByIndex(mPanelData.index);
             UpdateUI(kitchen);
+            SwitchTitle();
             LeftAndRightBtn();
         }
 
@@ -279,6 +280,15 @@ namespace EazyGF
             BtnInteractable(kitchen);
         }
 
+        private void SwitchTitle()
+        {
+            int areaIndex = builds[0].AreaIndex;
+            BuildArea_Property area = BuildArea_Data.GetBuildArea_DataByID(areaIndex);
+            title_img.sprite = AssetMgr.Instance.LoadAsset<Sprite>("AreaTitle", area.title);
+            title_img.SetNativeSize();
+        }
+
+
         /// <summary>
         /// 显示 button Text 金币
         /// </summary>
@@ -288,12 +298,12 @@ namespace EazyGF
             if (curBuildLevel == property.maxLevel || level == 0)
             {
                 Upgrade_coin = property.upgradePrice[0] * (int)Mathf.Pow(property.upgradePrice[1], level);
-                build_text.text = $"建造";
+                build_text.text = LanguageMgr.GetTranstion(2, 1);
             }
             else
             {
                 Upgrade_coin = property.buildPrice[0] * (int)Mathf.Pow(property.buildPrice[1], curBuildLevel - 1);
-                build_text.text = $"升级";
+                build_text.text = LanguageMgr.GetTranstion(1, 3);
             }
             Coin_text.text = Upgrade_coin.ToString();
         }

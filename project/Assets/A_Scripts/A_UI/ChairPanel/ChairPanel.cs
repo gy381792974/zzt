@@ -60,6 +60,7 @@ namespace EazyGF
             ShowChairStatus(chair);
             ShowImg();
             ShowInView();
+            SwitchTitle();
             LeftAndRightBtn();
         }
 
@@ -100,10 +101,8 @@ namespace EazyGF
             }
             toggles = new Toggle[builds.Count];
             id = mPanelData.id;
-            Debug.Log("id:" + id);
             index = GetIndexById();
             InfinityScroll.InitScrollView(builds.Count, 4);
-
         }
 
         private void SetItem(ChairItem item, int index)
@@ -128,7 +127,6 @@ namespace EazyGF
                     }
                 }
             }
-
 
             for (int i = 0; i < builds.Count; i++)
             {
@@ -197,6 +195,13 @@ namespace EazyGF
             btns = BuildAreaMgr.Instance.GetBoundAreas(areaId);
             left_btn.gameObject.SetActive(btns[0] != -1);
             right_btn.gameObject.SetActive(btns[1] != -1);
+        }
+        private void SwitchTitle()
+        {
+            int areaIndex = builds[0].AreaIndex;
+            BuildArea_Property area = BuildArea_Data.GetBuildArea_DataByID(areaIndex);
+            title_img.sprite = AssetMgr.Instance.LoadAsset<Sprite>("AreaTitle", area.title);
+            title_img.SetNativeSize();
         }
 
         private int GetIndexByAreaId(int id)
@@ -329,12 +334,12 @@ namespace EazyGF
             if (curLevel == chair.maxLevel || level == 0)
             {
                 upgrade_coin = chair.buildPrice[0] * (int)Mathf.Pow(chair.buildPrice[1], level);
-                build_text.text = $"建造";
+                build_text.text = LanguageMgr.GetTranstion(2, 1);
             }
             else
             {
                 upgrade_coin = chair.upgradePrice[0] * (int)Mathf.Pow(chair.upgradePrice[1], curLevel - 1);
-                build_text.text = $"升级";
+                build_text.text = LanguageMgr.GetTranstion(1, 3);
             }
             Coin_text.text = upgrade_coin.ToString();
         }
@@ -348,9 +353,16 @@ namespace EazyGF
                 {
                     curLevel = 1;
                     level++;
-                    mPanelData.index = GetPosById();
                     builds[index].Level = level;
-                    BuildMgr.UpgradeComBuild(id, mPanelData.index);
+                    if (mPanelData.index == -1)
+                    {
+                        BuildMgr.UpdateSelectBuild(id, level);
+                    }
+                    else
+                    {
+                        mPanelData.index = GetPosById();
+                        BuildMgr.UpgradeComBuild(id, mPanelData.index);
+                    }
                     chair = BuildMgr.GetChairByIdAndLevel(id, level);
                     item.SetItemLevelState(chair);
                     UpdateImage(chair);
@@ -372,7 +384,6 @@ namespace EazyGF
         {
             build_btn.interactable = curLevel < chair.maxLevel || chair.level < 4;
             maxObj.SetActive(!build_btn.interactable);
-
         }
 
         private void ShowImage(int index, Sprite sp)

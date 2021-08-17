@@ -145,19 +145,27 @@ namespace EazyGF
 
         private void ShowAllText(Stall_Property stall, StallLevel_Property stallLevel)
         {
-            //stall_text.text = LanguageMgr.GetTranstion(stall.BuildName);
-            //stallDes_text.text = LanguageMgr.GetTranstion(stall.BuildIntro);
             StartCoroutine(TextController(stall));
             time_text.text = $"{stall.StayTime}s";
             foodMaxLevel_text.text = $"Lv.{stallLevel.FoodMaxLevel}";
             fill_img.fillAmount = (float)curFoodLevel / stallLevel.FoodMaxLevel;
-            //  if (curMeal > stallLevel.TakeMealMax) curMeal = stallLevel.TakeMealMax;
-            mealNum_text.text = "Take a table" + $" {curMeal}/ {stallLevel.TakeMealMax}";
-            //  if (curQueue > stallLevel.MaxQueueNum) curQueue = stallLevel.MaxQueueNum;
-            queueNum_text.text = "Queuing space" + $" {curQueue}/ {stallLevel.MaxQueueNum}";
             ShowFoodText(stallLevel);
             ShowTipText(stallLevel);
+            MealText(stallLevel);
+            QueueText(stallLevel);
             ShowBtnText(stallLevel);
+        }
+
+        private void QueueText(StallLevel_Property stallLevel)
+        {
+            string queue = $" {curQueue}/ {stallLevel.MaxQueueNum}";
+            queueNum_text.text = LanguageMgr.GetTranstion(11, 7, queue);
+        }
+
+        private void MealText(StallLevel_Property stallLevel)
+        {
+            string meal = $" {curMeal}/ {stallLevel.TakeMealMax}";
+            mealNum_text.text = LanguageMgr.GetTranstion(11, 6, meal);
         }
 
         private IEnumerator TextController(Stall_Property stall)
@@ -176,15 +184,16 @@ namespace EazyGF
             tip1_text.gameObject.SetActive(bottleNum < stallLevel.BotNeedNum);
             if (tip1_text.gameObject.activeSelf)
             {
-                tip1_text.text = $"需要{stallLevel.BotNeedNum}个调料瓶";//LanguageMgr.GetTranstion(2, 1, stallLevel.BotNeedNum);
+                tip1_text.text = LanguageMgr.GetTranstion(11, 18, stallLevel.BotNeedNum);
             }
             //tip 2  最大食物等级10;
             tip2_text.gameObject.SetActive(curFoodLevel < stallLevel.FoodMaxLevel);
             if (tip2_text.gameObject.activeSelf)
             {
-                tip2_text.text = $"Need food level {stallLevel.FoodMaxLevel}";//LanguageMgr.GetTranstion(2, 1, stallLevel.FoodMaxLevel);
+                tip2_text.text = LanguageMgr.GetTranstion(11, 17, stallLevel.FoodMaxLevel);
             }
         }
+
         /// <summary>
         /// 4个按钮的文本
         /// </summary>
@@ -245,8 +254,8 @@ namespace EazyGF
                 food_coin = stall.FoodPrice[0] * (int)Mathf.Pow(stall.FoodPrice[1], curFoodLevel - 1);
                 upFood_text.text = food_coin.ToString();
                 ShowFoodText(stall);
-                PalyFoodUpgradeFX();
-                PlayUpgradeAnim(null);
+                PlayFoodUpgradeFX();
+                PlayUpgradeAnim();
                 SaveData();
             }
             upFood_btn.interactable = curFoodLevel < stall.FoodMaxLevel && bottleNum >= stall.BotNeedNum;
@@ -272,8 +281,8 @@ namespace EazyGF
                     meal.GetChild(1).gameObject.SetActive(true);
                 }
                 curMeal++;
-                string takeMealText = "Take a table " + $" {curMeal}/ {stall.TakeMealMax}";
-                mealNum_text.text = takeMealText;//LanguageMgr.GetTranstion(2, 1, takeMealText);
+                string takeMealText = $" {curMeal}/ {stall.TakeMealMax}";
+                mealNum_text.text = LanguageMgr.GetTranstion(11, 6, takeMealText);
                 meal_coin = stall.TakeMealPrice[0] * (int)Mathf.Pow(stall.TakeMealPrice[1], curMeal - 1);
                 upgradeMeal_text.text = meal_coin.ToString();
                 SaveData();
@@ -302,8 +311,8 @@ namespace EazyGF
                     queue.GetChild(1).gameObject.SetActive(true);
                 }
                 curQueue++;
-                string queueText = "Queuin space " + $" {curQueue}/ {stall.MaxQueueNum}";
-                queueNum_text.text = queueText;
+                string queueText = $" {curQueue}/ {stall.MaxQueueNum}";
+                queueNum_text.text = LanguageMgr.GetTranstion(11, 7, queueText);
                 queue_coin = stall.QueuePrice[0] * (int)Mathf.Pow(stall.QueuePrice[1], curQueue - 1);
                 Upgrade_text.text = queue_coin.ToString();
                 SaveData();
@@ -385,22 +394,17 @@ namespace EazyGF
             tip2_text.gameObject.SetActive(curFoodLevel < stall.FoodMaxLevel);
             if (tip2_text.gameObject.activeSelf)
             {
-                tip2_text.text = $"Need food level {stall.FoodMaxLevel}";//LanguageMgr.GetTranstion(2, 1, stallLevel.FoodMaxLevel);
+                tip2_text.text = LanguageMgr.GetTranstion(11, 18, stall.FoodMaxLevel);
             }
 
         }
-        private void PlayUpgradeAnim(string endValue, string endValue2)
-        {
-            food_text.DOText(endValue, 2f, true, ScrambleMode.Numerals);
-            next_text.DOText(endValue2, 4f);
-        }
-        private void PlayUpgradeAnim(string endValue)
+        private void PlayUpgradeAnim()
         {
             Sequence sqe = DOTween.Sequence();
             sqe.Join(food_text.rectTransform.DOScale(1.1f, 0.3f).SetEase(Ease.OutBack));
             sqe.Append(food_text.rectTransform.DOScale(1, 0.4f).SetEase(Ease.OutBack));
         }
-        private void PalyFoodUpgradeFX()
+        private void PlayFoodUpgradeFX()
         {
             if (FX != null)
             {
