@@ -27,7 +27,7 @@ namespace EazyGF
             combuildGrid.Clear();
             for (int i = 0; i < buildPos.Count; i++)
             {
-                combuildGrid.Add(GetTfTyChildNum(buildPos[i].GetChild(0)));
+                combuildGrid.Add(LocalCommonUtil.GetTfTyByChildNum(buildPos[i].GetChild(0)));
             }
         }
 
