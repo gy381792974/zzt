@@ -26,3 +26,15 @@ decoration_20071
 decoration_20072
 decoration_20073
 decoration_20074
+-1
+-1
+-1
+-1
+zhuozi1
+zhuozi2
+zhuozi3
+zhuozi4
+dengzi1
+dengzi2
+dengzi3
+dengzi4

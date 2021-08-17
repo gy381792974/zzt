@@ -22,10 +22,10 @@ stall_20061
 stall_20062
 stall_20063
 stall_20064
-stall_20071
-stall_20072
-stall_20073
-stall_20074
+batai1
+batai2
+batai3
+batai4
 stall_20081
 stall_20082
 stall_20083

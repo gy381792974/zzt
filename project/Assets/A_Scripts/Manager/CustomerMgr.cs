@@ -18,6 +18,7 @@ namespace EazyGF
         EnterDiningQuque,//用餐排队
         DiningQuque = 7,//用餐排队
         Dining, //用餐
+        GoWC, //去卫生间
         Leave, //离开
     }
 
@@ -114,6 +115,10 @@ namespace EazyGF
         public List<Transform> buyBoodQueue;
 
         public List<LevelPMQ> stallMultiQueue;
+
+        public List<Transform> wCCommonQueue;
+        public List<PosQueue> wCQueuePQ;
+        public List<Transform> wCIngTf;
 
         Dictionary<int, int[]> eStallQueue = new Dictionary<int, int[]>(); //排队
 
@@ -1585,33 +1590,13 @@ namespace EazyGF
         {
             yield return new WaitForSeconds(5);
 
-            if (cn.lineIndex == 1)
-            {
-                bool isGaveTip = UICommonUtil.Instance.IsFillConditByRotia(cn.Data.TipRatio);
-                if (isGaveTip || true)
-                {
-                    BuildDataModel bdm = BuildMgr.GetUserBuildDataById(diningAreaIds[1]);
-
-                    Transform tf = MainSpace.Instance.equipList[bdm.Pos - 1].GetShowBuildBoxTf(cn.QueueIndex / 2);
-
-                    int tipMultiple = LocalCommonUtil.TipMultipleNor(cn.Data.TipMultiple);
-
-                    int addCoin = 100 * tipMultiple;
-
-                    int[] ids = new int[2] { bdm.Id, cn.QueueIndex / 2};
-                    int id = LocalCommonUtil.GetBuildEquipCollectId(ids);
-
-                    addCoin = BuildCollectMgr.Instance.AddEquipBuildCoin(id, addCoin);
-
-                    LocalCommonUtil.ShowBB(4, tf, id, addCoin);
-                }
-            }
+            ShowLTChairBB(cn);
 
             if (cn.lineIndex == 4)
             {
                 List<Vector3> vs = BFS_Mgr.GetMoveList(mNavigate[cn.lineIndex].bfs, cn.transform, leaveTf[0].tfs[0]);
                 cn.MoveToTargetPoint(vs);
-                cn.MoveToTargetPoint(leaveTf[0].tfs[0]);
+                //cn.MoveToTargetPoint(leaveTf[0].tfs[0]);
             }
             else
             {
@@ -1625,7 +1610,6 @@ namespace EazyGF
                 cn.MoveToTargetPoint(vs);
                 
                 cn.MoveToTargetPoint(ls);
-                cn.MoveToTargetPoint(leaveTf[0].tfs[0]);
             }
 
             if (cn.lineIndex < 4)
@@ -1652,7 +1636,45 @@ namespace EazyGF
             }
             else
             {
-                CNLeave(cn);
+                if (UICommonUtil.Instance.IsFillConditByRotia(80))
+                {
+                    CNLeave(cn);
+                }
+                else
+                {
+                    CNLeave(cn);
+                }
+            }
+        }
+
+        private void EnterWC(CustomerNor cn)
+        {
+            Vector3 endPos = wCCommonQueue[0].position;
+            List<Vector3> vs = BFS_Mgr.GetMoveList(bfs, cn.transform.position, endPos);
+        }
+
+        private void ShowLTChairBB(CustomerNor cn)
+        {
+            if (cn.lineIndex == 1)
+            {
+                bool isGaveTip = UICommonUtil.Instance.IsFillConditByRotia(cn.Data.TipRatio);
+                if (isGaveTip || true)
+                {
+                    BuildDataModel bdm = BuildMgr.GetUserBuildDataById(diningAreaIds[1]);
+
+                    Transform tf = MainSpace.Instance.equipList[bdm.Pos - 1].GetShowBuildBoxTf(cn.QueueIndex / 2);
+
+                    int tipMultiple = LocalCommonUtil.TipMultipleNor(cn.Data.TipMultiple);
+
+                    int addCoin = 100 * tipMultiple;
+
+                    int[] ids = new int[2] { bdm.Id, cn.QueueIndex / 2 };
+                    int id = LocalCommonUtil.GetBuildEquipCollectId(ids);
+
+                    addCoin = BuildCollectMgr.Instance.AddEquipBuildCoin(id, addCoin);
+
+                    LocalCommonUtil.ShowBB(4, tf, id, addCoin);
+                }
             }
         }
 
@@ -1980,6 +2002,28 @@ namespace EazyGF
                     StartCoroutine(NCDiningEnd(cn));
                 }
             }
+            else if (cn.curState == NCSuatus.GoWC)
+            {
+                if (cn.lineIndex == 0)
+                {
+                    int index = GetQueueIndex((int)NCSuatus.GoWC, wCCommonQueue.Count);
+
+                    if (index == -1)
+                    {
+                        CNLeave(cn);
+                    }
+                    else
+                    {
+                        cn.lineIndex = 1;
+                        cn.MoveToTargetPoint(wCCommonQueue, true, index);
+                    }
+
+                }
+                else if (cn.lineIndex == 1)
+                {
+
+                }
+            }
             else if (cn.curState == NCSuatus.Leave)
             {
                 if (cn.lineIndex == 0)
@@ -1997,20 +2041,6 @@ namespace EazyGF
                     LeaveSceneEnd(cn);
                 }
             }
-        }
-
-        public int GetQueueIndex(int index)
-        {
-            if (!queueDic.ContainsKey(index))
-            {
-                queueDic.Add(index, 0);
-            }
-            else
-            {
-                return queueDic[index];
-            }
-
-            return 0;
         }
 
         #endregion
@@ -2178,5 +2208,41 @@ namespace EazyGF
             return takeMealNum + GetAllUnlockSeat() + BuildMgr.GetAllStallAndBornPosNum();
         }
 
+        public int GetQueueIndex(int index, int count)
+        {
+            int i = 0;
+
+            if (!queueDic.ContainsKey(index))
+            {
+                queueDic.Add(index, 0);
+            }
+            else
+            {
+                i = queueDic[index];
+            }
+
+            if (i >= count)
+            {
+                return -1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public int GetQueueIndex(int index)
+        {
+            if (!queueDic.ContainsKey(index))
+            {
+                queueDic.Add(index, 0);
+            }
+            else
+            {
+                return queueDic[index];
+            }
+
+            return 0;
+        }
     }
 }

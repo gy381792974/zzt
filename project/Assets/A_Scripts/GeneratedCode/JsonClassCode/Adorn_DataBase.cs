@@ -72,10 +72,6 @@ public class Adorn_PropertyBase
 	/// </summary>
 	public int[] Desc { get; set; }
 	/// <summary>
-	/// 资源链接
-	/// </summary>
-	public string Path { get; set; }
-	/// <summary>
 	/// 图标名字
 	/// </summary>
 	public string IconName { get; set; }

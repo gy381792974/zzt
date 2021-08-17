@@ -40,5 +40,23 @@ namespace EazyGF
         {
             return new int[] {id/100, id % 100};
         }
+
+        //得到有多个孩子的trasform
+        public static Transform GetTfTyByChildNum(Transform grid, int childNum = 3)
+        {
+            Transform tf = grid;
+            while (tf.childCount < childNum)
+            {
+                tf = tf.GetChild(0);
+
+                if (tf == null)
+                {
+                    Debug.LogError("获得子物体错误");
+                    return null;
+                }
+            }
+
+            return tf;
+        }
     }
 }
