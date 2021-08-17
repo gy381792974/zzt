@@ -60,6 +60,27 @@ namespace EazyGF
                         item.Key, item.Value);
                 }
             }
+
+            bcDir = BuildCollectMgr.Instance.equipCollectDic;
+
+            foreach (var item in bcDir)
+            {
+                if (item.Value > BuildCollectMgr.cCoinMinShowNum)
+                {
+                    int[] ids = LocalCommonUtil.GetBuildEquipCollectIds(item.Key);
+                    int posIndex = BuildMgr.GetStallPosById(ids[0]);
+
+                    if (posIndex == -1)
+                    {
+                        continue;
+                    }
+
+                    Transform tf = MainSpace.Instance.equipList[posIndex - 1].GetShowBuildBoxTf(ids[1]);
+
+                    LocalCommonUtil.ShowBB(4, tf,
+                        item.Key, item.Value);
+                }
+            }
         }
 
         public void UnLockALLBuildFun()

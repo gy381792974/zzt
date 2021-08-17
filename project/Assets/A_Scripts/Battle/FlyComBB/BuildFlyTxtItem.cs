@@ -20,8 +20,6 @@ namespace EazyGF
         {
             txt.text = "+" + data.num.ToString();
 
-            BuildCollectMgr.Instance.GetCoin(data.id);
-
             flyTf.DOPause();
             canvasGroup.DOPause();
 
@@ -43,9 +41,9 @@ namespace EazyGF
 
         public void AniPlayCom()
         {
-            //Debug.LogError("OnComplete");
+            Debug.LogError("OnComplete");
 
-            //EventManager.Instance.TriggerEvent(EventKey.RecycleCBBData, this);
+            EventManager.Instance.TriggerEvent(EventKey.RecycleCBBData, this);
         }
 
     }

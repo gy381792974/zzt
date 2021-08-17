@@ -127,7 +127,7 @@ namespace EazyGF
                     id = hitInfo.transform.name.ToInt();
                 }
 
-                Debug.LogWarning($"onclickName {hitInfo.transform.name}");
+                Debug.LogWarning($"onclickName  {buildItem.gameObject.name} {hitInfo.transform.name} ");
 
                 BuildUpgradeMgr.Instance.BuildUnLockAndUpgrade(buildItem.MBuildDataModel, id);
 

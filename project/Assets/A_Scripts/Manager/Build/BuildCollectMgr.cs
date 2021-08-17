@@ -6,7 +6,7 @@ namespace EazyGF
     public class BuildCollcetSerData
     {
         public Dictionary<int, int> SBCollctCoinDic;
-        public Dictionary<int[], int> SEquipCollectDic;
+        public Dictionary<int, int> SEquipCollectDic;
     }
 
 
@@ -34,7 +34,7 @@ namespace EazyGF
         public Dictionary<int, int> bCollctCoinDic = new Dictionary<int, int>();
 
         //设备的
-        public Dictionary<int[], int> equipCollectDic = new Dictionary<int[], int>();
+        public Dictionary<int, int> equipCollectDic = new Dictionary<int, int>();
 
         public override void Init()
         {
@@ -79,7 +79,7 @@ namespace EazyGF
         }
 
         //存到建筑中
-        public int AddEquipCoin(int[] id, int coin)
+        public int AddEquipBuildCoin(int id, int coin)
         {
             int total = coin;
             if (equipCollectDic.TryGetValue(id, out int value))
@@ -97,7 +97,7 @@ namespace EazyGF
             return total;
         }
 
-        public void GetEquipCoin(int[] id)
+        public void GetEquipBuildCoin(int id)
         {
             if (equipCollectDic.TryGetValue(id, out int value))
             {

@@ -283,7 +283,7 @@ namespace EazyGF
 
         private void LoadCus(CustomerNormal_Property pro, bool isFirst)
         {
-            if (!BuildAreaMgr.Instance.GetIsUnLockAreaById(1))
+            if (!BuildAreaMgr.Instance.GetIsUnLockAreaById(5))
             {
                 return;
             }
@@ -1588,7 +1588,7 @@ namespace EazyGF
             if (cn.lineIndex == 1)
             {
                 bool isGaveTip = UICommonUtil.Instance.IsFillConditByRotia(cn.Data.TipRatio);
-                if (isGaveTip|| true)
+                if (isGaveTip || true)
                 {
                     BuildDataModel bdm = BuildMgr.GetUserBuildDataById(diningAreaIds[1]);
 
@@ -1596,7 +1596,14 @@ namespace EazyGF
 
                     int tipMultiple = LocalCommonUtil.TipMultipleNor(cn.Data.TipMultiple);
 
-                    LocalCommonUtil.ShowBB(4, tf, bdm.Id + cn.QueueIndex / 2, tipMultiple * 100);
+                    int addCoin = 100 * tipMultiple;
+
+                    int[] ids = new int[2] { bdm.Id, cn.QueueIndex / 2};
+                    int id = LocalCommonUtil.GetBuildEquipCollectId(ids);
+
+                    addCoin = BuildCollectMgr.Instance.AddEquipBuildCoin(id, addCoin);
+
+                    LocalCommonUtil.ShowBB(4, tf, id, addCoin);
                 }
             }
 
@@ -1721,7 +1728,6 @@ namespace EazyGF
             cn.lineIndex = 2;
             cn.MoveToTargetPoint(leaveTf[cn.lineIndex].tfs);
         }
-
 
         private void NewLeaveScene(CustomerNor cn)
         {
@@ -2109,7 +2115,6 @@ namespace EazyGF
             PoolMgr.Instance.DespawnOne(cn.transform);
             unlockNCs.Remove(cn);
         }
-
 
         bool isDebug = false;
 

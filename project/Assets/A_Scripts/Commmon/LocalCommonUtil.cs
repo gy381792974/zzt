@@ -30,5 +30,15 @@ namespace EazyGF
 
             return tipMultiple;
         }
+
+        public static int GetBuildEquipCollectId(int[] id)
+        {
+            return id[0] * 100 + id[1];
+        }
+
+        public static int[] GetBuildEquipCollectIds(int id)
+        {
+            return new int[] {id/100, id % 100};
+        }
     }
 }
