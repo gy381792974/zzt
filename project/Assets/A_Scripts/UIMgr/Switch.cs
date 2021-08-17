@@ -11,7 +11,6 @@ public class Switch : MonoBehaviour, IPointerClickHandler
     [SerializeField] GameObject showBg;
     public Image targetImg;
     private bool isOn = false;
-    [SerializeField]
     public SwitchGroup group;
     public bool IsOn
     {

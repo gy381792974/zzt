@@ -31,7 +31,7 @@ namespace EazyGF
 
                     lastMouPos = Input.mousePosition;
                 }
-                 
+
                 if (UIPanelManager.Instance.GetDicShowingUI() <= uiShowNum + 1) //人物对话
                 {
                     if (CheckGuiRaycastObjects())
@@ -40,7 +40,7 @@ namespace EazyGF
                     }
 
                     OnClickSC();
-                   // OnClickWaiter();
+                    // OnClickWaiter();
                 }
             }
 
@@ -144,11 +144,16 @@ namespace EazyGF
             if (hit)
             {
                 BuildAreaItem buildItem = hitInfo.transform.GetComponentInParent<BuildAreaItem>();
-                BuildAreaMgr.Instance.TriggerUnlockArea(buildItem.AreaType, buildItem.id);
+                if (buildItem.AreaType == 1)
+                {
+                    BuildAreaMgr.Instance.TriggerUnlockArea(buildItem.AreaType, buildItem.id);
+                }
+                else
+                {
+                    BuildUpgradeMgr.Instance.ShowUnlockAreaUI(buildItem);
+                }
 
-                //if (buildItem.AreaType == 0)
-                //{
-                //}
+
                 //EventManager.Instance.TriggerEvent(EventKey.MoveCamerToTargetPos, buildItem.GetShowBuildBoxTf().position);
             }
         }

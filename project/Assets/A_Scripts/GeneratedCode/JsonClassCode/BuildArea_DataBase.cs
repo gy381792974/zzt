@@ -56,6 +56,10 @@ public class BuildArea_PropertyBase
 	/// </summary>
 	public string icon { get; set; }
 	/// <summary>
+	/// 区域标题
+	/// </summary>
+	public string title { get; set; }
+	/// <summary>
 	/// 解锁需要的金币
 	/// </summary>
 	public int needCoin { get; set; }

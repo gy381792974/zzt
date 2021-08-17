@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 573922851976914824}
   - component: {fileID: 1645565548195061729}
   m_Layer: 5
-  m_Name: Grid_trans
+  m_Name: Gridtrans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1169,6 +1169,7 @@ MonoBehaviour:
   DoAnimContent: {fileID: 0}
   UIBackGround: {fileID: 0}
   CloseBtn: {fileID: 5985607761357532036}
+  title_img: {fileID: 5714108103725156860}
   left_btn: {fileID: 3186793580022052340}
   right_btn: {fileID: 2320077292711653610}
   name_text: {fileID: 573922852239588458}
@@ -1184,7 +1185,6 @@ MonoBehaviour:
   build_btn: {fileID: 573922853639795908}
   build_text: {fileID: 573922851848187058}
   Coin_text: {fileID: 6643633858888672600}
-  Grid_trans: {fileID: 573922851976914825}
   infinity: {fileID: 2276289211096963386}
   maxObj: {fileID: 4395684253508416907}
 --- !u!1 &573922853340405530
@@ -1509,7 +1509,7 @@ GameObject:
   - component: {fileID: 573922853960647736}
   - component: {fileID: 5714108103725156860}
   m_Layer: 5
-  m_Name: title
+  m_Name: title_img
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

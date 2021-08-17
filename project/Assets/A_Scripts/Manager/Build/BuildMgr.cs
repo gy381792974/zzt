@@ -42,7 +42,7 @@ namespace EazyGF
 
         public BuildComModel(int pos, int level)
         {
-            
+
             this.pos = pos;
             this.level = level;
         }
@@ -85,8 +85,8 @@ namespace EazyGF
 
         public static Dictionary<int, BuildDataModel> userBuildDir = new Dictionary<int, BuildDataModel>(); //使用的建筑
 
-        
-        public static Dictionary<int, List<BuildComModel>> buildCommbo = new Dictionary<int, List<BuildComModel>>(); 
+
+        public static Dictionary<int, List<BuildComModel>> buildCommbo = new Dictionary<int, List<BuildComModel>>();
 
         //0收银台 1厨房 2厕所
         private static int[] speBuildIds = new int[] { 22007, 22005, 22008 };
@@ -125,7 +125,7 @@ namespace EazyGF
             {
                 BuildInital_Property data = datas[i];
 
-                BuildDataModel buildDataModel = new BuildDataModel(datas[i].Type, datas[i].ID, datas[i].InitLevel, 
+                BuildDataModel buildDataModel = new BuildDataModel(datas[i].Type, datas[i].ID, datas[i].InitLevel,
                     datas[i].BuildPos, datas[i].CommboType, datas[i].AreaIndex);
 
                 if (level != 0 && buildDataModel.Level != -1)
@@ -693,7 +693,7 @@ namespace EazyGF
                 }
             }
 
-            Debug.LogError("没有找到 厨房表 的数据");
+            Debug.LogError("没有找到 桌椅表 的数据");
             return null;
         }
         public static KitchenLevel_Property GetKitchenPropertyByIdAndLevel(int id, int level)

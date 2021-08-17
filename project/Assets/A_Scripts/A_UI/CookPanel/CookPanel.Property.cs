@@ -7,6 +7,7 @@ namespace EazyGF
 	{
 		private CookPanelData mPanelData = null;
 
+		[SerializeField] private Image title_img;
 		[SerializeField] private Button left_btn;
 		[SerializeField] private Button right_btn;
 		[SerializeField] private Text name_text;
@@ -22,6 +23,5 @@ namespace EazyGF
 		[SerializeField] private Button build_btn;
 		[SerializeField] private Text build_text;
 		[SerializeField] private Text Coin_text;
-		[SerializeField] private Transform Grid_trans;
 	}
 }

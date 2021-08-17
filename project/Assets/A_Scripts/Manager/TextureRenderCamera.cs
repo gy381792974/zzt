@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using EazyGF;
 using DG.Tweening;
+using System;
 
 public class TextureRenderCamera : MonoBehaviour
 {
@@ -8,10 +9,9 @@ public class TextureRenderCamera : MonoBehaviour
     [SerializeField] float initOrthographicSize;
     [SerializeField] float endOrthographicSize;
     [SerializeField] float duration;
-    [SerializeField] float offset;
+    float offset = 11;
     BitBenderGames.MobileTouchCamera cam;
-    Tween tween;
-    Sequence sqe;
+    Sequence seq;
     Vector2 initMinBoundary;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class TextureRenderCamera : MonoBehaviour
         renderCam = GetComponent<Camera>();
         cam = GetComponent<BitBenderGames.MobileTouchCamera>();
         initMinBoundary = cam.BoundaryMin;
-        sqe = DOTween.Sequence();
+        seq = DOTween.Sequence();
         //renderCam.orthographicSize = cam.CamZoomMax;
     }
 
@@ -29,36 +29,33 @@ public class TextureRenderCamera : MonoBehaviour
     }
     private void MoveCameraToTarget(object arg)
     {
-        sqe.Kill(true);
+        //seq.Kill();
         CameraViewMove camera = (CameraViewMove)arg;
-        offset = camera.point.y > 12 ? 8 : 11;
         Vector3 tarPos = transform.forward * -21 + camera.point - transform.forward * offset;
         tarPos.y = transform.position.y;
         if (camera.type)
         {
             cam.BoundaryMin = new Vector2(initMinBoundary.x - 10, initMinBoundary.y - 10);
             //放大
-            sqe.Join(ShortcutExtensions.DOOrthoSize(renderCam, endOrthographicSize, duration));
-            sqe.Join(transform.DOMove(tarPos, duration));
-            sqe.OnUpdate(() =>
-            {
-                cam.CamZoom = renderCam.orthographicSize;
-            });
+            seq.Join(ShortcutExtensions.DOOrthoSize(renderCam, endOrthographicSize, duration));
+            seq.Join(transform.DOMove(tarPos, duration).OnUpdate(CameraChangeViewSize));
+
         }
         else
         {
             cam.BoundaryMin = initMinBoundary;
             //缩小
-            sqe.Join(ShortcutExtensions.DOOrthoSize(renderCam, initOrthographicSize, duration));
-            sqe.Join(transform.DOMove(tarPos, duration));
-            sqe.OnUpdate(() =>
-            {
-                //cam.Awake();
-                cam.CamZoom = renderCam.orthographicSize;
-            });
+            seq.Join(ShortcutExtensions.DOOrthoSize(renderCam, initOrthographicSize, duration));
+            seq.Join(transform.DOMove(tarPos, duration).OnUpdate(CameraChangeViewSize));
             EazyGF.ColorGradientUtil.Instance.CanelCGradientEff();
         }
     }
+
+    private void CameraChangeViewSize()
+    {
+        cam.CamZoom = renderCam.orthographicSize;
+    }
+
 
 
 
