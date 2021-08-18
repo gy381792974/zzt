@@ -53,7 +53,6 @@ namespace EazyGF
             {
                 mPanelData = chairpanelData as ChairPanelData;
             }
-
             InitBuildsList();
             Chair_Property chair = GetChairByIndex(index);
             SetCurLevel(chair);
@@ -111,7 +110,6 @@ namespace EazyGF
             item.SetChairData(chair, index);
             toggles[index] = item.GetComponent<Toggle>();
             Image img = item.Img;
-            //item.BindData(builds[index]);
             ShowImage(index, img.sprite);
         }
 
@@ -243,7 +241,13 @@ namespace EazyGF
             int i;
             BuildDataModel bdm = builds[index];
             int pos = bdm.Pos;
-            if (bdm.Type == 2)
+            if (bdm.Type == 1)
+            {
+                i = GetStallIndexById(bdm.Id);
+                position = MainSpace.Instance.stallList[i].GetShowBuildPos(pos, bdm.Level);
+                ColorGradientUtil.Instance.PlayerCGradientEff(MainSpace.Instance.stallList[i].GetShowBuildMR(pos, bdm.Level));
+            }
+            else if (bdm.Type == 2)
             {
                 i = GetEquipIndexById(bdm.Id);
                 position = MainSpace.Instance.equipList[i].GetShowBuildPos(pos, bdm.Level);
@@ -257,6 +261,20 @@ namespace EazyGF
             }
             return position;
         }
+        private int GetStallIndexById(int id)
+        {
+            Stall_Property[] stalls = Stall_Data.DataArray;
+            for (int i = 0; i < stalls.Length / 4; i++)
+            {
+                if (stalls[i * 4].ID == id)
+                {
+                    return i;
+                }
+            }
+            Debug.LogError("在建筑表\" Stall \"中未找到id：" + id);
+            return -1;
+        }
+
 
         private int GetEquipIndexById(int id)
         {
@@ -285,10 +303,12 @@ namespace EazyGF
             Debug.LogError("在建筑表\" Adorn \"中未找到id：" + id);
             return -1;
         }
+
         private void UpdateUI(Chair_Property chair)
         {
             ShowChairStatus(chair);
         }
+
         private IEnumerator ShowText(Chair_Property chair)
         {
             name_text.text = LanguageMgr.GetTranstion(chair.name) + ":";
@@ -343,7 +363,9 @@ namespace EazyGF
             }
             Coin_text.text = upgrade_coin.ToString();
         }
-
+        /// <summary>
+        /// 建筑升级  按钮
+        /// </summary>
         private void ClickUpgradeBtn()
         {
             Chair_Property chair = BuildMgr.GetChairByIdAndLevel(id, level);
@@ -354,7 +376,7 @@ namespace EazyGF
                     curLevel = 1;
                     level++;
                     builds[index].Level = level;
-                    if (mPanelData.index == -1)
+                    if (builds[index].CommboType == 0)
                     {
                         BuildMgr.UpdateSelectBuild(id, level);
                     }
@@ -367,6 +389,7 @@ namespace EazyGF
                     item.SetItemLevelState(chair);
                     UpdateImage(chair);
                     UpdateUI(chair);
+                    SaveData(chair);
                     return;
                 }
             }

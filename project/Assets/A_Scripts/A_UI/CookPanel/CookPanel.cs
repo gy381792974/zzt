@@ -76,7 +76,7 @@ namespace EazyGF
                     for (int j = 0; j < models.Count; j++)
                     {
                         BuildDataModel build = new BuildDataModel(mPanelData.buildDataModels[i].Type, mPanelData.buildDataModels[i].Id,
-                            models[j].level, models[j].pos, 0, mPanelData.buildDataModels[i].AreaIndex);
+                            models[j].level, models[j].pos, 1, mPanelData.buildDataModels[i].AreaIndex);
                         builds.Add(build);
                     }
                 }

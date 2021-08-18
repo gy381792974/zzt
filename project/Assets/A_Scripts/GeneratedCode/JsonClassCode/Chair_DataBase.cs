@@ -40,6 +40,10 @@ public class Chair_PropertyBase
 	/// </summary>
 	public int ID { get; set; }
 	/// <summary>
+	/// 备注
+	/// </summary>
+	public string bz { get; set; }
+	/// <summary>
 	/// 等级
 	/// </summary>
 	public int level { get; set; }

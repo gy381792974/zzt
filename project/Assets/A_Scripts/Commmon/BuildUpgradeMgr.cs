@@ -100,7 +100,7 @@ public class BuildUpgradeMgr : SingleClass<BuildUpgradeMgr>
                 new CameraViewMove(point, true));
             ColorGradientUtil.Instance.PlayerCGradientEff(MainSpace.Instance.stallList[model.Pos - 1].GetShowBuildMR());
         }
-        else if (model.AreaIndex == 3 || model.AreaIndex == 1 || model.AreaIndex == 7 || model.AreaIndex == 5 || model.AreaIndex == 6)
+        else if (model.AreaIndex == 1 || model.AreaIndex == 2 || model.AreaIndex == 3 || model.AreaIndex == 5 || model.AreaIndex == 6 || model.AreaIndex == 7)
         {
             List<BuildDataModel> buildDataModels = BuildMgr.GetBuildDatasByArea(model.AreaIndex);
 
