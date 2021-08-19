@@ -79,18 +79,18 @@ namespace EazyGF
             return combuildGrid[level - 1].GetChild(pos).GetComponent<MeshRenderer>();
         }
 
-        //public override void PlayComEffect(int pos, int level)
-        //{
-        //    chairEffect.transform.position = combuildGrid[level - 1].GetChild(pos).GetComponent<MeshRenderer>().bounds.center;
+        public override void PlayComEffect(int pos, int level)
+        {
+            //chairEffect.transform.position = combuildGrid[level - 1].GetChild(pos).GetComponent<MeshRenderer>().bounds.center;
 
-        //    chairEffect.gameObject.SetActive(false);
-        //    chairEffect.gameObject.SetActive(true);
+            //chairEffect.gameObject.SetActive(false);
+            //chairEffect.gameObject.SetActive(true);
 
-        //    StartCoroutine(UICommonUtil.Instance.DelayedHandle((obj) =>
-        //    {
-        //        chairEffect.gameObject.SetActive(false);
-        //        MusicMgr.Instance.PlayMusicEff("d_building_fix_finish");
-        //    }, 0.5f));
-        //}
+            //StartCoroutine(UICommonUtil.Instance.DelayedHandle((obj) =>
+            //{
+            //    chairEffect.gameObject.SetActive(false);
+            //    MusicMgr.Instance.PlayMusicEff("d_building_fix_finish");
+            //}, 0.5f));
+        }
     }
 }

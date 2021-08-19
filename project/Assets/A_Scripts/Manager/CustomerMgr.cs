@@ -1749,23 +1749,32 @@ namespace EazyGF
             if (cn.QueueIndex == 0)
             {
                 int[] teamInfos = GetMulTeamQueInfos((int)NCSuatus.GoWC, 4);
-
                 int teamIndex = teamInfos[0];
                 int queueIndex = teamInfos[1];
 
+                int index = GetOccupyDic((int)NCSuatus.GoWC, 4, false);
+                if (index != -1)
+                {
+                    teamIndex = index;
+                    queueIndex = 0;
+                }
+                
                 if (teamIndex < wCMulQueuePQ.Count && queueIndex < wCMulQueuePQ[teamIndex].tfs.Count)
                 {
-                    eStallQueue[(int)NCSuatus.GoWC][teamIndex]++;
-
-                    queueDic[(int)NCSuatus.GoWC]--;
-                
                     cn.lineIndex = 2;
+
+                    cn.MoveToTargetPoint(wCLinePQ[0].tfs);
+                    
+                    eStallQueue[(int)NCSuatus.GoWC][teamIndex]++;
+                    queueDic[(int)NCSuatus.GoWC]--;
+
                     cn.QueueIndex = queueIndex;
                     cn.enterIndex = teamIndex;
 
-                    cn.MoveToTargetPoint(wCLinePQ[0].tfs);
                     Vector3 endPos = wCMulQueuePQ[teamIndex].tfs[queueIndex].position;
                     cn.MoveToTargetPoint(endPos);
+
+                    Debug.LogError($"teamindex {cn.enterIndex}  {eStallQueue[(int)NCSuatus.GoWC][cn.enterIndex]} 洗手间排队++");
 
                     WCCCommonGS(cn);
                 }
@@ -1803,6 +1812,7 @@ namespace EazyGF
                 occupyDic[(int)NCSuatus.GoWC][cn.enterIndex] = 1;
 
                 eStallQueue[(int)NCSuatus.GoWC][cn.enterIndex]--;
+                Debug.LogError($"teamindex {cn.enterIndex}  {eStallQueue[(int)NCSuatus.GoWC][cn.enterIndex]} 洗手间排队--");
 
                 cn.lineIndex = 3; 
 
