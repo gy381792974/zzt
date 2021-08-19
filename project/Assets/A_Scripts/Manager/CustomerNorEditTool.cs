@@ -43,7 +43,7 @@ public class CustomerNorEditTool : MonoBehaviour
     {
         AddTf(enterEnterGrid, customerMgr.nCEnter, "Enter");
         AddTf(tackMealDirGrid, customerMgr.takeMealDirTf, "Enter");
-        SetPosQueueTypeData(customerMgr.nCTakeMeal, tackMealGrid, "tm");
+        AddPosQueueTypeData(customerMgr.nCTakeMeal, tackMealGrid, "tm");
     }
 
     [ContextMenu("InitBuidStallDir")]
@@ -289,7 +289,7 @@ public class CustomerNorEditTool : MonoBehaviour
     [ContextMenu("InitDiningDirPos")]
     public void InitDiningDirPos()
     {
-        SetPosQueueTypeData(customerMgr.diningDir, diningDirPosGrid, "Dr");
+        AddPosQueueTypeData(customerMgr.diningDir, diningDirPosGrid, "Dr");
     }
 
 
@@ -297,7 +297,7 @@ public class CustomerNorEditTool : MonoBehaviour
     [ContextMenu("InitDiningSeatPos")]
     public void InitDiningSeatsPos()
     {
-        SetPosQueueTypeData(customerMgr.diningSeats, diningSeatPosGrid, "Ds");
+        AddPosQueueTypeData(customerMgr.diningSeats, diningSeatPosGrid, "Ds");
     }
 
     //public Transform getFoodPosGrid;
@@ -356,6 +356,34 @@ public class CustomerNorEditTool : MonoBehaviour
         Debug.LogError("设置成功");
     }
 
+    public Transform wcCommQueueGrid;
+    [ContextMenu("SetWcCommQueueGrid")]
+    public void SetWcCommQueueGrid()
+    {
+        AddTf(wcCommQueueGrid, customerMgr.wCCommonQueue, "CQ");  
+    }
+
+    public Transform wcMulQueueGrid;
+    [ContextMenu("SetWCMulQueuePQ")]
+    public void SetWCMulQueuePQ()
+    {
+        AddPosQueueTypeData(customerMgr.wCMulQueuePQ, wcMulQueueGrid, "WCmQ");
+    }
+
+    public Transform wCIngGrid;
+    [ContextMenu("SetWCIngGrid")]
+    public void SetWCIngGrid()
+    {
+        AddTf(wCIngGrid, customerMgr.wCIngTf, "CQ");
+    }
+
+    public Transform wcLineGrid;
+    [ContextMenu("SetWcLineGrid")]
+    public void SetWcLeaveGrid()
+    {
+        AddPosQueueTypeData(customerMgr.wCLinePQ, wcLineGrid, "lpq");
+    }
+
     #region 通用方法
     //--------------------------------------------------------------------------------
 
@@ -393,7 +421,7 @@ public class CustomerNorEditTool : MonoBehaviour
         Debug.LogError("设置成功");
     }
 
-    private void SetPosQueueTypeData(List<PosQueue> list, Transform grid, string name)
+    private void AddPosQueueTypeData(List<PosQueue> list, Transform grid, string name)
     {
         list.Clear();
 

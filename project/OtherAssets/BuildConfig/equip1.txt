@@ -42,7 +42,7 @@ gongjutai_20051
 gongjutai_20052
 gongjutai_20053
 gongjutai_20054
-huojia_20051
+huijia_20051
 huojia_20052
 huojia_20053
 huojia_20054
@@ -54,7 +54,7 @@ zaotai_20051
 zaotai_20052
 zaotai_20053
 zaotai_20054
-cesuomen1
+cesuo1
 cesuomen2
 cesuomen3
 cesuomen4
@@ -64,9 +64,9 @@ jingzi3
 jingzi4
 xishoupeng1
 xishoupeng2
-xishoupeng3
+xishoupeng
 xishoupeng4
-diban1
+doban1
 diban2
-diban3
+diban
 diban4

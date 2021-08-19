@@ -117,8 +117,9 @@ namespace EazyGF
         public List<LevelPMQ> stallMultiQueue;
 
         public List<Transform> wCCommonQueue;
-        public List<PosQueue> wCQueuePQ;
+        public List<PosQueue> wCMulQueuePQ;
         public List<Transform> wCIngTf;
+        public List<PosQueue> wCLinePQ;
 
         Dictionary<int, int[]> eStallQueue = new Dictionary<int, int[]>(); //排队
 
@@ -130,7 +131,7 @@ namespace EazyGF
         public static int targetIndex = -1;
 
         //得到最少人数的队伍index 以及队伍排队的人数 
-        public int[] GetStallInfos(int targetStallId, int teamNum)
+        public int[] GetMulTeamQueInfos(int targetStallId, int teamNum)
         {
             int num = 0;
             int teamIndex = 0;
@@ -274,7 +275,7 @@ namespace EazyGF
 
         public int GetTarCusIndexByid(int index)
         {
-            List<CustomerNormal_Property> unLockCns =  CustomerLogic.unlockCNs;
+            List<CustomerNormal_Property> unLockCns = CustomerLogic.unlockCNs;
             for (int i = 0; i < unLockCns.Count; i++)
             {
                 if (unLockCns[i].ID == index)
@@ -315,7 +316,7 @@ namespace EazyGF
                 int diners = GetCurDiners();
                 int seats = GetAllUnlockSeat();
 
-                if (rote <= ((float)diners /seats) * 100)
+                if (rote <= ((float)diners / seats) * 100)
                 {
                     //NCPedestrian(cn, index);
 
@@ -347,7 +348,7 @@ namespace EazyGF
             cn.MoveToTargetPoint(pedestrianBfs[1].Pos);
             cn.MoveToTargetPoint(pedestrianTfs[index]);
             cn.QueueIndex = index;
-        }   
+        }
 
         //变成顾客
         public void NCPedToCus()
@@ -496,6 +497,8 @@ namespace EazyGF
             if (isSingleTeam)
             {
                 NCEnterBuyFood(cn);
+
+                //EnterWC(cn);
             }
             else
             {
@@ -700,7 +703,7 @@ namespace EazyGF
                     cn.MoveToTargetPoint(mPath);
                     cn.MoveToTargetPoint(tfs[index]);
                 }
-                else if(isNoHaveQueue)
+                else if (isNoHaveQueue)
                 {
                     NCHangOut(cn);
                 }
@@ -857,7 +860,7 @@ namespace EazyGF
 
             PosMultiQueue multiQueue = stallMultiQueue[cn.level - 1].datas[cn.posIndex];
 
-            int[] datas = GetStallInfos(cn.targetStallId, multiQueue.datas.Count);
+            int[] datas = GetMulTeamQueInfos(cn.targetStallId, multiQueue.datas.Count);
             cn.enterIndex = datas[0];
 
             List<Transform> tfs = multiQueue.datas[cn.enterIndex].tfs;
@@ -874,7 +877,7 @@ namespace EazyGF
             cn.lineIndex = 2;
 
             cn.SetCurState(NCSuatus.BuyFood);
-         
+
             cn.level = BuildMgr.GetUserBuildLevelById(cn.targetStallId);
             PosMultiQueue multiQueue = stallMultiQueue[cn.level - 1].datas[cn.posIndex];
 
@@ -904,7 +907,7 @@ namespace EazyGF
                 cn.QueueIndex = data[1];
 
                 List<Transform> tfs = multiQueue.datas[cn.enterIndex].tfs;
-                cn.DirPos =  stallDirTf[cn.posIndex].position;
+                cn.DirPos = stallDirTf[cn.posIndex].position;
 
                 eStallQueue[cn.targetStallId][cn.enterIndex]++;
 
@@ -1005,7 +1008,7 @@ namespace EazyGF
                 canQueueTeamNum = maxTeamNum;
             }
 
-            int[] datas = GetStallInfos(id, canQueueTeamNum);
+            int[] datas = GetMulTeamQueInfos(id, canQueueTeamNum);
 
             int teamIndex = datas[0]; //队伍的idnex
             int queueNum = datas[1];
@@ -1124,6 +1127,46 @@ namespace EazyGF
             }
         }
 
+        private bool IsOccupyByIndex(int key, int index = 2, int num = 5)
+        {
+            if (num <= 0)
+            {
+                return true;
+            }
+
+            if (occupyDic.TryGetValue(key, out int[] value))
+            {
+                if (num > value.Length)
+                {
+                    int[] datas = new int[num];
+
+                    for (int i = 0; i < value.Length; i++)
+                    {
+                        datas[i] = value[i];
+                    }
+
+                    occupyDic[key] = datas;
+
+                    return false;
+                }
+
+                return occupyDic[key][index] == 1;                
+            }
+            else
+            {
+                int[] datas = new int[num];
+
+                for (int i = 0; i < datas.Length; i++)
+                {
+                    datas[i] = 0;
+                }
+
+                occupyDic.Add(key, datas);
+
+                return false;
+            }
+        }
+
         //闲逛
         private void NCHangOut(CustomerNor cn)
         {
@@ -1142,13 +1185,13 @@ namespace EazyGF
                 }
             }
 
-            if (cn.QueueIndex == -1 || buildId == -1 )
+            if (cn.QueueIndex == -1 || buildId == -1)
             {
                 RemoveCn(cn);
                 Debug.LogWarning("装饰位置没有地方可以停");
                 return;
             }
-           
+
             cn.targetBuildId = buildId;
             cn.SetCurState(NCSuatus.HangOut);
 
@@ -1274,7 +1317,7 @@ namespace EazyGF
             //int value = 5;
 
             int[] sDRatio = new int[2];
-          
+
             int ratio = 0;
 
             for (int i = 0; i < sDRatio.Length; i++)
@@ -1302,7 +1345,7 @@ namespace EazyGF
             }
 
             //cn.lineIndex = 1;
-            
+
             if (cn.lineIndex == 0)
             {
                 int level = StaffMgr.Instance.FindStaffById(2).level;
@@ -1344,11 +1387,11 @@ namespace EazyGF
 
                 if (index != -1)
                 {
-                   cn.lineIndex = 3;
+                    cn.lineIndex = 3;
 
-                   int enterIndex = index >= 6 ? 1:0;
+                    int enterIndex = index >= 6 ? 1 : 0;
 
-                   GoToDiningSeat(cn, index, enterIndex);
+                    GoToDiningSeat(cn, index, enterIndex);
                 }
                 else
                 {
@@ -1430,7 +1473,7 @@ namespace EazyGF
             {
                 level = 0;
             }
-           
+
             int index = GetOccupyDic(buildId, SeatNum);
 
             if (index == -1)
@@ -1551,7 +1594,7 @@ namespace EazyGF
             if (index != -1)
             {
                 dinOccupyPosArr[index] = 1;
-                
+
                 cn.SetCurState(NCSuatus.Dining);
 
                 cn.QueueIndex = index;
@@ -1608,13 +1651,13 @@ namespace EazyGF
                 List<Vector3> ls = BFS_Mgr.GetMoveList(bfs, endPos, leaveTf[0].tfs[0].position);
 
                 cn.MoveToTargetPoint(vs);
-                
+
                 cn.MoveToTargetPoint(ls);
             }
 
             if (cn.lineIndex < 4)
             {
-                  occupyDic[diningAreaIds[cn.lineIndex]][cn.QueueIndex] = 0;
+                occupyDic[diningAreaIds[cn.lineIndex]][cn.QueueIndex] = 0;
             }
             else
             {
@@ -1626,7 +1669,7 @@ namespace EazyGF
             if (cn.NCISCanRepateTK())
             {
                 cn.SetCurState(NCSuatus.Enter);
-                
+
                 List<Vector3> ls = BFS_Mgr.GetMoveList(bfs, cn.transform.position, nCEnter[2].position);
 
                 cn.MoveToTargetPoint(ls);
@@ -1638,7 +1681,7 @@ namespace EazyGF
             {
                 if (UICommonUtil.Instance.IsFillConditByRotia(80))
                 {
-                    CNLeave(cn);
+                    EnterWC(cn);
                 }
                 else
                 {
@@ -1647,11 +1690,164 @@ namespace EazyGF
             }
         }
 
+        #region 洗手间部分
+
+        //1阶段
         private void EnterWC(CustomerNor cn)
         {
+            cn.lineIndex = 0;
+            cn.SetCurState(NCSuatus.GoWC);
             Vector3 endPos = wCCommonQueue[0].position;
             List<Vector3> vs = BFS_Mgr.GetMoveList(bfs, cn.transform.position, endPos);
+            cn.MoveToTargetPoint(vs);
         }
+
+        //2阶段 公用排队
+        private void WCCCmmonQueue(CustomerNor cn)
+        {
+            int index = GetQueueIndex((int)NCSuatus.GoWC, wCCommonQueue.Count);
+
+            if (index == -1)
+            {
+                List<Vector3> vs = BFS_Mgr.GetMoveList(bfs, cn.transform.position, leaveTf[0].tfs[0].position);
+                cn.MoveToTargetPoint(vs);
+
+                CNLeave(cn);
+            }
+            else
+            {
+                cn.lineIndex = 1;
+
+                cn.QueueIndex = index;
+
+                cn.MoveToTargetPoint(wCCommonQueue[index]);
+            }
+        }
+
+        private void WCCCommonGS(CustomerNor cn)
+        {
+            for (int i = 0; i < unlockNCs.Count; i++)
+            {
+                if (unlockNCs[i].curState == NCSuatus.GoWC && unlockNCs[i].lineIndex == 1)
+                {
+                    if (unlockNCs[i].QueueIndex == 0)
+                    {
+                        WCGeJjQueue(unlockNCs[i]);
+                    }
+                    else if (unlockNCs[i].QueueIndex > 0)
+                    {
+                        unlockNCs[i].QueueIndex--;
+                        cn.MoveToTargetPoint(wCCommonQueue[unlockNCs[i].QueueIndex]);
+                    }
+                }
+            }
+        }            
+
+        //3 阶段 隔间排队
+        private void WCGeJjQueue(CustomerNor cn)
+        {
+            if (cn.QueueIndex == 0)
+            {
+                int[] teamInfos = GetMulTeamQueInfos((int)NCSuatus.GoWC, 4);
+
+                int teamIndex = teamInfos[0];
+                int queueIndex = teamInfos[1];
+
+                if (teamIndex < wCMulQueuePQ.Count && queueIndex < wCMulQueuePQ[teamIndex].tfs.Count)
+                {
+                    eStallQueue[(int)NCSuatus.GoWC][teamIndex]++;
+
+                    queueDic[(int)NCSuatus.GoWC]--;
+                
+                    cn.lineIndex = 2;
+                    cn.QueueIndex = queueIndex;
+                    cn.enterIndex = teamIndex;
+
+                    cn.MoveToTargetPoint(wCLinePQ[0].tfs);
+                    Vector3 endPos = wCMulQueuePQ[teamIndex].tfs[queueIndex].position;
+                    cn.MoveToTargetPoint(endPos);
+
+                    WCCCommonGS(cn);
+                }
+            }
+        }
+
+        //排队跟随
+        private void WCGeJjQueueGJ()
+        {
+            for (int i = 0; i < unlockNCs.Count; i++)
+            {
+                CustomerNor cn = unlockNCs[i];
+                if (cn.curState == NCSuatus.GoWC && cn.lineIndex == 2)
+                {
+                    if (cn.QueueIndex == 0)
+                    {
+                        GOTOXSJ(cn);
+                    }
+                    else
+                    {
+                        cn.QueueIndex--;
+                        cn.MoveToTargetPoint(wCMulQueuePQ[cn.enterIndex].tfs[cn.QueueIndex]);
+                    }
+                }
+            }
+        }
+
+        //4阶段进入洗手间
+        private void GOTOXSJ(CustomerNor cn)
+        {
+            if (!IsOccupyByIndex((int)NCSuatus.GoWC, cn.enterIndex, 4))
+            {
+                int index = cn.enterIndex;
+
+                occupyDic[(int)NCSuatus.GoWC][cn.enterIndex] = 1;
+
+                eStallQueue[(int)NCSuatus.GoWC][cn.enterIndex]--;
+
+                cn.lineIndex = 3; 
+
+                cn.MoveToTargetPoint(wCIngTf[index].transform);
+
+                int[] data = new int[2] { 0, index };
+                EventManager.Instance.TriggerEvent(EventKey.PlayDoorAni, data);
+
+                WCGeJjQueueGJ();
+            }
+        }
+
+        //5 正在使用洗手间
+        private IEnumerator WCEND(CustomerNor cn)
+        {
+            cn.lineIndex = 4;
+            int doorIndex = cn.enterIndex;
+
+            int[] data = new int[2] { 1, doorIndex };
+            EventManager.Instance.TriggerEvent(EventKey.PlayDoorAni, data);
+
+            yield return new WaitForSeconds(14.5f);
+            data = new int[2] { 0, doorIndex };
+            EventManager.Instance.TriggerEvent(EventKey.PlayDoorAni, data);
+            yield return new WaitForSeconds(0.5f);
+
+            occupyDic[(int)NCSuatus.GoWC][cn.enterIndex] = 0;
+          
+            cn.MoveToTargetPoint(wCLinePQ[1].tfs[cn.enterIndex]);
+            cn.MoveToTargetPoint(wCLinePQ[2].tfs);
+            List<Vector3> mPath =
+                 BFS_Mgr.GetMoveList(bfs, cn.transform.position, leaveTf[0].tfs[0].position);
+            cn.MoveToTargetPoint(mPath);
+
+            CNLeave(cn);
+
+            WCGeJjQueueGJ();
+
+            yield return new WaitForSeconds(1);
+
+            data = new int[2] { 1, doorIndex };
+            EventManager.Instance.TriggerEvent(EventKey.PlayDoorAni, data);
+        }
+
+        #endregion
 
         private void ShowLTChairBB(CustomerNor cn)
         {
@@ -2006,22 +2202,22 @@ namespace EazyGF
             {
                 if (cn.lineIndex == 0)
                 {
-                    int index = GetQueueIndex((int)NCSuatus.GoWC, wCCommonQueue.Count);
-
-                    if (index == -1)
-                    {
-                        CNLeave(cn);
-                    }
-                    else
-                    {
-                        cn.lineIndex = 1;
-                        cn.MoveToTargetPoint(wCCommonQueue, true, index);
-                    }
-
+                    WCCCmmonQueue(cn);
                 }
                 else if (cn.lineIndex == 1)
                 {
-
+                    WCGeJjQueue(cn);
+                }
+                else if (cn.lineIndex == 2)
+                {
+                    if (cn.QueueIndex == 0)
+                    {
+                        GOTOXSJ(cn);
+                    }
+                }
+                else if (cn.lineIndex == 3)
+                {
+                    StartCoroutine(WCEND(cn));
                 }
             }
             else if (cn.curState == NCSuatus.Leave)
@@ -2208,7 +2404,7 @@ namespace EazyGF
             return takeMealNum + GetAllUnlockSeat() + BuildMgr.GetAllStallAndBornPosNum();
         }
 
-        public int GetQueueIndex(int index, int count)
+        public int GetQueueIndex(int index, int count, bool isAdd = true)
         {
             int i = 0;
 
@@ -2227,7 +2423,12 @@ namespace EazyGF
             }
             else
             {
-                return 0;
+                if (isAdd)
+                {
+                    queueDic[index]++;
+                }
+
+                return i;
             }
         }
 
