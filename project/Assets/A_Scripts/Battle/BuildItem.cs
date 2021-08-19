@@ -118,17 +118,6 @@ namespace EazyGF
             return buildPos[0].GetChild(1).transform;
         }
 
-        public Transform GetShowBuildTf()
-        {
-            if (level >= 1 && level <= 4)
-            {
-                return buildPos[level - 1].GetChild(0).transform;
-            }
-
-            return buildPos[0].GetChild(0).transform;
-        }
-
-
         public virtual Transform GetShowBuildBoxTf(int pos)
         {
             if (level >= 1 && level <= 4)

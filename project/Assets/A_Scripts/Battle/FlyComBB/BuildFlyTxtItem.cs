@@ -41,7 +41,7 @@ namespace EazyGF
 
         public void AniPlayCom()
         {
-         //   Debug.LogError("OnComplete");
+            Debug.LogError("OnComplete");
 
             EventManager.Instance.TriggerEvent(EventKey.RecycleCBBData, this);
         }

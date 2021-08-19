@@ -51,8 +51,6 @@ namespace EazyGF
 
         SecFloorTip, //二楼给小费
 
-        PlayDoorAni, //播放门的动画
-
         TestEvent,
         Null,
     }

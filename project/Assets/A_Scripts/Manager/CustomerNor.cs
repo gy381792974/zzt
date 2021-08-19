@@ -30,12 +30,12 @@ namespace EazyGF
 
         public NCSuatus curState;
 
-        public int queueIndex;
+        private int queueIndex;
         private int canBuyFoodNum = 0;
 
-        public int lineIndex;//可以代表阶段 或者是选择的路线
+        public int lineIndex;
         public int posIndex;
-        public int enterIndex;//可以是选择的路线 或者是
+        public int enterIndex;
         public int level;
 
         public int targetStallId;
@@ -210,7 +210,7 @@ namespace EazyGF
         private void SetRoleMoveAni()
         {
             if (curState == NCSuatus.Enter || curState == NCSuatus.TakeMeal || curState == NCSuatus.Pedestrian
-                || curState == NCSuatus.Leave || curState == NCSuatus.GoWC)
+                || curState == NCSuatus.Leave)
             {
                 SetRoalStatus(NormalRoleStatus.Move);
             }
@@ -392,6 +392,7 @@ namespace EazyGF
         //0 朝前 1朝后
         private void SetRoleShowByIndex(int index)
         {
+         
             sas[0].gameObject.SetActive(0 == index);
             sas[1].gameObject.SetActive(1 == index);
         }

@@ -10,10 +10,10 @@ decoration_20031
 decoration_20032
 decoration_20033
 decoration_20034
--1
--1
--1
--1
+pasted__pPlane41
+pasted__pPlane42
+pasted__pPlane43
+pasted__pPlane44
 decoration_20051
 decoration_20052
 decoration_20053
@@ -34,11 +34,7 @@ zhuozi1
 zhuozi2
 zhuozi3
 zhuozi4
-dengzi
-dengzi 1
-dengzi 2
-dengzi 3
-facility_20021
-facility_20022
-facility_20023
-facility_20024
+dengzi1
+dengzi2
+dengzi3
+dengzi4
