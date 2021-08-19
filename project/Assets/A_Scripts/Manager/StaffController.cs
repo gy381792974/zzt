@@ -96,7 +96,7 @@ public class StaffController : MonoBehaviour
         staffsDic.Add(id, behaviour);
         return behaviour;
     }
-
+    int i = 0;
     private void InitStaffData(int id)
     {
         #region
@@ -155,7 +155,8 @@ public class StaffController : MonoBehaviour
         else if (staffsDic[id] is Cook)
         {
             Cook cook = staffsDic[id] as Cook;
-            cook.SetCookMoveTarget(cookPath[0]);
+            cook.SetCookMoveTarget(cookPath[0], i);
+            i++;
         }
 
     }

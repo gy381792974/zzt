@@ -840,7 +840,7 @@ namespace EazyGF
 
                 buildComModel[pos].level = level;
 
-                BuildDataModel data = new BuildDataModel(-1, id, level, pos, 1, 0);
+                BuildDataModel data = new BuildDataModel(2, id, level, pos, 1, 0);
 
                 EventManager.Instance.TriggerEvent(EventKey.BuildComDataUdpate, data);
 

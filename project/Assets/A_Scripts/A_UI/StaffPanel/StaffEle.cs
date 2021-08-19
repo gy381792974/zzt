@@ -31,6 +31,8 @@ namespace EazyGF
         int growthTime = 0;
         bool isUpdateQuaProgress = false;
 
+        [SerializeField] Animator animator;
+
         private void Start()
         {
             unLockBtn.onClick.AddListener(UnLockBtnOnClick);
@@ -51,9 +53,14 @@ namespace EazyGF
             if (ItemPropsManager.Intance.CoseItem(1, upgradeCost))
             {
                 StaffMgr.Instance.UpgradeStaff(stallModel.id);
+                PlayAnim();
             }
         }
-      
+
+        private void PlayAnim()
+        {
+            animator.Play("StaffUpgrade");
+        }
 
         StaffModel stallModel;
         int unLockCost = 0;
@@ -93,7 +100,7 @@ namespace EazyGF
             }
             else
             {
-                tests[1].text = LanguageMgr.GetTranstion(new int[2]{12,17});
+                tests[1].text = LanguageMgr.GetTranstion(new int[2] { 12, 17 });
             }
 
 
@@ -120,7 +127,7 @@ namespace EazyGF
             {
                 Staff_Level_Property nextData = StaffMgr.Instance.GetStaffLevelDataByIdAndLevel(id, stallModel.level + 1);
                 tests[2].gameObject.SetActive(true);
-                tests[2].text = UICommonUtil.GetTranstion(dataBase.SpecialSkill,  nextData.SkllParam);
+                tests[2].text = UICommonUtil.GetTranstion(dataBase.SpecialSkill, nextData.SkllParam);
 
                 costTxt.text = nextData.EmpPrice.ToString();
                 upgradeCost = nextData.EmpPrice;
@@ -178,7 +185,7 @@ namespace EazyGF
                     UpdateProgress();
                 }
             }
-            
+
         }
     }
 }

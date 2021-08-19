@@ -56,16 +56,17 @@ public class Cook : StaffBehaviour
 
     private void TriggerKitchenChange(object arg)
     {
-        GetLineByStallLevel(arg);
+        //GetLineByStallLevel(arg);
         sas[curIndex].gameObject.SetActive(false);
         timer = 0;
         defaultDir = true;
         Invoke("SetActiveCook", 2f);
         this.enabled = false;
     }
-    public void SetCookMoveTarget(Transform target)
+    public void SetCookMoveTarget(Transform target, int i)
     {
         cookTarget = target;
+        curPath = cookTarget.GetChild(i);
     }
 
 
@@ -79,11 +80,10 @@ public class Cook : StaffBehaviour
     protected override void InitStaffLevel()
     {
         base.InitStaffLevel();
-        //LoadSpineAsset();
         sas[0].gameObject.SetActive(true);
         sas[1].gameObject.SetActive(true);
-        GetLineByStallLevel(BuildMgr.GetKitchenLevel());
         InitCook();
+        //GetLineByStallLevel(BuildMgr.GetKitchenLevel());
     }
 
     private void InitCook()

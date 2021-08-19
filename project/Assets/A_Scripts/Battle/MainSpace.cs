@@ -142,16 +142,6 @@ namespace EazyGF
                         equipList[i].PlayComEffect(buildDataModel.Pos, buildDataModel.Level);
                     }
                 }
-
-                for (int i = 0; i < adornList.Count; i++)
-                {
-                    if (adornList[i].MBuildDataModel.Id == buildDataModel.Id)
-                    {
-                        adornList[i].ShowComBuild(buildDataModel.Pos, buildDataModel.Level);
-
-                        adornList[i].PlayComEffect(buildDataModel.Pos, buildDataModel.Level);
-                    }
-                }
             }
         }
 

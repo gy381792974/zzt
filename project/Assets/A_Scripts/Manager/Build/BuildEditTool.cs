@@ -433,7 +433,71 @@ public class BuildEditTool : MonoBehaviour
 
     }
 
-    #region 通用部分
+
+    int[] dz = new int[16] {1,1,1,1, 1,0,1,1, 0,1,1,0, 1,1,0,1};
+    public BuildItem buildItemZY;
+    public BuildItem buildItemDz;
+
+    [ContextMenu( "SetBuildShowChild")]
+    public void SetBuildShowChild()
+    {
+       List<Transform> tfs = buildItemDz.buildPos;
+
+        for (int i = 0; i < tfs.Count; i++)
+        {
+            Transform comtf = LocalCommonUtil.GetTfTyByChildNum(tfs[i]);
+            
+
+            for (int j = 0; j < comtf.childCount; j++)
+            {
+                if (comtf.GetChild(j).childCount < 2)
+                {
+                    continue;
+                }
+
+                Transform c0 = comtf.GetChild(j).GetChild(0);
+                Transform c1 = comtf.GetChild(j).GetChild(1);
+
+                if (dz[i * 4 + j] == 1)
+                {
+                    GameObject.DestroyImmediate(c0.gameObject);
+                }
+                else
+                {
+                    GameObject.DestroyImmediate(c1.gameObject);
+                }
+            }
+        }
+
+
+        tfs = buildItemZY.buildPos;
+        for (int i = 0; i < tfs.Count; i++)
+        {
+            Transform comtf = LocalCommonUtil.GetTfTyByChildNum(tfs[i]);
+
+            for (int j = 0; j < comtf.childCount; j++)
+            {
+                if (comtf.GetChild(j).childCount < 2)
+                {
+                    continue;
+                }
+
+                Transform c0 = comtf.GetChild(j).GetChild(0);
+                Transform c1 = comtf.GetChild(j).GetChild(1);
+
+                if (dz[i * 4 + j] == 0)
+                {
+                    GameObject.DestroyImmediate(c0.gameObject);
+                }
+                else
+                {
+                    GameObject.DestroyImmediate(c1.gameObject);
+                }
+            }
+        }
+    }
+
+    #region 通用部分--------------------------
     private void CreatePre(Transform tf, GameObject pre, bool isCreatBox = false, bool isCreaetUnlockBox = false, bool isUsrOrAng = false)
     {
         
