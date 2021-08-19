@@ -14,5 +14,10 @@ namespace EazyGF
 
         }
 
+        public virtual void PlayComEffect(int pos, int level)
+        {
+
+        }
+
     }
 }

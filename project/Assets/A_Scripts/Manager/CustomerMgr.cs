@@ -1653,6 +1653,163 @@ namespace EazyGF
             List<Vector3> vs = BFS_Mgr.GetMoveList(bfs, cn.transform.position, endPos);
         }
 
+        //2阶段 公用排队
+        private void WCCCmmonQueue(CustomerNor cn)
+        {
+            int index = GetQueueIndex((int)NCSuatus.GoWC, wCCommonQueue.Count);
+
+            if (index == -1)
+            {
+                List<Vector3> vs = BFS_Mgr.GetMoveList(bfs, cn.transform.position, leaveTf[0].tfs[0].position);
+                cn.MoveToTargetPoint(vs);
+
+                CNLeave(cn);
+            }
+            else
+            {
+                cn.lineIndex = 1;
+
+                cn.QueueIndex = index;
+
+                cn.MoveToTargetPoint(wCCommonQueue[index]);
+            }
+        }
+
+        private void WCCCommonGS(CustomerNor cn)
+        {
+            for (int i = 0; i < unlockNCs.Count; i++)
+            {
+                if (unlockNCs[i].curState == NCSuatus.GoWC && unlockNCs[i].lineIndex == 1)
+                {
+                    if (unlockNCs[i].QueueIndex == 0)
+                    {
+                        WCGeJjQueue(unlockNCs[i]);
+                    }
+                    else if (unlockNCs[i].QueueIndex > 0)
+                    {
+                        unlockNCs[i].QueueIndex--;
+                        cn.MoveToTargetPoint(wCCommonQueue[unlockNCs[i].QueueIndex]);
+                    }
+                }
+            }
+        }            
+
+        //3 阶段 隔间排队
+        private void WCGeJjQueue(CustomerNor cn)
+        {
+            if (cn.QueueIndex == 0)
+            {
+                int[] teamInfos = GetMulTeamQueInfos((int)NCSuatus.GoWC, 4);
+                int teamIndex = teamInfos[0];
+                int queueIndex = teamInfos[1];
+
+                int index = GetOccupyDic((int)NCSuatus.GoWC, 4, false);
+                if (index != -1)
+                {
+                    teamIndex = index;
+                    queueIndex = 0;
+                }
+                
+                if (teamIndex < wCMulQueuePQ.Count && queueIndex < wCMulQueuePQ[teamIndex].tfs.Count)
+                {
+                    cn.lineIndex = 2;
+
+                    cn.MoveToTargetPoint(wCLinePQ[0].tfs);
+                    
+                    eStallQueue[(int)NCSuatus.GoWC][teamIndex]++;
+                    queueDic[(int)NCSuatus.GoWC]--;
+
+                    cn.QueueIndex = queueIndex;
+                    cn.enterIndex = teamIndex;
+
+                    Vector3 endPos = wCMulQueuePQ[teamIndex].tfs[queueIndex].position;
+                    cn.MoveToTargetPoint(endPos);
+
+                    Debug.LogError($"teamindex {cn.enterIndex}  {eStallQueue[(int)NCSuatus.GoWC][cn.enterIndex]} 洗手间排队++");
+
+                    WCCCommonGS(cn);
+                }
+            }
+        }
+
+        //排队跟随
+        private void WCGeJjQueueGJ()
+        {
+            for (int i = 0; i < unlockNCs.Count; i++)
+            {
+                CustomerNor cn = unlockNCs[i];
+                if (cn.curState == NCSuatus.GoWC && cn.lineIndex == 2)
+                {
+                    if (cn.QueueIndex == 0)
+                    {
+                        GOTOXSJ(cn);
+                    }
+                    else
+                    {
+                        cn.QueueIndex--;
+                        cn.MoveToTargetPoint(wCMulQueuePQ[cn.enterIndex].tfs[cn.QueueIndex]);
+                    }
+                }
+            }
+        }
+
+        //4阶段进入洗手间
+        private void GOTOXSJ(CustomerNor cn)
+        {
+            if (!IsOccupyByIndex((int)NCSuatus.GoWC, cn.enterIndex, 4))
+            {
+                int index = cn.enterIndex;
+
+                occupyDic[(int)NCSuatus.GoWC][cn.enterIndex] = 1;
+
+                eStallQueue[(int)NCSuatus.GoWC][cn.enterIndex]--;
+                Debug.LogError($"teamindex {cn.enterIndex}  {eStallQueue[(int)NCSuatus.GoWC][cn.enterIndex]} 洗手间排队--");
+
+                cn.lineIndex = 3; 
+
+                cn.MoveToTargetPoint(wCIngTf[index].transform);
+
+                int[] data = new int[2] { 0, index };
+                EventManager.Instance.TriggerEvent(EventKey.PlayDoorAni, data);
+
+                WCGeJjQueueGJ();
+            }
+        }
+
+        //5 正在使用洗手间
+        private IEnumerator WCEND(CustomerNor cn)
+        {
+            cn.lineIndex = 4;
+            int doorIndex = cn.enterIndex;
+
+            int[] data = new int[2] { 1, doorIndex };
+            EventManager.Instance.TriggerEvent(EventKey.PlayDoorAni, data);
+
+            yield return new WaitForSeconds(14.5f);
+            data = new int[2] { 0, doorIndex };
+            EventManager.Instance.TriggerEvent(EventKey.PlayDoorAni, data);
+            yield return new WaitForSeconds(0.5f);
+
+            occupyDic[(int)NCSuatus.GoWC][cn.enterIndex] = 0;
+          
+            cn.MoveToTargetPoint(wCLinePQ[1].tfs[cn.enterIndex]);
+            cn.MoveToTargetPoint(wCLinePQ[2].tfs);
+            List<Vector3> mPath =
+                 BFS_Mgr.GetMoveList(bfs, cn.transform.position, leaveTf[0].tfs[0].position);
+            cn.MoveToTargetPoint(mPath);
+
+            CNLeave(cn);
+
+            WCGeJjQueueGJ();
+
+            yield return new WaitForSeconds(1);
+
+            data = new int[2] { 1, doorIndex };
+            EventManager.Instance.TriggerEvent(EventKey.PlayDoorAni, data);
+        }
+
+        #endregion
+
         private void ShowLTChairBB(CustomerNor cn)
         {
             if (cn.lineIndex == 1)
