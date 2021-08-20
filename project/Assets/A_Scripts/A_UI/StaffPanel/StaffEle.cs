@@ -32,6 +32,7 @@ namespace EazyGF
         bool isUpdateQuaProgress = false;
 
         [SerializeField] Animator animator;
+        [SerializeField] Animator StaffWrapEffect;
 
         private void Start()
         {
@@ -45,6 +46,7 @@ namespace EazyGF
             if (ItemPropsManager.Intance.CoseItem(1, unLockCost))
             {
                 StaffMgr.Instance.UpgradeStaff(stallModel.id);
+                PlayAnim_StaffWrapEffect("StaffWrapEffect");
             }
         }
 
@@ -53,13 +55,17 @@ namespace EazyGF
             if (ItemPropsManager.Intance.CoseItem(1, upgradeCost))
             {
                 StaffMgr.Instance.UpgradeStaff(stallModel.id);
-                PlayAnim();
+                PlayAnim_StaffUpgrade("StaffUpgrade");
             }
         }
 
-        private void PlayAnim()
+        private void PlayAnim_StaffUpgrade(string animName)
         {
-            animator.Play("StaffUpgrade");
+            animator.Play(animName);
+        }
+        private void PlayAnim_StaffWrapEffect(string animName)
+        {
+            StaffWrapEffect.Play(animName);
         }
 
         StaffModel stallModel;
@@ -89,6 +95,11 @@ namespace EazyGF
 
             unlockObj.SetActive(stallModel.level != 0);
             lockObj.SetActive(stallModel.level == 0);
+
+            if (stallModel.level != 0)
+            {
+                PlayAnim_StaffWrapEffect("StaffWrapEffect");
+            }
 
             Staff_Level_Property data = StaffMgr.Instance.GetStaffLevelDataByIdAndLevel(id, level);
 

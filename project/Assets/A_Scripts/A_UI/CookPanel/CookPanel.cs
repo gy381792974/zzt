@@ -283,7 +283,7 @@ namespace EazyGF
         private void SwitchTitle()
         {
             int areaIndex = builds[0].AreaIndex;
-            BuildArea_Property area = BuildArea_Data.GetBuildArea_DataByID(areaIndex);
+            AreaUnlock_Property area = AreaUnlock_Data.GetAreaUnlock_DataByID(areaIndex);
             title_img.sprite = AssetMgr.Instance.LoadAsset<Sprite>("AreaTitle", area.title);
             title_img.SetNativeSize();
         }

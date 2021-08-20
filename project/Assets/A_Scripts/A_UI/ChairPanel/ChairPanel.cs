@@ -197,24 +197,9 @@ namespace EazyGF
         private void SwitchTitle()
         {
             int areaIndex = builds[0].AreaIndex;
-            BuildArea_Property area = BuildArea_Data.GetBuildArea_DataByID(areaIndex);
+            AreaUnlock_Property area = AreaUnlock_Data.GetAreaUnlock_DataByID(areaIndex);
             title_img.sprite = AssetMgr.Instance.LoadAsset<Sprite>("AreaTitle", area.title);
             title_img.SetNativeSize();
-        }
-
-        private int GetIndexByAreaId(int id)
-        {
-            BuildArea_Property[] area = BuildArea_Data.DataArray;
-            for (int i = 0; i < area.Length; i++)
-            {
-                if (area[i].ID == id)
-                {
-                    return i;
-                }
-            }
-
-            Debug.LogError($"此 {id} 不在区域表中");
-            return -1;
         }
 
         public void ClickToggleChangeImage(ChairItem item, bool isOn)

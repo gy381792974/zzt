@@ -67,9 +67,13 @@ namespace EazyGF
         BuildStatus bs;
         [SerializeField] GameObject FX;
         [SerializeField] GameObject[] objects;
+        [SerializeField] Animator foodAnim;
+        [SerializeField] Animator progressAnim;
+        Dictionary<int, AreaUnlock_Property> areaDic = new Dictionary<int, AreaUnlock_Property>();
         protected override void OnInit()
         {
             InitAllButton();
+            InitAreaDic();
             for (int i = 0; i < objects.Length; i++)
             {
                 objects[i].SetActive(false);
@@ -88,8 +92,7 @@ namespace EazyGF
             curFoodLevel = bs.foodLevel;
             Stall_Property stall = BuildMgr.GetStall_Property(mPanelData.id, mPanelData.level);
             StallLevel_Property stallLevel = BuildMgr.GetStallLevelPropertyByIdAndLevel(mPanelData.id, mPanelData.level);
-            title_img.sprite = AssetMgr.Instance.LoadTexture("AreaTitle", stall.title);
-            title_img.SetNativeSize();
+            ShowTitleImg();
             icon_img.sprite = AssetMgr.Instance.LoadTexture("buildTex", stall.IconName);
             //食物图片
             food_img.sprite = AssetMgr.Instance.LoadTexture("FoodIcon", stall.foodIcon);
@@ -126,6 +129,25 @@ namespace EazyGF
             upgradeMeal_btn.onClick.AddListener(UpgradeMealPos);
             Upgrade_btn.onClick.AddListener(UpgradeQueuePos);
         }
+        private void InitAreaDic()
+        {
+            AreaUnlock_Property[] areas = AreaUnlock_Data.DataArray;
+            foreach (var area in areas)
+            {
+                if (!areaDic.ContainsKey(area.id))
+                {
+                    areaDic.Add(area.id, area);
+                }
+            }
+        }
+
+
+        private void ShowTitleImg()
+        {
+            title_img.sprite = AssetMgr.Instance.LoadTexture("AreaTitle", areaDic[mPanelData.id].title);
+            title_img.SetNativeSize();
+        }
+
 
         private void ShowAllBtnInteractable(StallLevel_Property stallLevel)
         {
@@ -233,6 +255,7 @@ namespace EazyGF
                 OnShow(new BuildUpgradePanelData(mPanelData.data));
                 SaveData();
             }
+            PlayProgressUp();
 
         }
 
@@ -260,7 +283,13 @@ namespace EazyGF
             }
             upFood_btn.interactable = curFoodLevel < stall.FoodMaxLevel && bottleNum >= stall.BotNeedNum;
             objects[0].SetActive(stall.Level >= 4 && curFoodLevel >= stall.FoodMaxLevel);
+            foodAnim.Play("Food");
         }
+        private void PlayProgressUp()
+        {
+            progressAnim.Play("UIup");
+        }
+
 
         /// <summary>
         /// 升级取餐位置
@@ -279,6 +308,8 @@ namespace EazyGF
                     Transform meal = GridMeal_trans.GetChild(i);
                     meal.GetChild(0).gameObject.SetActive(false);
                     meal.GetChild(1).gameObject.SetActive(true);
+                    PlayAnim(meal.GetChild(1));
+
                 }
                 curMeal++;
                 string takeMealText = $" {curMeal}/ {stall.TakeMealMax}";
@@ -309,6 +340,7 @@ namespace EazyGF
                     Transform queue = GridQueue_trans.GetChild(i);
                     queue.GetChild(0).gameObject.SetActive(false);
                     queue.GetChild(1).gameObject.SetActive(true);
+                    PlayAnim(queue.GetChild(1));
                 }
                 curQueue++;
                 string queueText = $" {curQueue}/ {stall.MaxQueueNum}";
@@ -415,6 +447,12 @@ namespace EazyGF
                 Debug.Log("播放特效");
             }
         }
+        private void PlayAnim(Transform parent)
+        {
+            Animator animator = parent.GetComponentInChildren<Animator>();
+            animator.Play("UI");
+        }
+
 
 
 
