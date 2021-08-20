@@ -71,12 +71,12 @@ namespace EazyGF
 
         public override Vector3 GetShowBuildPos(int pos, int level)
         {
-            return combuildGrid[level - 1].GetChild(pos).GetComponent<MeshRenderer>().bounds.center;
+            return combuildGrid[level - 1].GetChild(pos).GetComponentInChildren<MeshRenderer>().bounds.center;
         }
 
         public override MeshRenderer GetShowBuildMR(int pos, int level)
         {
-            return combuildGrid[level - 1].GetChild(pos).GetComponent<MeshRenderer>();
+            return combuildGrid[level - 1].GetChild(pos).GetComponentInChildren<MeshRenderer>();
         }
 
         //public override void PlayComEffect(int pos, int level)

@@ -26,7 +26,9 @@ public class LanguageMgr
     private static SystemLanguage GetPlayerLauguage()
     {
         //return Application.systemLanguage;
-        return SystemLanguage.English;
+        //return SystemLanguage.English;
+
+        return (SystemLanguage)GameComSetting.Instance.languageIndex;
     }
 
 

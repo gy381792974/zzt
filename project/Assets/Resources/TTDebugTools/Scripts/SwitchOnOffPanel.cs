@@ -14,6 +14,7 @@ public enum SwitchOnoffKey
     AddItemNum,
     AddCoinStar,
     timeScale,
+    ChangeLanguage,
     KeepNum,
     TargetCus,
     DebugPanel,
@@ -149,6 +150,11 @@ class SwitchOnOffElements
 
                 //EventManager.Instance.TriggerEvent(EventKey.MoveCamerToTargetPos2, vp);
 
+
+                //ColorGradientUtil.Instance.PlayerCGradientEff(MainSpace.Instance.adornList[10].GetShowBuildMR(0,1));
+
+                 //LanguageMgr.LoadLanguage(SystemLanguage.ChineseSimplified);
+
                 break;
 
             case 2:
@@ -283,7 +289,35 @@ class SwitchOnOffElements
                 DebugTools.Instance.ShowOrHidePanel();
 
                 break;
-            
+            case SwitchOnoffKey.ChangeLanguage:
+
+                SystemLanguage lIndex = (SystemLanguage)GameComSetting.Instance.languageIndex;
+
+                // if (lIndex == SystemLanguage.English)
+                //{
+                //    GameComSetting.Instance.SetLanguageMgr(SystemLanguage.ChineseSimplified);
+                //}
+                //else if (lIndex == SystemLanguage.ChineseSimplified)
+                //{
+                //    GameComSetting.Instance.SetLanguageMgr(SystemLanguage.English);
+                //}
+                //else
+                //{
+                //    GameComSetting.Instance.SetLanguageMgr(SystemLanguage.ChineseSimplified);
+                //}
+
+                if (value == 1)
+                {
+                    GameComSetting.Instance.SetLanguageMgr(SystemLanguage.ChineseSimplified);
+                }
+                else if (value == 0)
+                {
+                    GameComSetting.Instance.SetLanguageMgr(SystemLanguage.English);
+                }
+
+
+                break;
+
             case SwitchOnoffKey.KeepNum:
                 
                 CustomerMgr.faseCreateNum = value;
