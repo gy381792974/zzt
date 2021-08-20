@@ -21,6 +21,12 @@ public class LocalJsonDataLoader
 		jsonValue = File.ReadAllText(filePath);
 		AppConst_Data.DataArray = JsonMapper.ToObject<AppConst_Property>(jsonValue);
 
+		//加载 AreaUnlock_Data
+		filePath =$"{AB_ResFilePath.jsonGameDatasRootDir}/AreaUnlock_Data.txt";
+		jsonValue = File.ReadAllText(filePath);
+		AreaUnlock_Data.DataArray = JsonMapper.ToObject<AreaUnlock_Property[]>(jsonValue);
+		AreaUnlock_Data.SetAreaUnlockDataLenth();
+
 		//加载 BuildArea_Data
 		filePath =$"{AB_ResFilePath.jsonGameDatasRootDir}/BuildArea_Data.txt";
 		jsonValue = File.ReadAllText(filePath);
@@ -160,6 +166,11 @@ public class LocalJsonDataLoader
 		textAsset = AssetMgr.Instance.LoadAsset<TextAsset>("appconst_data","AppConst_Data");
 		AppConst_Data.DataArray = JsonMapper.ToObject<AppConst_Property>(textAsset.text);
 		AssetMgr.Instance.UnloadAsset("appconst_data",true,true);
+
+		textAsset = AssetMgr.Instance.LoadAsset<TextAsset>("areaunlock_data","AreaUnlock_Data");
+		AreaUnlock_Data.DataArray = JsonMapper.ToObject<AreaUnlock_Property[]>(textAsset.text);
+		AreaUnlock_Data.SetAreaUnlockDataLenth();
+		AssetMgr.Instance.UnloadAsset("areaunlock_data",true,true);
 
 		textAsset = AssetMgr.Instance.LoadAsset<TextAsset>("buildarea_data","BuildArea_Data");
 		BuildArea_Data.DataArray = JsonMapper.ToObject<BuildArea_Property[]>(textAsset.text);

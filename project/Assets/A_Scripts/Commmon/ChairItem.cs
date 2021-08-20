@@ -29,7 +29,7 @@ public class ChairItem : MonoBehaviour
     public void SetChairData(Chair_Property chair, int index)
     {
         Img.sprite = AssetMgr.Instance.LoadTexture("BuildIcon", chair.icon);
-        Img.SetNativeSize();
+        //Img.SetNativeSize();
         SetItemLevelState(chair);
         Index = index;
     }

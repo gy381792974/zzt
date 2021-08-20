@@ -41,7 +41,7 @@ namespace EazyGF
             {
                 mPanelData = buildunlockpanelData as AreaUnlockPanelData;
             }
-            GetPropetyByType(mPanelData.type);
+            GetPropetyByType();
         }
 
         protected override void OnHide()
@@ -51,24 +51,31 @@ namespace EazyGF
 
         }
         //LanguageMgr.GetTranstion(2, 1, adorn.UnlockCoin)
-        private void GetPropetyByType(int type)
+        private void GetPropetyByType()
         {
-            if (type == 1)
-            {
-                Stall_Property stall = BuildMgr.GetStall_Property(mPanelData.id, mPanelData.level);
-                needCoin = stall.UnlockCoin;
-                UpdateContent(AssetMgr.Instance.LoadTexture("buildtex", stall.IconName),
-                    AssetMgr.Instance.LoadTexture("AreaTitle", stall.title),
-                     LanguageMgr.GetTranstion(stall.BuildIntro), $"{needCoin}");
-            }
-            else
-            {
-                BuildArea_Property area = BuildArea_Data.GetBuildArea_DataByID(mPanelData.id);
-                needCoin = area.needCoin;
-                UpdateContent(AssetMgr.Instance.LoadTexture("AreaTexture", area.icon),
-                    AssetMgr.Instance.LoadTexture("AreaTitle", area.title),
+            //if (type == 1)
+            //{
+            //    Stall_Property stall = BuildMgr.GetStall_Property(mPanelData.id, mPanelData.level);
+            //    needCoin = stall.UnlockCoin;
+            //    UpdateContent(AssetMgr.Instance.LoadTexture("buildtex", stall.IconName),
+            //        AssetMgr.Instance.LoadTexture("AreaTitle", stall.title),
+            //         LanguageMgr.GetTranstion(stall.BuildIntro), $"{needCoin}");
+            //}
+            //else
+            //{
+            //    BuildArea_Property area = BuildArea_Data.GetBuildArea_DataByID(mPanelData.id);
+            //    needCoin = area.needCoin;
+            //    UpdateContent(AssetMgr.Instance.LoadTexture("AreaTexture", area.icon),
+            //        AssetMgr.Instance.LoadTexture("AreaTitle", area.title),
+            //         LanguageMgr.GetTranstion(area.desc), $"{needCoin}");
+            //}
+            AreaUnlock_Property area = AreaUnlock_Data.GetAreaUnlock_DataByID(mPanelData.id);
+            needCoin = area.needCoin;
+            UpdateContent(AssetMgr.Instance.LoadTexture("AreaTexture", area.icon),
+                   AssetMgr.Instance.LoadTexture("AreaTitle", area.title),
                      LanguageMgr.GetTranstion(area.desc), $"{needCoin}");
-            }
+
+
         }
 
         public void UpdateContent(Sprite sprite, Sprite spriteTitle, string desc, string buildTxt)

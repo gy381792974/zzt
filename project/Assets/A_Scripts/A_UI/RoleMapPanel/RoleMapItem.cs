@@ -19,6 +19,7 @@ namespace EazyGF
         RoleMapData roleMapData;
 
         public GameObject purpleBox;
+        [SerializeField] Animator animator;
         private void Start()
         {
             desc_btn.onClick.AddListener(OnDescBtnClick);
@@ -43,9 +44,18 @@ namespace EazyGF
             purpleBox.SetActive(roleMapData.type == 2);
             name_text.text = roleMapData.name_text;
 
+            animator.gameObject.SetActive(roleMapData.type == 2);
+            //if (roleMapData.type == 2)
+            //{
+            //    animator.Play("VIP");
+            //}
+
+
+
+
             if (isUnlock)
             {
-                
+
                 image_img.sprite = AssetMgr.Instance.LoadTexture("CusIcon", $"{roleMapData.iconPath}");
             }
             else
