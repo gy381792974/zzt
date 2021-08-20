@@ -33,6 +33,7 @@ namespace EazyGF
         List<BuildDataModel> builds = new List<BuildDataModel>();
         [SerializeField] ScrollViewInfinity infinity;
         [SerializeField] GameObject maxObj;
+        [SerializeField] Animator animator;
         protected override void OnInit()
         {
             build_btn.onClick.AddListener(ClickUpgradeBtn);
@@ -324,6 +325,7 @@ namespace EazyGF
                     property = BuildMgr.GetKitchenPropertyByIdAndLevel(id, level);
                     item.SetKitchenData(property, item.Index, curBuildLevel, id);
                     UpdateUI(property);
+                    animator.Play("UIup");
                     return;
                 }
             }

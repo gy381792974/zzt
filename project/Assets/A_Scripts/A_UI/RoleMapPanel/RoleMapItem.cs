@@ -45,10 +45,11 @@ namespace EazyGF
             name_text.text = roleMapData.name_text;
 
             animator.gameObject.SetActive(roleMapData.type == 2);
-            //if (roleMapData.type == 2)
-            //{
-            //    animator.Play("VIP");
-            //}
+
+            if (roleMapData.type == 2)
+            {
+                animator.Play("VIP");
+            }
 
 
 
