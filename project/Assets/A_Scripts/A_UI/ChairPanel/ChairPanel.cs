@@ -209,7 +209,7 @@ namespace EazyGF
                 this.item = item;
                 img = item.Img;
                 Icon_img.sprite = img.sprite;
-                Icon_img.SetNativeSize();
+               // Icon_img.SetNativeSize();
                 index = item.Index;
                 Chair_Property chair = GetChairByIndex(index);
                 item.SetItemLevelState(chair);

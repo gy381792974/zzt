@@ -288,7 +288,6 @@ namespace EazyGF
             title_img.SetNativeSize();
         }
 
-
         /// <summary>
         /// 显示 button Text 金币
         /// </summary>
