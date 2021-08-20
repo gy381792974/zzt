@@ -222,7 +222,7 @@ namespace EazyGF
         {
             CustomerSpe cs = AssetMgr.Instance.LoadGameobjFromPool(pro.Path).GetComponent<CustomerSpe>();
             cs.ResetData();
-
+            cs.PlayAnim();
             List<Transform> lines = pathLines[pro.RoleIndex].tfs; //随机的角色的所有路线
             int index = Random.Range(0, lines.Count);
             Transform line = lines[index];  //随机的路线
@@ -274,18 +274,6 @@ namespace EazyGF
             EventManager.Instance.TriggerEvent(EventKey.SpeRoleLeave, cs.MHashCode);
             EventManager.Instance.TriggerEvent(EventKey.DancingGameVictory, 0);
         }
-        [SerializeField] Animator animator;
-        private void PlayEffect()
-        {
-            animator.Play("VIP");
-        }
-
-        private void StopPlayEffect()
-        {
-            animator.SetBool("VIP", true);
-        }
-
-
         private void FixedUpdate()
         {
             timer += Time.deltaTime;

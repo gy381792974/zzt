@@ -33,28 +33,21 @@ namespace EazyGF
 
         public bool isClicked;
         [SerializeField] Animator animator;
-        private void Start()
-        {
-            PlayAnim();
-        }
-
         public void PlayAnim()
         {
             animator.Play("VIP");
         }
 
-
-
         public void StopPlayAnim()
         {
-            //animator.SetBool("VIP", true);
+            animator.SetBool("pause", true);
+            
             //animator.Play("null");
         }
 
         public void ResetData()
         {
             onHandle2 = null;
-            onHandle2 += (x) => { StopPlayAnim(); };
         }
 
         public void MoveToTargetPoint(List<Vector3> pos)
