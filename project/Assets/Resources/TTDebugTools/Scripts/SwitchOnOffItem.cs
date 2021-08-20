@@ -38,6 +38,11 @@ public class SwitchOnOffItem : MonoBehaviour
             case SwitchOnoffKey.TestValue2:
                 
                 break;
+            case SwitchOnoffKey.ChangeLanguage:
+
+                ItemDes.text = $"多语言0en1cn";
+
+                break;
 
             case SwitchOnoffKey.AddItemNum:
                 
