@@ -71,7 +71,7 @@ namespace EazyGF
             //}
             AreaUnlock_Property area = AreaUnlock_Data.GetAreaUnlock_DataByID(mPanelData.id);
             needCoin = area.needCoin;
-            UpdateContent(AssetMgr.Instance.LoadTexture("AreaTexture", area.icon),
+            UpdateContent(AssetMgr.Instance.LoadTexture(area.abName, area.icon),
                    AssetMgr.Instance.LoadTexture("AreaTitle", area.title),
                      LanguageMgr.GetTranstion(area.desc), $"{needCoin}");
 
