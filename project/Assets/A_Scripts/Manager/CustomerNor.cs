@@ -74,6 +74,7 @@ namespace EazyGF
         private Vector3 dir;
 
         private int buyFoodSpaceCoin;
+        [SerializeField] Animator anim;
 
         [ContextMenu("FillBXTf")]
         public void FillBXTf()
@@ -114,7 +115,7 @@ namespace EazyGF
             RemoveHaveBeenStall();
         }
 
-       
+
         public void SetBX(int index, bool isUpdateFashion = true)
         {
             if (index == -1 || bxTf == null || curBxIndex == index || index >= bxTf.Count)
@@ -140,6 +141,7 @@ namespace EazyGF
             if (isUpdateFashion)
             {
                 CusFashionMgr.Instance.UpdateFashionIndex(Data.ID, curBxIndex);
+                anim.Play("CrossDressing");
             }
         }
 
@@ -214,7 +216,7 @@ namespace EazyGF
             {
                 SetRoalStatus(NormalRoleStatus.Move);
             }
-            else if(curState == NCSuatus.TrayMakeMeal || curState == NCSuatus.BuyFood || curState == NCSuatus.HangOut)
+            else if (curState == NCSuatus.TrayMakeMeal || curState == NCSuatus.BuyFood || curState == NCSuatus.HangOut)
             {
                 SetRoalStatus(NormalRoleStatus.Move_panzi);
             }
@@ -229,8 +231,8 @@ namespace EazyGF
             //if (curState == NCSuatus.TrayMakeMeal || curState == NCSuatus.BuyFood || curState == NCSuatus.HangOut || curState == NCSuatus.DiningQuque
             //    || curState == NCSuatus.EnterDiningQuque)
 
-              if ((int)curState >= 3 && (int)curState <= 7)
-             {
+            if ((int)curState >= 3 && (int)curState <= 7)
+            {
                 if (curState == NCSuatus.BuyFood && lineIndex == 2)
                 {
                     SetTurnByDir();
@@ -255,7 +257,7 @@ namespace EazyGF
             {
                 SetTurnByDir();
 
-                if (lineIndex == 0 && isEnterStatus) 
+                if (lineIndex == 0 && isEnterStatus)
                 {
                     SetRoalStatus(NormalRoleStatus.Breath_meal);
                 }
@@ -452,9 +454,9 @@ namespace EazyGF
             {
                 case NormalRoleStatus.Breath:
                     aniName = "breath";
-                
+
                     break;
-                
+
                 case NormalRoleStatus.Breath_meal:
                     aniName = "breath_meal";
                     break;
@@ -465,13 +467,13 @@ namespace EazyGF
 
                 case NormalRoleStatus.Move:
                     aniName = "move";
-                
+
                     break;
-                
+
                 case NormalRoleStatus.Move_meal:
 
                     aniName = "move_meal";
-                    
+
                     break;
 
                 case NormalRoleStatus.Move_panzi:
@@ -501,7 +503,7 @@ namespace EazyGF
                 isTargetPos = false;
 
                 dir = (targetPos - transform.position).normalized;
-            
+
                 SetTurn();
             }
 
@@ -565,7 +567,7 @@ namespace EazyGF
             {
                 canBuyFoodNum = CustomerLogic.GetCanBuyFoodNum();
             }
-            
+
         }
 
         List<int> haveBeenStalls = new List<int>();
@@ -597,7 +599,7 @@ namespace EazyGF
 
         public bool IsGoOnBuyFood()
         {
-            return haveBeenStalls.Count < canBuyFoodNum; 
+            return haveBeenStalls.Count < canBuyFoodNum;
 
             return false;
         }
@@ -608,7 +610,7 @@ namespace EazyGF
             return false;
 
             //int rang = UnityEngine.Random.Range(1, 101);
-         
+
             //if (tkNum == 1)
             //{
             //    return data.SecondMlRatio >= rang;

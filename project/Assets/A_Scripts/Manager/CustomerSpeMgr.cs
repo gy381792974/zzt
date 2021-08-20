@@ -274,6 +274,17 @@ namespace EazyGF
             EventManager.Instance.TriggerEvent(EventKey.SpeRoleLeave, cs.MHashCode);
             EventManager.Instance.TriggerEvent(EventKey.DancingGameVictory, 0);
         }
+        [SerializeField] Animator animator;
+        private void PlayEffect()
+        {
+            animator.Play("VIP");
+        }
+
+        private void StopPlayEffect()
+        {
+            animator.SetBool("VIP", true);
+        }
+
 
         private void FixedUpdate()
         {

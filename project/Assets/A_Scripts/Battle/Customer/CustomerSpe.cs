@@ -32,9 +32,29 @@ namespace EazyGF
         private int mHashCode;
 
         public bool isClicked;
+        [SerializeField] Animator animator;
+        private void Start()
+        {
+            PlayAnim();
+        }
+
+        public void PlayAnim()
+        {
+            animator.Play("VIP");
+        }
+
+
+
+        public void StopPlayAnim()
+        {
+            //animator.SetBool("VIP", true);
+            //animator.Play("null");
+        }
+
         public void ResetData()
         {
             onHandle2 = null;
+            onHandle2 += (x) => { StopPlayAnim(); };
         }
 
         public void MoveToTargetPoint(List<Vector3> pos)
@@ -162,8 +182,6 @@ namespace EazyGF
         {
             PlayAni(action);
         }
-
-
         protected virtual void SetRoleStill()
         {
             if (curSRoleStage == SRoleStage.MoveTarget)

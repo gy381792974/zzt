@@ -35,6 +35,7 @@ namespace EazyGF
         ChairItem item;
         [SerializeField] ScrollViewInfinity InfinityScroll;
         [SerializeField] GameObject maxObj;
+        [SerializeField] Animator animator;
         protected override void OnInit()
         {
             //BuildUpgradeMgr.Instance.Init();
@@ -209,7 +210,7 @@ namespace EazyGF
                 this.item = item;
                 img = item.Img;
                 Icon_img.sprite = img.sprite;
-               // Icon_img.SetNativeSize();
+                // Icon_img.SetNativeSize();
                 index = item.Index;
                 Chair_Property chair = GetChairByIndex(index);
                 item.SetItemLevelState(chair);
@@ -375,17 +376,18 @@ namespace EazyGF
                     UpdateImage(chair);
                     UpdateUI(chair);
                     SaveData(chair);
+                    animator.Play("UIup");
                     return;
                 }
             }
             else if (ItemPropsManager.Intance.CoseItem((int)CurrencyType.Coin, upgrade_coin))
             {
                 curLevel++;
+                SaveData(chair);
+                ShowCoin(chair);
+                ShowUnlockText(chair);
+                BtnInteraction(chair);
             }
-            SaveData(chair);
-            ShowCoin(chair);
-            ShowUnlockText(chair);
-            BtnInteraction(chair);
         }
 
         private void BtnInteraction(Chair_Property chair)
