@@ -19,6 +19,7 @@ namespace EazyGF
 		[SerializeField] private Text food_text;
 		[SerializeField] private Text next_text;
 		[SerializeField] private Image fill_img;
+		[SerializeField] private Image anim_img;
 		[SerializeField] private Text foodMaxLevel_text;
 		[SerializeField] private Text time_text;
 		[SerializeField] private Button remould_btn;

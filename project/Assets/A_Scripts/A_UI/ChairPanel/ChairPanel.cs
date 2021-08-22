@@ -330,6 +330,7 @@ namespace EazyGF
             curLevel_text.text = $"LV.{level}";
             //通过字典 赋值 curLevel
             chairFill_img.fillAmount = (float)curLevel / chair.maxLevel;
+            UIWalkLight.Instance.StartWalkLight(WalkLight_img.rectTransform, chairFill_img.fillAmount);
             chairMaxLevel_text.text = $"lv.{chair.maxLevel}";
             curStage_text.text = $"Current stage: <color=#519f87>Pick up time {2}s</color>";
             nextStage_text.text = $"Next:               <color=#519f87>Pick up time {1.85}s</color>";

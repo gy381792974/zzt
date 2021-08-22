@@ -200,6 +200,7 @@ namespace EazyGF
         private void CookUnlockText(KitchenLevel_Property kitchen)
         {
             cookFill_img.fillAmount = (float)curBuildLevel / kitchen.maxLevel;
+            UIWalkLight.Instance.StartWalkLight(WalkLight_img.rectTransform, cookFill_img.fillAmount);
             curLevel_text.text = $"LV.{level}";
             cookMaxLevel_text.text = $"lv.{kitchen.maxLevel}";
             unlockCook_text.text = $"Gain per level {kitchen.reward}";

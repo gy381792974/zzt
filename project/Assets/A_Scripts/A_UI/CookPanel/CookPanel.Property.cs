@@ -18,6 +18,7 @@ namespace EazyGF
 		[SerializeField] private Text cookLock_text;
 		[SerializeField] private GameObject unlockCook_obj;
 		[SerializeField] private Image cookFill_img;
+		[SerializeField] private Image WalkLight_img;
 		[SerializeField] private Text cookMaxLevel_text;
 		[SerializeField] private Text unlockCook_text;
 		[SerializeField] private Button build_btn;

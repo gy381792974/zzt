@@ -171,6 +171,7 @@ namespace EazyGF
             time_text.text = $"{stall.StayTime}s";
             foodMaxLevel_text.text = $"Lv.{stallLevel.FoodMaxLevel}";
             fill_img.fillAmount = (float)curFoodLevel / stallLevel.FoodMaxLevel;
+            UIWalkLight.Instance.StartWalkLight(anim_img.rectTransform, fill_img.fillAmount);
             ShowFoodText(stallLevel);
             ShowTipText(stallLevel);
             MealText(stallLevel);
@@ -256,7 +257,6 @@ namespace EazyGF
                 SaveData();
             }
             PlayProgressUp();
-
         }
 
         /// <summary>
@@ -274,6 +274,7 @@ namespace EazyGF
             {
                 curFoodLevel++;
                 fill_img.fillAmount = (float)curFoodLevel / stall.FoodMaxLevel;
+                UIWalkLight.Instance.StartWalkLight(anim_img.rectTransform, fill_img.fillAmount);
                 food_coin = stall.FoodPrice[0] * (int)Mathf.Pow(stall.FoodPrice[1], curFoodLevel - 1);
                 upFood_text.text = food_coin.ToString();
                 ShowFoodText(stall);
