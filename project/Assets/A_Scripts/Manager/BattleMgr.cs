@@ -107,6 +107,7 @@ namespace EazyGF
                 cs.MHashCode = cs.GetHashCode();
                 UIMgr.ShowPanel<RoleDialoguePanel>(new RoleDialoguePanelData(cs.Data, cs.GetHashCode()));
                 UIMgr.GetUI<RoleDialoguePanel>().ShowClickDialogue();
+                cs.StopPlayAnim();
             }
         }
 
