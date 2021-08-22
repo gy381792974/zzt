@@ -125,7 +125,7 @@ namespace EazyGF
 
         bool isSingleTeam = true; //是否使用单队伍 
         bool isReadTable = false;
-        int testStatues = 1;//阶段
+        int testStatues = -1;//阶段
         
 
         bool isTargetIndex = false;  //是否使用目标客户
